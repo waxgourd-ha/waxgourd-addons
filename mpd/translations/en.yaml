@@ -1,0 +1,14 @@
+---
+configuration:
+  media_folder:
+    name: media_folder
+  playlist_folder:
+    name: playlist_folder
+  volume_normalization:
+    name: volume_normalization
+  httpd_output:
+    name: httpd_output
+  verbose:
+    name: verbose
+  custom_config:
+    name: custom_config

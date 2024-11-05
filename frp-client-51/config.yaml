@@ -1,0 +1,38 @@
+name: "FRP Client 0.51.0 (停更)"
+slug: "frp_client_51"
+version: "0.59.0"
+description: "您可以使用此工具通过端口转发实现对本地Home Assistant操作系统的远程访问"
+url: https://github.com/waxgourd-ha/waxgourd-addons
+host_network: true
+startup: application
+boot: "manual"
+init: false
+image: wghaos/frp-client-51
+map:
+  - share:rw
+privileged:
+  - NET_ADMIN
+devices:
+  - /dev/net/tun
+arch:
+  - aarch64
+  - amd64
+  - armv7
+options:
+  server_addr: "frp.freefrp.net"
+  server_port: 7000
+  token: "freefrp.net"
+  proxy_type: http
+  proxy_name: "myweb"
+  local_port: 8123
+  remote_port: 18123
+schema:
+  server_addr: str
+  server_port: int
+  token: str
+  proxy_type: list(http|tcp)
+  proxy_name: str
+  local_port: int
+  custom_domains: str
+  remote_port: match(^([1-4][0-9]{4}|50000|80|443)$)
+  subdomain: str?

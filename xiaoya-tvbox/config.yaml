@@ -1,0 +1,20 @@
+name: "小雅-TvBox"
+description: "AList代理，支持xiaoya版AList界面管理"
+version: "latest-2024110509"
+slug: "xiaoya-tvbox"
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/xiaoya-tvbox
+init: false
+arch:
+  - aarch64
+  - amd64
+webui: "[PROTO:http]://[HOST]:[PORT:4567]"
+ports:
+  4567/tcp: 4567
+  80/tcp: 5344
+environment:
+  no_proxy: "*.aliyundrive.com"
+  ALIST_PORT: "5344"
+  INSTALL: "xiaoya"
+  MEM_OPT: "-Xmx512M"
+boot: manual

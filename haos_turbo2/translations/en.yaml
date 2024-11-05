@@ -1,0 +1,38 @@
+---
+configuration:
+  bin_app:
+    name: UseBinApp
+    description: >-
+      Select v2raya call service v2ray-core or xray-core.
+  tun_config:
+    name: ConfigVersion
+    description: >-
+      Select config file version. default v1.
+  proxy_domains:
+    name: DomainByProxy
+    description: >-
+      Select Domain by proxy channel
+  direct_domains:
+    name: DomainByDirect
+    description: >-
+      Select Domain by direct channel
+  proxy_ipcidr:
+    name: IPcidrByProxy
+    description: >-
+      Select ip/cidr by proxy channel
+  direct_ipcidr:
+    name: IPcidrByDirect
+    description: >-
+      Select ip/cidr by direct channel
+  logger_disable:
+    name: DisableLogger
+    description: >-
+      disable proxy logger file
+  clear_mode:
+    name: ClearUserData
+    description: >-
+      clear user data, all data
+  dns_parsing:
+    name: dns_parsing
+    description: >-
+      dns_parsing

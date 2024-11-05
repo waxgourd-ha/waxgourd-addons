@@ -1,0 +1,14 @@
+---
+configuration:
+  roms_folder:
+    name: roms存放文件夹
+    description: >-
+      roms存放文件夹。
+  disable_ipfs:
+    name: 禁用ipfs
+    description: >-
+      禁用ipfs功能。
+  lang:
+    name: 语言
+    description: >-
+      选择管理界面是中文还是英文。

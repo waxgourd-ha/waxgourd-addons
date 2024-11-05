@@ -1,0 +1,10 @@
+---
+configuration:
+  mqtt:
+    name: mqtt
+    description: >-
+      如果使用mosquito插件，此处可不填写MQTT详细信息。详细查看“文档”页面。
+  serial:
+    name: serial
+    description: >-
+      填写串行详细信息(例如USB协调器的端口)。详细查看“文档”页面。

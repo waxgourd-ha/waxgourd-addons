@@ -1,0 +1,16 @@
+---
+configuration:
+  certfile:
+    name: 证书文件
+    description: >-
+      SSL证书，必须位于/ SSL目录下。
+  password:
+    name: 密码
+    description: >-
+      定义admin密码。如果保持空白，将允许手动恢复以前的备份。至少12个字符。
+  keyfile:
+    name: 密钥
+    description: >-
+      ssl密钥，必须位于/SSL目录下。
+  ssl:
+    name: ssl

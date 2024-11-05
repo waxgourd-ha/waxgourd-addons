@@ -1,0 +1,38 @@
+---
+configuration:
+  server_addr:
+    name: FRP服务端地址
+    description: >-
+      FRP服务端的地址（默认为freefrp.net指定地址）。
+  server_port:
+    name: FRP服务器端口
+    description: >-
+      FRP服务端端口（默认为freefrp.net指定端口）。
+  token:
+    name: 验证令牌
+    description: >-
+      身份验证令牌（默认为freefrp.net要求的令牌）。
+  custom_domains:
+    name: 自定义二级域名
+    description: >-
+      自定义二级域名（填写需要绑定的二级域名）。
+  subdomain:
+    name: 子域名
+    description: >-
+      子域名（选填，原freefrp子域名功能，与自定义二级域名功能一样，自有子域名服务器时可用）。
+  proxy_name:
+    name: 配置项名称
+    description: >-
+      该配置信息的名称（没特殊需求默认即可）。
+  local_port:
+    name: Web本地端口
+    description: >-
+      HomeAssistant的Web本地端口。
+  remote_port:
+    name: Web访问端口
+    description: >-
+      HomeAssistant的Web访问端口。
+  proxy_type:
+    name: 代理协议
+    description: >-
+      代理协议。

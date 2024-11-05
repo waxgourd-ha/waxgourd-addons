@@ -1,0 +1,10 @@
+---
+configuration:
+  mqtt:
+    name: mqtt
+    description: >-
+      If you are not using the Mosquitto broker addon fill in your MQTT details
+  serial:
+    name: serial
+    description: >-
+      Fill in the serial details (e.g. port of your USB coordinator).  Format can be found here, but skip the initial. e.g.: port: /dev/ttyUSB0

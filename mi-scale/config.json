@@ -1,0 +1,96 @@
+{
+  "name": "Xiaomi Mi Scale",
+  "version": "0.3.6-1",
+  "slug": "xiaomi_mi_scale",
+  "description": "通过蓝牙（BLE）读取小米体脂秤的测量值",
+  "url": "https://github.com/waxgourd-ha/waxgourd-addons",
+  "image": "wghaos/mi-scale",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "manual",
+  "host_dbus": true,
+  "panel_admin": false,
+  "host_network": true,
+  "apparmor": true,
+  "privileged": ["NET_ADMIN", "SYS_ADMIN"],
+
+  "options": {
+    "HCI_DEV": "hci0",
+    "BLUEPY_PASSIVE_SCAN": false,
+    "MISCALE_MAC": "00:00:00:00:00:00",
+    "MQTT_PREFIX": "miscale",
+    "MQTT_HOST": "127.0.0.1",
+    "MQTT_USERNAME": "user",
+    "MQTT_PASSWORD": "passwd",
+    "MQTT_PORT": 1883,
+    "MQTT_RETAIN": true,
+    "MQTT_DISCOVERY": true,
+    "MQTT_DISCOVERY_PREFIX": "homeassistant",
+    "MQTT_TLS_CACERTS": "Path to CA Cert File",
+    "MQTT_TLS_INSECURE": false,
+    "DEBUG_LEVEL": "error",
+
+    "USERS": [
+        {
+          "NAME": "Bob",
+          "SEX": "male",
+          "GT": 60,
+          "LT": 80,
+          "HEIGHT": 180,
+          "DOB": "1980-01-01"
+        },
+        {
+          "NAME": "Mary",
+          "SEX": "female",
+          "GT": 40,
+          "LT": 60,
+          "HEIGHT": 160,
+          "DOB": "1990-01-01"
+        },
+        {
+          "NAME": "Timmy",
+          "SEX": "male",
+          "GT": 20,
+          "LT": 40,
+          "HEIGHT": 120,
+          "DOB": "2010-01-01"
+        },
+        {
+          "NAME": "Baby Sally",
+          "SEX": "female",
+          "GT": 1,
+          "LT": 20,
+          "HEIGHT": 50,
+          "DOB": "2020-01-01"
+        }
+    ]
+
+  },
+  "schema": {
+    "HCI_DEV": "str?",
+    "BLUEPY_PASSIVE_SCAN": "bool?",
+    "MISCALE_MAC": "str",
+    "MQTT_PREFIX": "str?",
+    "MQTT_HOST": "str",
+    "MQTT_USERNAME": "str?",
+    "MQTT_PASSWORD": "str?",
+    "MQTT_PORT": "int?",
+    "MQTT_RETAIN": "bool?",
+    "MQTT_DISCOVERY": "bool?",
+    "MQTT_DISCOVERY_PREFIX": "str?",
+    "MQTT_TLS_CACERTS": "str?",
+    "MQTT_TLS_INSECURE": "bool?",
+    "DEBUG_LEVEL": "str?",
+
+    "USERS": [
+      {
+        "NAME": "str",
+        "SEX": "str",
+        "GT": "int",
+        "LT": "int",
+        "HEIGHT": "int",
+        "DOB": "str"
+      }
+    ]
+  }
+}

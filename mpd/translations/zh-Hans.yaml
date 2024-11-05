@@ -1,0 +1,14 @@
+---
+configuration:
+  media_folder:
+    name: 媒体文件夹
+  playlist_folder:
+    name: 播放列表文件夹
+  volume_normalization:
+    name: 音量标准化
+  httpd_output:
+    name: httpd输出
+  verbose:
+    name: 详细日志输出
+  custom_config:
+    name: 自定义配置

@@ -1,0 +1,20 @@
+name: "IT Tools"
+version: 2024.10.22-7ca5933
+slug: it-tools
+codenotary: wghaos@163.com
+description: '适用于开发人员和IT人员的有用工具'
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/it-tools
+init: false
+arch:
+  - aarch64
+  - amd64
+ingress: false
+ingress_port: 3210
+ingress_stream: true
+webui: "[PROTO:http]://[HOST]:[PORT:3210]"
+ports:
+  3210/tcp: 3210
+ports_description:
+  3210/tcp: Web interface
+boot: manual

@@ -1,0 +1,17 @@
+name: '冬瓜HAOS-ttyd'
+version: '0.1.0'
+slug: 'wghaos-ttyd'
+codenotary: 'wghaos@163.com'
+description: "可以将ttyd在HA内嵌的方式打开，方便大家远程时操作"
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/addons-wghaos-ttyd
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armv7
+ingress: true
+ingress_port: 7681
+panel_icon: 'mdi:application-variable'
+host_network: true
+boot: manual

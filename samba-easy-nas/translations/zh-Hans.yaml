@@ -1,0 +1,34 @@
+---
+configuration:
+  username:
+    name: 用户名
+    description:  >-
+      此用户名用于登录Samba服务器验证.
+  password:
+    name: 密码
+    description:  >-
+      此密码用于相应用户的登录.
+  workgroup:
+    name: 工作组
+    description:  >-
+      更改您所在的工作组，一般默认值就是WORKGROUP.
+  compatibility_mode:
+    name: 兼容模式
+    description:  >-
+      启用该功能，就可以在该集成上使用已有的Samba协议.
+  veto_files: 
+    name: 隐藏文件
+    description:  >-
+      不显示已隐藏的文件.
+  allow_hosts:
+    name: 允许访问
+    description:  >-
+      允许访问共享文件夹的主机/网络列表.
+  interfaces:
+    name: 网络适配器
+    description:  >-
+      这里填写samba使用的网络适配器,x86一般为enp2s1,其他的end0,最好net info命令查看一下.  
+  localdisks:
+    name: 本地存储器
+    description:  >-
+      挂载的本地存储器(填写sda1或sdb1)，查看host主机中挂载的盘位于/dev.

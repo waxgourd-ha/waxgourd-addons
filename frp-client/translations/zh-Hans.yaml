@@ -1,0 +1,50 @@
+---
+configuration:
+  serverAddr:
+    name: FRP服务端地址
+    description: >-
+      连接FRP服务端的地址。
+  serverPort:
+    name: FRP服务器端口
+    description: >-
+      连接FRP服务端的端口。
+  authToken:
+    name: 验证令牌
+    description: >-
+      身份验证令牌。
+  webServerAddr:
+    name: 客户端地址
+    description: >-
+      客户端 AdminServer地址配置。
+  webServerPort:
+    name: 端口配置
+    description: >-
+      客户端 AdminServer 端口配置。
+  webServerUser:
+    name: 用户名
+    description: >-
+      客户端 AdminServer 用户名配置。
+  webServerPassword:
+    name: 密码
+    description: >-
+      客户端 AdminServer 密码配置。
+  customDomain:
+    name: 自定义二级域名
+    description: >-
+      自定义二级域名（填写需要绑定的二级域名）。
+  proxyName:
+    name: 配置项名称
+    description: >-
+      该配置信息的名称（没特殊需求默认即可）。
+  proxyType:
+    name: 代理协议
+    description: >-
+      代理协议。
+  localPort:
+    name: Web本地端口
+    description: >-
+      HomeAssistant的Web本地端口。
+  remotePort:
+    name: Web访问端口
+    description: >-
+      HomeAssistant的Web访问端口。

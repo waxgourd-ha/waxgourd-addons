@@ -1,0 +1,7 @@
+configuration:
+  user_token:
+    name: "User Token"
+    description: "到 ddnsto 控制台获取用户 Token。"
+  device_id:
+    name: "Device ID"
+    description: "如有多台设备 ID 重复,请修改设备编号用于区分。"

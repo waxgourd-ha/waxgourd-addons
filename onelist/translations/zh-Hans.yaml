@@ -1,0 +1,71 @@
+---
+configuration:
+  env:
+    name: 环境
+    description: >-
+      这里选择运行的环境
+  title:
+    name: 标题
+    description: >-
+      这里填写标题
+  user:
+    name: 用户配置
+    description: >-
+      这里填写用户的信息
+  user_email:
+    name: 邮箱
+    description: >-
+      这里填写邮箱地址
+  user_password:
+    name: 密码
+    description: >-
+      这里填写用户密码
+  db:
+    name: 数据库配置
+    description: >-
+      这里填写数据库的配置项
+  db_driver:
+    name: db_driver
+    description: >-
+      db_driver
+  db_user:
+    name: db_user
+    description: >-
+      db_user
+  db_name:
+    name: db_name
+    description: >-
+      db_name
+  db_password_debug:
+    name: db_password_debug
+    description: >-
+      db_password_debug
+  db_password_release:
+    name: db_password_release
+    description: >-
+      db_password_release
+  api_secret:
+    name: API密钥
+    description: >-
+      这里填写API密钥
+  faviconico_url:
+    name: 收藏的url
+    description: >-
+      这里是收藏的url地址
+  download_image:
+    name: 下载图片
+    description: >-
+      这里配置是否下载图片
+  img_url:
+    name: 图片地址
+    description: >-
+      这里填写图片地址
+  video_types:
+    name: 视频类型
+    description: >-
+      这里填写视频类型
+  key_db:
+    name: 数据库键
+    description: >-
+      这里填写数据库的键
+

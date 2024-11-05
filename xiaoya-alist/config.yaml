@@ -1,0 +1,39 @@
+name: 小雅Alist
+version: hostmode-2024110109
+slug: xiaoya-alist
+codenotary: wghaos@163.com
+description: '一个口碑级的alist应用'
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/xiaoya-alist
+init: false
+host_network: true
+arch:
+  - aarch64
+  - amd64
+  - armv7
+webui: "[PROTO:http]://[HOST]:[PORT:5678]"
+ports:
+  5678/tcp: 5678
+  2345/tcp: 2345
+  2346/tcp: 2346
+environment:
+  no_proxy: "*.aliyundrive.com"
+boot: manual
+options:
+  alipan_token: ""
+  alipan_refresh_token: ""
+  alipan_folder_id: ""
+  cron: "20 05 * * *"
+  pikpak_email: ""
+  pikpak_mobile: ""
+  docker_address_ext: ""
+  proxy: ""
+schema:
+  alipan_token: str
+  alipan_refresh_token: str
+  alipan_folder_id: str
+  cron: str?
+  pikpak_email: str?
+  pikpak_mobile: str?
+  docker_address_ext: str?
+  proxy: str?

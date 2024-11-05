@@ -1,0 +1,38 @@
+---
+configuration:
+  server_addr:
+    name: server_addr
+    description: >-
+      The address to connect to the server.
+  server_port:
+    name: server_port
+    description: >-
+      The default port for connecting to the server is 7000.
+  token:
+    name: token
+    description: >-
+      Token authentication.
+  custom_domains:
+    name: custom_domains
+    description: >-
+      Custom field.
+  subdomain:
+    name: subdomain
+    description: >-
+      subdomain.
+  proxy_name:
+    name: proxy_name
+    description: >-
+      Agent name.
+  local_port:
+    name: local_port
+    description: >-
+      Local port.
+  remote_port:
+    name: remote_port
+    description: >-
+      Remote_port.
+  proxy_type:
+    name: proxy_type
+    description: >-
+      Proxy_type.

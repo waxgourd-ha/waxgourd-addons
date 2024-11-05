@@ -1,0 +1,30 @@
+---
+name: HA健康检测
+slug: wgha-boost
+version: 1.0.1
+description: HAOS综合网络访问健康度检查的应用，具有运行状态、网络状态、网络响应检测等功能
+init: false
+startup: services
+codenotary: wghaos@163.com
+ingress: true
+ingress_port: 8991
+ingress_stream: true
+image: wghaos/wga-boost
+url: https://github.com/waxgourd-ha/waxgourd-addons
+ports:
+  8991/tcp: 8991
+panel_icon: mdi:stethoscope
+hassio_api: true
+hassio_role: admin
+docker_api: true
+map:
+  - addon_config:rw
+arch:
+  - aarch64
+  - amd64
+  - armv7
+options:
+  config_file: /config/config.yaml
+schema:
+  config_file: str?
+boot: manual

@@ -1,0 +1,23 @@
+---
+name: 青龙面板 for HA
+version: 2.17.11
+slug: qinglong
+description: "支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台"
+url: https://github.com/waxgourd-ha/waxgourd-addons
+init: false
+codenotary: wghaos@163.com
+map:
+  - share:rw
+arch:
+  - aarch64
+  - amd64
+  - armv7
+webui: "http://[HOST]:[PORT:5700]/"
+ports_description:
+  5700/tcp: 'Web UI port'
+ports:
+  5700/tcp: 5700
+image: wghaos/qinglong
+environment:
+  QL_DIR: /data/qinglong
+boot: manual

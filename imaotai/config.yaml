@@ -1,0 +1,21 @@
+name: i茅台
+version: 1.0.13
+slug: imaotai
+codenotary: wghaos@163.com
+description: 'i茅台app自动预约，每日自动预约，支持docker一键部署'
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/imaotai
+init: false
+arch:
+  - aarch64
+  - amd64
+webui: "[PROTO:http]://[HOST]:[PORT:8161]"
+ports:
+  8161/tcp: 8161
+options:
+  db_user: homeassistant
+  db_pass: null
+schema:
+  db_user: str
+  db_pass: str
+boot: manual

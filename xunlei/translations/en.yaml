@@ -1,0 +1,14 @@
+---
+configuration:
+  download_path:
+    name: download_path
+    description: >-
+      download path
+  user:
+    name: user
+    description: >-
+      user
+  password:
+    name: password
+    description: >-
+      password

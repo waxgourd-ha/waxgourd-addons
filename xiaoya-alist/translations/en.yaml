@@ -1,0 +1,34 @@
+---
+configuration:
+  alipan_token:
+    name: alipan_token
+    description: >-
+      alipan token.
+  alipan_folder_id:
+    name: alipan_folder_id
+    description: >-
+      alipan folder id.
+  alipan_refresh_token:
+    name: alipan_refresh_token
+    description: >-
+      alipan refresh token.
+  pikpak_email:
+    name: pikpak_email
+    description: >-
+      pikpak_email.
+  pikpak_mobile:
+    name: pikpak_mobile
+    description: >-
+      pikpak mobile.
+  docker_address_ext:
+    name: docker_address_ext
+    description: >-
+      docker address ext.
+  proxy:
+    name: proxy
+    description: >-
+      proxy.
+  cron:
+    name: Timed cleaning settings
+    description: >-
+      Time division, day, month, week: If you do not understand the cron format, please do not modify it!!! Default daily cache cleaning and check-in at 5:20 am。Set to empty, do not start scheduled cleaning

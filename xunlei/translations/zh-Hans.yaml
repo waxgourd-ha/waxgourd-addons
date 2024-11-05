@@ -1,0 +1,14 @@
+---
+configuration:
+  download_path:
+    name: 存储路径
+    description: >-
+      需要保存的路径
+  user:
+    name: 用户名
+    description: >-
+      非必填项，进入页面后需要输入该用户名
+  password:
+    name: 密码
+    description: >-
+      非必填项，进入页面后需要输入该密码

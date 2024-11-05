@@ -1,0 +1,28 @@
+name: "HA清理大师"
+version: '0.1.5'
+slug: 'addon_data_clean'
+codenotary: wghaos@163.com
+description: '一个专门为HAOS清理垃圾数据的工具，让HA也能直观的进行存储规划。'
+image: wghaos/addon-data-clean
+url: https://github.com/waxgourd-ha/waxgourd-addons
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armv7
+backup_exclude:
+  - '*/data/'
+ingress: true
+ingress_port: 80
+ingress_stream: true
+privileged:
+  - SYS_ADMIN
+full_access: true
+map:
+  - all_addon_configs:rw
+  - backup:rw
+apparmor: true
+docker_api: true
+startup: services
+boot: manual
+panel_icon: 'mdi:flower'

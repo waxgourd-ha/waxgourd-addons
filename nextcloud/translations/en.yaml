@@ -1,0 +1,94 @@
+---
+configuration:
+  Full_Text_Search:
+    name: Full_Text_Search
+    description: >-
+      
+  OCR:
+    name: OCR
+    description: >-
+      set to true to install tesseract-ocr capability.
+  OCRLANG:
+    name: OCRLANG
+    description: >-
+      Any language can be set from this page (always three letters) [here](https://tesseract-ocr.github.io/tessdoc/Data-Files#data-files-for-version-400-november-29-2016).
+  PGID:
+    name: PGID
+    description: >-
+      allows setting user.
+  PUID:
+    name: PUID
+    description: >-
+      allows setting user.
+  TZ:
+    name: TZ
+    description: >-
+      
+  additional_apps:
+    name: additional_apps
+    description: >-
+      specify additional apk files to install ; separated by commas
+  certfile:
+    name: certfile
+    description: >-
+      ssl certificate, must be located in /ssl
+  cifsdomain:
+    name: cifsdomain
+    description: >-
+      
+  cifspassword:
+    name: cifspassword
+    description: >-
+      optional, smb password, same for all smb shares)
+  cifsusername:
+    name: cifsusername
+    description: >-
+      optional, smb username, same for all smb shares
+  default_phone_region:
+    name: default_phone_region
+    description: >-
+      Define the default phone region according to https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
+  disable_updates:
+    name: disable_updates
+    description: >-
+      prevent automatic apps updating along addon
+  elasticsearch_server:
+    name: elasticsearch_server
+    description: >-
+      
+  enable_thumbnails:
+    name: enable_thumbnails
+    description: >-
+      enable generations of thumbnails for media file (to disable for older systems)
+  env_memory_limit:
+    name: env_memory_limit
+    description: >-
+      nextcloud usable memory limit (default is 512M)
+  env_post_max_size:
+    name: env_post_max_size
+    description: >-
+      nextcloud post size (default is 512M)
+  env_upload_max_filesize:
+    name: env_upload_max_filesize
+    description: >-
+      nextcloud upload size (default is 512M)
+  keyfile:
+    name: keyfile
+    description: >-
+      sslkeyfile, must be located in /ssl
+  localdisks:
+    name: localdisks
+    description: >-
+      put the hardware name of your drive to mount separated by commas, or its label. ex. sda1, sdb1, MYNAS...
+  networkdisks:
+    name: networkdisks
+    description: >-
+      optional, list of smbv2/3 servers to mount, separated by commas
+  trusted_domains:
+    name: trusted_domains
+    description: >-
+      allows to select the trusted domains. Domains not in this lis will be removed, except for the first one used in the initial configuration.
+  use_own_certs:
+    name: use_own_certs
+    description: >-
+      if true, use the certfile and keyfile specified

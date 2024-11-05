@@ -1,0 +1,10 @@
+---
+configuration:
+  pwd:
+    name: pwd
+    description: >-
+      password
+  frequency:
+    name: frequency
+    description: >-
+      frequency

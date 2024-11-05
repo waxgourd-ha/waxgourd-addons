@@ -1,0 +1,38 @@
+---
+configuration:
+  bin_app:
+    name: 使用后台服务
+    description: >-
+      选择后台服务是 v2r ay-core 还是 xr ay-core.
+  tun_config:
+    name: 配置版本
+    description: >-
+      使用配置文件的版本. 目前v1的兼容性较好.
+  proxy_domains:
+    name: 升速域名
+    description: >-
+      需要升速的域名列表
+  direct_domains:
+    name: 直连域名
+    description: >-
+      选择直连的域名列表
+  proxy_ipcidr:
+    name: 升速IP(CIDR)
+    description: >-
+      加速的IP地址(支持CIDR)
+  direct_ipcidr:
+    name: 直连IP(支持CIDR)
+    description: >-
+      直连的IP地址(支持CIDR)
+  logger_disable:
+    name: 关闭部分日志
+    description: >-
+      关闭部分日志（注意：调试时才开，否则日志会占用磁盘空间）
+  clear_mode:
+    name: 清除用户数据
+    description: >-
+      每次启动自动清除所有的用户数据（注意：卸载插件，用户数据不会删除）
+  dns_parsing:
+    name: DNS解析模式
+    description: >-
+      DNS解析模式

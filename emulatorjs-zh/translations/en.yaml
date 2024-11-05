@@ -1,0 +1,14 @@
+---
+configuration:
+  roms_folder:
+    name: roms_folder
+    description: >-
+      Roms storage folder.
+  disable_ipfs:
+    name: disable_ipfs
+    description: >-
+      Disable ipfs.
+  lang:
+    name: lang
+    description: >-
+      Management interface language selection.

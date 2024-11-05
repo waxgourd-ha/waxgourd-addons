@@ -1,0 +1,17 @@
+name: "Sun Panel"
+version: 1.5.3
+slug: sun-panel
+codenotary: wghaos@163.com
+description: '一个服务器、NAS导航面板、Homepage、浏览器首页'
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/sun-panel
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armv7
+webui: "[PROTO:http]://[HOST]:[PORT:3002]"
+ports:
+  3002/tcp: 3002
+boot: manual
+docker_api: true

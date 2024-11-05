@@ -1,0 +1,41 @@
+---
+configuration:
+  PGID:
+    name: PGID
+    description: >-
+      PGID
+  GPID:
+    name: GPID
+    description: >-
+      GPID
+  TZ:
+    name: TZ
+    description: >-
+      所在时区
+  localdisks:
+    name: 本地存储器
+    description: >-
+      挂载的存储器的硬件名称或其标签，用逗号分隔要。例如sda1, sdb1, MYNAS…
+  networkdisks:
+    name: 网络存储器
+    description: >-
+      可选，要挂载的SMB服务器列表，以逗号分隔。
+  cifsusername:
+    name: cifs用户名
+    description: >-
+      可选，samba 账号
+  cifspassword:
+    name: cifs密码
+    description: >-
+      可选，samba 密码
+  cifsdomain:
+    name: cifs工作组
+    description: >-
+      可选，samba 所在的工作组
+  silent:
+    name: 静默
+    description: >-
+      debug 信息为静默状态
+  smbv1:
+    name: Samba
+    description: >-

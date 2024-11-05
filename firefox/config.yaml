@@ -1,0 +1,76 @@
+name: "Firefox"
+version: "24.10.1"
+slug: "firefox"
+panel_icon: "mdi:firefox"
+description: "火狐浏览器的Docker容器"
+url: "https://github.com/mincka/ha-addons/tree/main/firefox"
+arch:
+  - aarch64
+  - amd64
+  - armv7
+init: false
+apparmor: false
+panel_admin: false
+map:
+  - share:rw
+ingress: true
+ingress_port: 5800
+ports:
+  5800/tcp: null
+  5900/tcp: null
+  9222/tcp: null
+environment:
+  # Required to write to /data
+  USER_ID: "0"
+  KEEP_APP_RUNNING: "1"
+# Sound support (forward audio to your host), not tested
+devices:
+  - /dev/snd
+# Map a working PulseAudio setup into the container
+audio: true
+image: wghaos/firefox
+# To pass options as environment variables (thanks to legacy mode), they must be either "int" or "str" ("str?" will be ignored).
+legacy: true
+boot: manual
+options:
+  VNC_PASSWORD: ""
+  ENABLE_CJK_FONT: "1"
+  FF_OPEN_URL: ""
+  FF_KIOSK: "0"
+  LANG: "zh_CN.UTF-8"
+  TZ: "Asia/shanghai"
+  INSTALL_PACKAGES: ""
+  PACKAGES_MIRROR: ""
+  CONTAINER_DEBUG: "0"
+  DISPLAY_WIDTH: "1920"
+  DISPLAY_HEIGHT: "1080"
+  DARK_MODE: "0"
+  SECURE_CONNECTION: "0"
+  SECURE_CONNECTION_VNC_METHOD: "SSL"
+  SECURE_CONNECTION_CERTS_CHECK_INTERVAL: "60"
+  WEB_AUDIO: "0"
+  WEB_AUTHENTICATION: "0"
+  WEB_AUTHENTICATION_USERNAME: ""
+  WEB_AUTHENTICATION_PASSWORD: "0"
+  FF_CUSTOM_ARGS: ""
+schema:
+  VNC_PASSWORD: str
+  ENABLE_CJK_FONT: str
+  FF_OPEN_URL: str
+  FF_KIOSK: str
+  LANG: str
+  TZ: str
+  INSTALL_PACKAGES: str
+  PACKAGES_MIRROR: str
+  CONTAINER_DEBUG: str
+  DISPLAY_WIDTH: str
+  DISPLAY_HEIGHT: str
+  DARK_MODE: str
+  SECURE_CONNECTION: str
+  SECURE_CONNECTION_VNC_METHOD: str
+  SECURE_CONNECTION_CERTS_CHECK_INTERVAL: str
+  WEB_AUDIO: str
+  WEB_AUTHENTICATION: str
+  WEB_AUTHENTICATION_USERNAME: str
+  WEB_AUTHENTICATION_PASSWORD: str
+  FF_CUSTOM_ARGS: str

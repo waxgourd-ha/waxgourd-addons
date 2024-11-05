@@ -1,0 +1,94 @@
+---
+configuration:
+  Full_Text_Search:
+    name: 全文索引
+    description: >-
+      
+  OCR:
+    name: OCR
+    description: >-
+      设置为true以安装tesseract-ocr功能。
+  OCRLANG:
+    name: OCR语言
+    description: >-
+      任何语言都可以从这个页面设置(总是三个字母)，相关查询见配置文档。 
+  PGID:
+    name: PGID
+    description: >-
+      允许设置用户。
+  PUID:
+    name: PUID
+    description: >-
+      允许设置用户。
+  TZ:
+    name: TZ
+    description: >-
+      时区设置。      
+  additional_apps:
+    name: 附加应用程序
+    description: >-
+      指定要安装的其他apk文件;用逗号分隔。
+  certfile:
+    name: 证书
+    description: >-
+      ssl证书，必须位于本地ssl。
+  cifsdomain:
+    name: cifs域
+    description: >-
+      
+  cifspassword:
+    name: cifs密码
+    description: >-
+      可选项， smb密码，与smb shares密码相同。
+  cifsusername:
+    name: cifs用户名
+    description: >-
+      可选项， smb用户名，与smb shares用户名相同。
+  default_phone_region:
+    name: 默认电话区域
+    description: >-
+      定义默认电话区域 https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
+  disable_updates:
+    name: 禁用更新
+    description: >-
+      防止插件自动更新应用程序。
+  elasticsearch_server:
+    name: elasticsearch服务器
+    description: >-
+      
+  enable_thumbnails:
+    name: 启用缩略图
+    description: >-
+      为媒体文件启用几代缩略图(在旧系统中禁用)。
+  env_memory_limit:
+    name: 环境内存限制
+    description: >-
+      nextcloud可用内存限制(默认为512M)。
+  env_post_max_size:
+    name: env_post_max_size
+    description: >-
+      nextcloud post文件大小(默认为512M)。
+  env_upload_max_filesize:
+    name: env_upload_max_filesize
+    description: >-
+      nextcloud上传大小(默认为512M)。
+  keyfile:
+    name: 密钥
+    description: >-
+      ssl密钥，必须位于本地的ssl。
+  localdisks:
+    name: 本地磁盘
+    description: >-
+      用逗号分隔要挂载的驱动器的硬件名称或其标签。例如sda1, sdb1, MYNAS…
+  networkdisks:
+    name: 网络磁盘
+    description: >-
+      可选，要挂载的smbv2/v3服务器列表，以逗号分隔
+  trusted_domains:
+    name: 信任域
+    description: >-
+      允许选择信任域。不在此列表中的域将被删除，除了初始配置中使用的第一个域。
+  use_own_certs:
+    name: 使用自己的证书
+    description: >-
+      如果为true，则使用指定的certfile和keyfile。

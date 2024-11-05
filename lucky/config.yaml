@@ -1,0 +1,20 @@
+name: Lucky(万吉)
+version: 2.10.8
+slug: lucky
+codenotary: wghaos@163.com
+description: '替代socat,IPv6 tcp/udp 转发内网IPv4,动态域名服务'
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/lucky
+init: false
+boot: manual
+arch:
+  - aarch64
+  - amd64
+  - armv7
+#webui: "[PROTO:http]://[HOST]:[PORT:16601]"
+ports:
+  16601/tcp: 16601
+ingress: true
+ingress_port: 16601
+panel_icon: 'mdi:server-network'
+host_network: true

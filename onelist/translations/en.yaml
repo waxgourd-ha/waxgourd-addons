@@ -1,0 +1,71 @@
+---
+configuration:
+  env:
+    name: env
+    description: >-
+      env
+  title:
+    name: title
+    description: >-
+      title
+  user:
+    name: user
+    description: >-
+      user
+  user_email:
+    name: user_email
+    description: >-
+      user_email
+  user_password:
+    name: user_password
+    description: >-
+      user_password
+  db:
+    name: db
+    description: >-
+      db
+  db_driver:
+    name: db_driver
+    description: >-
+      db_driver
+  db_user:
+    name: db_user
+    description: >-
+      db_user
+  db_name:
+    name: db_name
+    description: >-
+      db_name
+  db_password_debug:
+    name: db_password_debug
+    description: >-
+      db_password_debug
+  db_password_release:
+    name: db_password_release
+    description: >-
+      db_password_release
+  api_secret:
+    name: api_secret
+    description: >-
+      api_secret
+  faviconico_url:
+    name: faviconico_url
+    description: >-
+      faviconico_url
+  download_image:
+    name: download_image
+    description: >-
+      download_image
+  img_url:
+    name: img_url
+    description: >-
+      img_url
+  video_types:
+    name: video_types
+    description: >-
+      video_types
+  key_db:
+    name: key_db
+    description: >-
+      key_db
+

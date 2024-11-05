@@ -1,0 +1,16 @@
+---
+configuration:
+  certfile:
+    name: certfile
+    description: >-
+      ssl certificate, must be located in /ssl.
+  password:
+    name: password
+    description: >-
+      define admin password. If kept blank, will allow manual restore of previous backup. At least 12 characters.
+  keyfile:
+    name: keyfile
+    description: >-
+      sslkeyfile, must be located in /ssl.
+  ssl:
+    name: ssl

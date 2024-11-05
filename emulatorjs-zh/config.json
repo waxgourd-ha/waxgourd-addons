@@ -1,0 +1,49 @@
+{
+  "name": "游戏机模拟器",
+  "version": "1.9.2",
+  "slug": "emulatorjs-zh",
+  "codenotary": "wghaos@163.com",
+  "description": "基于web浏览器的模拟器，己移植众多复古游戏机。它是Libretro和EmulatorJS之间混合使用模拟器",
+  "url": "https://github.com/waxgourd-ha/waxgourd-addons",
+  "image": "wghaos/emulatorjs",
+  "arch": [
+    "aarch64",
+    "amd64"
+  ],
+  "init": false,
+  "boot": "manual",
+  "webui": "http://[HOST]:[PORT:80]",
+  "ports": {
+    "80/tcp": 8486,
+    "3000/tcp": 3000,
+    "4001/tcp": 4001,
+    "4001/udp": 4001
+  },
+  "ports_description": {
+    "80/tcp": "EmulatorJS frontend",
+    "3000/tcp": "EmulatorJS Manager",
+    "4001/tcp": "IPFS TCP (Optional)",
+    "4001/udp": "IPFS UDP (Optional)"
+  },
+  "options": {
+    "roms_folder": "/config/roms",
+    "disable_ipfs": false,
+    "lang": "zh"
+  },
+  "schema": {
+    "roms_folder": "str",
+    "disable_ipfs": "bool",
+    "lang": "list(zh|en)"
+  },
+  "map": [
+    "addon_config:rw",
+    "media:rw",
+    "share:rw"
+  ],
+  "backup_exclude": [
+    "**/data/.ipfs",
+    "**/data/main",
+    "**/data/metadata",
+    "**/videos"
+  ]
+}

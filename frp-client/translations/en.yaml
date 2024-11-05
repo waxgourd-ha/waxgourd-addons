@@ -1,0 +1,50 @@
+---
+configuration:
+  serverAddr:
+    name: serverAddr
+    description: >-
+      The address to connect to the server.
+  serverPort:
+    name: serverPort
+    description: >-
+      The default port for connecting to the server is 7000.
+  authToken:
+    name: authToken
+    description: >-
+      Token authentication.
+  webServerAddr:
+    name: webServerAddr
+    description: >-
+      Client AdminServer address configuration.
+  webServerPort:
+    name: webServerPort
+    decription: >-
+      Client AdminServer port configuration.
+  webServerUser:
+    name: webServerUser
+    description: >-
+      Client AdminServer user configuration.
+  webServerPassword:
+    name: webServerPassword
+    description: >-
+      Client AdminServer password configuration.
+  customDomain:
+    name: customDomain
+    description: >-
+      Custom field.
+  proxyName:
+    name: proxyName
+    description: >-
+      Agent name.
+  proxyType:
+    name: proxyType
+    description: >-
+      Agency Agreement.
+  localPort:
+    name: localPort
+    description: >-
+      Local port.
+  remotePort:
+    name: remotePort
+    description: >-
+      Remote_port.

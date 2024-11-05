@@ -1,0 +1,10 @@
+---
+configuration:
+  pwd:
+    name: 密码
+    description: >-
+      密码
+  frequency:
+    name: 频率
+    description: >-
+      频率

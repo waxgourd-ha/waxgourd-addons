@@ -1,0 +1,40 @@
+name: Alist
+slug: alist
+description: '一个支持多种存储的文件列表程序，由 Gin 和 Solidjs 提供支持'
+url: https://github.com/waxgourd-ha/waxgourd-addons
+version: 3.39.1
+image: wghaos/alist
+codenotary: wghaos@163.com
+arch:
+  - aarch64
+  - amd64
+  - armv7
+apparmor: true
+backup_exclude:
+  - '*/data/'
+devices:
+  - /dev/dri
+  - /dev/dri/card0
+  - /dev/dri/card1
+  - /dev/dri/renderD128
+  - /dev/vchiq
+  - /dev/ttyUSB0
+  - /dev/sda
+  - /dev/sdb
+  - /dev/nvme
+  - /dev/nvme0n1p1
+  - /dev/nvme0n1p2
+  - /dev/mmcblk
+  - /dev/fuse
+  - /dev/net/tun
+webui: "http://[HOST]:[PORT:5244]/"
+privileged:
+  - SYS_ADMIN
+  - DAC_READ_SEARCH
+init: false
+ports:
+  '5244': 5244
+ports_description:
+  '5244': web port
+startup: application
+boot: manual

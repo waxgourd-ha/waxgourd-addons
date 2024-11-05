@@ -1,0 +1,44 @@
+---
+version: 2.2.6
+slug: haos_turbo2
+name: HAOS加速器(备选)
+description: 它是Home Assistant系统加速器的一个补充。
+url: https://github.com/v2raya
+arch:
+  - aarch64
+  - amd64
+  - armv7
+hassio_api: true
+host_network: true
+image: xyyyhtl/haos-turbo2
+init: false
+boot: manual
+map:
+  - addons:rw
+  - addon_config:rw
+  - backup:rw
+  - homeassistant_config:rw
+  - media:rw
+  - share:rw
+  - backup:rw
+  - ssl:rw
+udev: true
+ports_description:
+  2017/tcp: 'Web UI port'
+webui: "http://[HOST]:[PORT:2017]/"
+ports:
+  2017/tcp: 2017
+privileged:
+  - SYS_ADMIN
+  - NET_ADMIN
+  - NET_RAW
+  - DAC_READ_SEARCH
+apparmor: true
+devicetree: false
+options:
+  bin_app: v2ray-core
+  clear_mode: false
+schema:
+  bin_app: list(v2ray-core|xray-core)
+  clear_mode: bool
+startup: services

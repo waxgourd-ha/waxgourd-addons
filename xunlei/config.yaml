@@ -1,0 +1,29 @@
+name: Xunlei(迅雷)
+version: 3.20.2
+slug: xunlei
+codenotary: wghaos@163.com
+description: 迅雷NAS版
+image: wghaos/xunlei
+url: https://github.com/waxgourd-ha/waxgourd-addons
+init: false
+arch:
+  - aarch64
+  - amd64
+boot: manual
+ports:
+  2345/tcp: 2345
+webui: "http://[HOST]:[PORT:2345]/"
+map:
+  - media:rw
+  - share:rw
+apparmor: true
+privileged:
+  - SYS_ADMIN
+options:
+  download_path: "/share"
+  user: ""
+  password: ""
+schema:
+  download_path: str
+  user: str
+  password: str

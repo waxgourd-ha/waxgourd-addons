@@ -1,0 +1,65 @@
+configuration:
+  VNC_PASSWORD:
+    name: VNC 密码
+    description: 连接到应用程序图形用户界面所需的密码。如果您设置了值，移除它的唯一方式将是重新安装插件。由于远程帧缓冲协议RFC的限制（参见第7.2.2节），密码限制为8个字符。
+  ENABLE_CJK_FONT:
+    name: 启用中文日韩字体
+    description: 设置为1时，将安装开源计算机字体文泉驿正黑。该字体包含大量的中文/日文/韩文字符。
+  FF_OPEN_URL:
+    name: Firefox 打开 URL
+    description: Firefox启动时打开的URL。如果您设置了值，移除它的唯一方式将是重新安装插件。
+  FF_KIOSK:
+    name: Firefox iosk模式
+    description: 设置为1时，启用iosk模式。此模式以非常受限和有限的模式启动Firefox，最适合公共区域或面向客户的展示。
+  LANG:
+    name: 地区设置
+    description: 设置地区，定义应用程序的语言（如果支持）。地区的格式是language[_territory][.codeset]，其中language是ISO 639语言代码，territory是ISO 3166国家代码，codeset是字符集，如UTF-8。例如，使用UTF-8编码的澳大利亚英语是en_AU.UTF-8。
+  TZ:
+    name: 时区
+    description: 容器使用的时区。也可以通过在主机和容器之间映射/etc/localtime来设置时区。
+  INSTALL_PACKAGES:
+    name: 安装软件包
+    description: 在容器启动期间安装的软件包列表，空格分隔。可用软件包列表可在 https://mirrors.alpinelinux.org 查看。注意 - 安装覆盖现有容器文件的软件包可能会影响容器功能（例如二进制文件）。
+  PACKAGES_MIRROR:
+    name: 软件包镜像
+    description: 安装软件包时使用的仓库镜像。镜像列表可在 https://mirrors.alpinelinux.org 查看。
+  CONTAINER_DEBUG:
+    name: 容器调试
+    description: 设置为1时，启用调试日志。
+  DISPLAY_WIDTH:
+    name: 显示宽度
+    description: 应用程序窗口的宽度（像素值）。
+  DISPLAY_HEIGHT:
+    name: 显示高度
+    description: 应用程序窗口的高度（像素值）。
+  DARK_MODE:
+    name: Firefox 暗色模式
+    description: 设置为1时，启用应用程序的暗色模式。
+  SECURE_CONNECTION:
+    name: 安全连接
+    description: 设置为1时，使用加密连接访问应用程序的GUI（通过Web浏览器或VNC客户端）。这可能与HA Ingress（即使是HTTPS）不兼容。请注意，很少有VNC客户端支持这种方法。SSVNC是其中之一。更多细节请参阅 https://github.com/jlesage/docker-firefox 的安全部分。
+  SECURE_CONNECTION_VNC_METHOD:
+    name: 安全连接VNC方法
+    description: 执行安全VNC连接的方法。可能的值是SSL或TLS。更多细节请参阅 https://github.com/jlesage/docker-firefox 的安全部分。
+  SECURE_CONNECTION_CERTS_CHECK_INTERVAL:
+    name: 安全连接证书检查间隔
+    description: 系统检查Web或VNC证书是否更改的间隔（秒）。当检测到更改时，受影响的服务将自动重启。值为0时禁用检查。
+  FF_CUSTOM_ARGS:
+    name: Firefox自定义参数
+    description: 启动Firefox时传递的自定义参数。
+  WEB_AUDIO:
+    name: Web音频
+    description: 设置为1时，启用音频支持，这意味着应用程序产生的任何音频都通过浏览器播放。不要忘记在VNC停靠的控制台中启用音频。请注意，VNC客户端和HA Ingress不支持音频。如果您找到了通过HA ingress使其工作的方法，请告诉我。
+  WEB_AUTHENTICATION:
+    name: Web认证
+    description: 设置为1时，应用程序的GUI在通过Web浏览器访问时受到登录页面的保护。只有在提供有效凭证时才允许访问。此功能需要启用安全连接（SECURE_CONNECTION环境变量）。这可能与HA ingress（即使是HTTPS）不兼容。
+  WEB_AUTHENTICATION_USERNAME:
+    name: Web认证用户名
+    description: 为Web认证配置的可选用户名。这是为单个用户配置凭证的快速简便方式。
+  WEB_AUTHENTICATION_PASSWORD:
+    name: Web认证密码
+    description: 为Web认证配置的可选密码。这是为单个用户配置凭证的快速简便方式。
+network:
+  5800/tcp: 通过Web访问Firefox（Ingress不需要）
+  5900/tcp: 通过VNC访问Firefox（Ingress不需要）
+  9222/tcp: Firefox远程调试端口（Ingress不需要）

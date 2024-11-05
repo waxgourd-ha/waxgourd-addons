@@ -1,0 +1,26 @@
+name: "DDNS-GO"
+version: '6.7.2'
+slug: 'ddns_go'
+codenotary: wghaos@163.com
+description: '自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务'
+image: wghaos/ddns-go
+url: https://github.com/waxgourd-ha/waxgourd-addons
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armv7
+ports:
+  9876/tcp: 9876
+apparmor: true
+startup: application
+boot: manual
+webui: "http://[HOST]:[PORT:9876]/"
+options:
+  pwd: ""
+  frequency: 300
+schema:
+  pwd: str
+  frequency: "int(10,)"
+breaking_versions:
+  - "6.6.9"

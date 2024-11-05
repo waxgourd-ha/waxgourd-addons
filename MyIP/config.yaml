@@ -1,0 +1,23 @@
+---
+name: MyIP
+version: latest
+slug: MyIP
+description: "一个更好的 IP 工具箱。可以查看IP、IP 信息（代理前后）、检查 DNS 泄露、检查 WebRTC 连接、网速测试、测试网站可用性等"
+url: https://github.com/waxgourd-ha/waxgourd-addons
+init: false
+codenotary: wghaos@163.com
+arch:
+  - aarch64
+  - amd64
+ports_description:
+  18966/tcp: 'Web UI port'
+panel_icon: 'mdi:ip'
+ingress: false
+ingress_port: 18966
+ingress_stream: true
+startup: services
+image: jason5ng32/myip
+webui: "[PROTO:http]://[HOST]:[PORT:18966]"
+ports:
+  18966/tcp: 18966
+boot: manual

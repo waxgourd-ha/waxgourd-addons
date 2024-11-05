@@ -1,0 +1,5 @@
+---
+build_from:
+  amd64: d.fashgh.com/bugprogrammer/calendar-remark:latest
+  aarch64: d.fashgh.com/bugprogrammer/calendar-remark:latest_arm64v8
+

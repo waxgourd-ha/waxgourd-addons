@@ -1,0 +1,18 @@
+name: DPanel
+version: "1.1.4"
+slug: dpanel
+description: Docker 可视化管理面板，提供完善的管理容器的功能
+url: "https://github.com/donknap/dpanel"
+image: wghaos/dpanel
+arch:
+  - armv7
+  - aarch64
+  - amd64
+webui: "[PROTO:http]://[HOST]:[PORT:8807]"
+ports:
+  80/tcp: 80
+  443/tcp: 443
+  8080/tcp: 8807
+init: false
+boot: manual
+docker_api: true

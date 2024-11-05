@@ -1,0 +1,25 @@
+name: Netdata
+version: 1.47.4
+slug: netdata
+codenotary: wghaos@163.com
+description: 'Netdata每秒收集指标，并将其显示在漂亮的低延迟仪表板中'
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/netdata
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armv7
+privileged:
+  - SYS_ADMIN
+  - SYS_PTRACE
+panel_icon: mdi:chart-bell-curve
+panel_title: Netdata
+ingress: true
+ingress_port: 19999
+ingress_stream: true
+ports:
+  19999/tcp: 19999
+ports_description:
+  19999/tcp: Web interface
+boot: manual
