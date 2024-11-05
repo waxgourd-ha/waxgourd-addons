@@ -177,4 +177,5 @@ FRP客户端。
 
 一款Docker可视化管理面板，提供完善的管理容器的功能。
 
+[repository-badge]: https://img.shields.io/badge/Add%20repository%20to%20my-Home%20Assistant-41BDF5?logo=home-assistant&style=for-the-badge
 [repository-url]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fwaxgourd-ha%2Fwaxgourd-addons
