@@ -9,7 +9,6 @@ init: false
 arch:
   - aarch64
   - amd64
-  - armv7
 webui: "http://[HOST]:[PORT:8880]/"
 ports:
   '80': 8880

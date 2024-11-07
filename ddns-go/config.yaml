@@ -9,7 +9,6 @@ init: false
 arch:
   - aarch64
   - amd64
-  - armv7
 ports:
   9876/tcp: 9876
 apparmor: true

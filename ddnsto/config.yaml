@@ -9,7 +9,6 @@ apparmor: false
 arch:
   - aarch64
   - amd64
-  - armv7
 host_network: true
 boot: manual
 options:

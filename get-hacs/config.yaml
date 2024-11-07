@@ -8,7 +8,6 @@ url: "https://github.com/hacs/addons/tree/main/get"
 image: wghaos/addons-get-hacs
 # image: ghcr.io/hacs/{arch}-addon-get
 arch:
-  - armv7
   - aarch64
   - amd64
 init: false

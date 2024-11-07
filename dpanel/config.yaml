@@ -5,7 +5,6 @@ description: Docker 可视化管理面板，提供完善的管理容器的功能
 url: "https://github.com/donknap/dpanel"
 image: wghaos/dpanel
 arch:
-  - armv7
   - aarch64
   - amd64
 webui: "[PROTO:http]://[HOST]:[PORT:8807]"

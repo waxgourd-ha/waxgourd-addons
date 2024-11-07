@@ -9,7 +9,6 @@ init: false
 arch:
   - aarch64
   - amd64
-  - armv7
 webui: "[PROTO:http]://[HOST]:[PORT:3002]"
 ports:
   3002/tcp: 3002

@@ -10,7 +10,6 @@ host_network: true
 arch:
   - aarch64
   - amd64
-  - armv7
 webui: "[PROTO:http]://[HOST]:[PORT:5678]"
 ports:
   5678/tcp: 5678

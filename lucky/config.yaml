@@ -10,7 +10,6 @@ boot: manual
 arch:
   - aarch64
   - amd64
-  - armv7
 #webui: "[PROTO:http]://[HOST]:[PORT:16601]"
 ports:
   16601/tcp: 16601

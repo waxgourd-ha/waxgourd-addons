@@ -8,7 +8,6 @@ codenotary: wghaos@163.com
 arch:
   - aarch64
   - amd64
-  - armv7
 devices:
   - /dev/sda
   - /dev/sdb

@@ -8,7 +8,6 @@ image: wghaos/onelist
 arch:
   - aarch64
   - amd64
-  - armv7
 backup_exclude:
   - '*/data/'
 devices:

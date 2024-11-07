@@ -22,7 +22,6 @@ map:
 arch:
   - aarch64
   - amd64
-  - armv7
 options:
   config_file: /config/config.yaml
 schema:

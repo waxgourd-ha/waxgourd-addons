@@ -17,7 +17,6 @@ devices:
 arch:
   - aarch64
   - amd64
-  - armv7
 options:
   server_addr: "frp.freefrp.net"
   server_port: 7000
