@@ -1,6 +1,6 @@
 {
     "name": "eWeLink Smart Home",
-    "version": "1.0.0",
+    "version": "1.4.3",
     "slug": "ewelink_smart_home_slug",
     "description": "将 eWeLink 与家庭助理连接",
     "arch": ["aarch64", "amd64"],

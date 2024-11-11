@@ -120,7 +120,7 @@
   "slug": "emby_nas",
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "4.9.0.30",
+  "version": "4.9.0.31",
   "video": true,
   "boot": "manual"
 }

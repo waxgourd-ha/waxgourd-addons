@@ -8,11 +8,8 @@ url: https://github.com/waxgourd-ha/waxgourd-addons
 ingress: true
 ingress_port: 6680
 arch:
-  - armv7
-  - armhf
   - aarch64
   - amd64
-  - i386
 image: ghcr.io/poeschl-homeassistant-addons/mpd-{arch}
 init: false
 audio: true

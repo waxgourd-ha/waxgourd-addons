@@ -5,7 +5,6 @@ description: Fusion一个现代化、易于使用且性能卓越的自定义Home
 arch:
   - aarch64
   - amd64
-  - armv7
 init: false
 url: https://github.com/matt8707/addon-ha-fusion
 panel_icon: mdi:atom
