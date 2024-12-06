@@ -1,0 +1,24 @@
+name: "zigbee2MQTT分身"
+version: "1.0.0"
+slug: "addon-zigbee2mqtt-twin"
+codenotary: wghaos@163.com
+description: "zigbee2MQTT分身"
+image: wghaos/addon-wghaos-zigbee2mqtt-copy
+url: https://gitcode.com/waxgourd/addons
+init: false
+arch:
+  - aarch64
+  - amd64
+ingress: true
+ingress_port: 9876
+privileged:
+  - SYS_ADMIN
+  - SYS_RAWIO
+map:
+  - addons:rw
+apparmor: true
+docker_api: true
+startup: services
+boot: manual
+full_access: true
+

@@ -1,9 +1,10 @@
 {
   "name": "Zigbee2MQTT",
-  "version": "1.41.0-1",
+  "version": "1.42.0-2",
   "slug": "zigbee2mqtt",
   "description": "可以自定义ZigBee的接收连接器",
   "uart": true,
+  "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
   "startup": "application",
   "services": [
@@ -19,8 +20,20 @@
   "timeout": 30,
   "panel_icon": "mdi:zigbee",
   "map": [
-    "share:rw",
-    "config:rw"
+    {
+      "type": "share",
+      "read_only": false
+    },
+    {
+      "type": "homeassistant_config",
+      "read_only": false,
+      "path": "/config"
+    },
+    {
+      "type": "addon_config",
+      "read_only": false,
+      "path": "/addon_config"
+    }
   ],
   "ports": {
     "8485/tcp": 8485,
@@ -62,7 +75,7 @@
     },
     "serial": {
       "port": "str?",
-      "adapter": "match(zstack|deconz|zigate|ezsp|ember)?",
+      "adapter": "match(zstack|deconz|zigate|ezsp|ember|zboss)?",
       "baudrate": "int?",
       "rtscts": "bool?"
     },

@@ -1,0 +1,46 @@
+# https://gitcode.com/waxgourd/addons
+name: KNXD daemon (波特率版)
+version: "0.5.2-1"
+slug: knxd-wg
+description: KNXD守护进程可用于通过TPUART或USB总线适配器创建KNX/IP网关
+url: https://gitcode.com/waxgourd/addons
+arch:
+  - aarch64
+  - amd64
+init: false
+startup: services
+host_network: true
+privileged:
+  - SYS_MODULE
+  - SYS_RAWIO
+options:
+  address: "0.0.1"
+  client_address: "0.0.2:8"
+  interface: usb
+  log_error_level: warning
+  usb_filters: single
+  dest_port: "99"
+  connect_device: ""
+  baudrate: "19200"
+schema:
+  address: "match(^\\d+\\.\\d+.\\d+$)"
+  client_address: "match(^\\d+\\.\\d+.\\d+\\:\\d+$)"
+  interface: "list(tpuart|tpuart-ip|usb|ft12|ft12cemi|ncn5120|ncn5120-ip|ipt|dummy)"
+  device: "device?"
+  log_error_level: "list(warning|error|fatal|note|info|debug)"
+  usb_filters: "str?"
+  ip_address: "str?"
+  dest_port: "port?"
+  baudrate: "str?"
+  connect_device: "str?"
+  custom_config: "str?"
+watchdog: "tcp://[HOST]:[PORT:6720]"
+ports:
+  "6720/tcp": 6720
+  "3671/udp": 3671
+ports_description:
+  "6720/tcp": "knx接口要求，能够通过ETS访问knx总线"
+  "3671/udp": "knx接口要求，能够通过ETS访问knx总线"
+image: "wghaos/{arch}-knxd"
+uart: true
+usb: true

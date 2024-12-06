@@ -1,0 +1,31 @@
+name: "Addons镜像备份工具"
+version: "1.0.0"
+slug: "addon-image-backup"
+codenotary: wghaos@163.com
+description: "冬瓜镜像备份"
+image: wghaos/addon-wghaos-image-backup
+url: https://gitcode.com/waxgourd/addons
+init: false
+arch:
+  - aarch64
+  - amd64
+ingress: true
+ingress_port: 9876
+privileged:
+  - SYS_ADMIN
+  - SYS_RAWIO
+  - DAC_READ_SEARCH
+map:
+  - media:rw
+  - share:rw
+  - backup:rw
+  - all_addon_configs
+apparmor: false
+docker_api: true
+startup: services
+boot: manual
+full_access: true
+options:
+  config_file: ""
+schema:
+  config_file: str?

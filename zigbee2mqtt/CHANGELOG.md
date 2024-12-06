@@ -1,3 +1,5 @@
+## 1.42.0-2
+- 尝试修复 https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/issues/664
 ## 1.41.0-1
 - 升级Zigbee2MQTT最新版本 [`1.41.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/1.41.0)
 - 将插件特定配置挂载到插件容器 (/addon_config)

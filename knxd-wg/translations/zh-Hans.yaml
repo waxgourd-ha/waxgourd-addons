@@ -1,0 +1,45 @@
+---
+configuration:
+  address:
+    name: KNXD巴士地址
+    description: knxd deamon本身的KNX地址。例如，用于源自组缓存的请求。
+  client_address:
+    name: KNXD客户端总线地址池
+    description: >-
+      分配给客户端连接的地址范围。请注意，长度参数表示要分配的地址数量。
+      示例：1.2.3:5（这将地址1.2.3到1.2.7分配给knxd的客户端。）
+  interface:
+    name: 接口驱动程序
+    description: >-
+      驱动程序knxd应用作与KNX总线通信的接口。此插件的典型用例中最常见的是：
+      tpuart（用于基于UART的KNX接口，如Busware.de中的接口）
+      usb（用于商用usb KNX接口）
+      ipt（用于连接到现有的IP隧道接口）
+  device:
+    name: 用于连接的设备
+    description: >-
+      linux中适配器的物理设备地址。
+      您可以尝试将此留空，以便knxd自动检测您的设备。
+  usb_filters:
+    name: usb过滤器
+    description: 使用USB接口时，您可以指定要使用的其他过滤器。查看过滤器[https://github.com/knxd/knxd/blob/master/doc/inifile.rst#filters]knxd官方文件的一部分。
+  custom_config:
+    name: 完成自定义配置
+    description: >-
+      允许您编写自己的自定义knxd ini配置，而不是使用此插件中准备好的模板，该模板使用了上述所有其他配置选项。
+      您的自定义配置将替换此插件提供的默认配置，因此上述所有其他配置选项都将被忽略。有关所有可能的配置选项，请参阅knxd文档。
+  log_error_level:
+    name: KNXD日志级别
+    description: 定义knxd的日志级别。
+  ip_address:
+    name: 接口IP地址
+    description: 基于IP的接口应使用的IP地址（仅适用于tpuart IP、ncn5120 IP和ipt）
+  dest_port:
+    name: 接口端口
+    description: 基于IP的接口应使用的网络端口（仅适用于tpuart IP、ncn5120 IP和ipt）
+  connect_device:
+    name: connect_device
+    description: 连接设备，设置此项后device项失效，主要解决多个usb时device只能选择/dev/ttyUSB0的问题
+  baudrate:
+    name: 波特率
+    description: 波特率(仅适用于tpuart、ft12、ft12cemi、ncn5120)

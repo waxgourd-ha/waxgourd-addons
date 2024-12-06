@@ -36,5 +36,5 @@ If you use clients for file syncing, the use of SQLite is highly discouraged.
 ![image](https://raw.githubusercontent.com/waxgourd-ha/waxgourd-addons/refs/heads/main/nextcloud/images/nextcloud-1.png)
 ## 来源
 
-- 原始版来源：https://github.com/haberda/hassio_addons
-- 加载项基于：https://github.com/linuxserver/docker-nextcloud
+原始版来源：https://github.com/haberda/hassio_addons
+加载项基于：https://github.com/linuxserver/docker-nextcloud

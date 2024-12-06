@@ -1,5 +1,5 @@
 name: Netdata
-version: 1.47.4
+version: 2
 slug: netdata
 codenotary: wghaos@163.com
 description: 'Netdata每秒收集指标，并将其显示在漂亮的低延迟仪表板中'
