@@ -85,7 +85,8 @@
   "ingress_port": 0,
   "init": false,
   "map": [
-    "config:rw",
+    "addon_config:rw",
+    "homeassistant_config:rw",
     "share:rw",
     "media:rw",
     "ssl:rw"
@@ -151,7 +152,7 @@
   "uart": true,
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "30.0.2",
+  "version": "30.0.3",
   "webui": "https://[HOST]:[PORT:443]",
   "boot": "manual"
 }

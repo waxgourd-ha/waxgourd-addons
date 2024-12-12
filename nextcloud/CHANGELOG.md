@@ -1,3 +1,7 @@
+## 30.0.3 (07-12-2024)
+- 升级到linuxserver/docker-nextcloud最新版本
+- 对config.yaml和nextcloud-ocr.sh使用/addon_configs将其备份到nextcloud
+- 使用/config/data作为默认文件夹，而不是/config/data进行初始设置
 ## 30.0.2 (09-11-2024)
 - 升级到linuxserver/docker-nextcloud最新版本
 ## 30.0.1 (21-10-2024)
