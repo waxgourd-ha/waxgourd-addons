@@ -88,6 +88,7 @@
     "PUID": 0,
     "silent": true
   },
+  "panel_admin": false,
   "panel_icon": "mdi:emby",
   "ports": {
     "1900/udp": null,
@@ -120,7 +121,7 @@
   "slug": "emby_nas",
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "4.9.0.32",
+  "version": "4.9.0.33",
   "video": true,
   "boot": "manual"
 }

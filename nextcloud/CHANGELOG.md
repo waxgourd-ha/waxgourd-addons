@@ -1,3 +1,5 @@
+## 30.0.4 (14-12-2024)
+- 升级到linuxserver/docker-nextcloud最新版本
 ## 30.0.3 (07-12-2024)
 - 升级到linuxserver/docker-nextcloud最新版本
 - 对config.yaml和nextcloud-ocr.sh使用/addon_configs将其备份到nextcloud
