@@ -1,3 +1,8 @@
+## 2.0.0-2
+- 修复某些系统（如Rpi4）上打开串行端口时插件崩溃的问题
+## 2.0.0-1
+- 已将Zigbee2MQTT更新到2.0.0版本
+- 注意突破性的变化。
 ## 1.42.0-2
 - 尝试修复 https://github.com/zigbee2mqtt/hassio-zigbee2mqtt/issues/664
 ## 1.41.0-1

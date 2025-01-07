@@ -1,8 +1,11 @@
 {
   "name": "Zigbee2MQTT",
-  "version": "1.42.0-2",
+  "version": "2.0.0-2",
   "slug": "zigbee2mqtt",
   "description": "可以自定义ZigBee的接收连接器",
+  "breaking_versions": [
+    "2.0.0-1",
+  ],
   "uart": true,
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
