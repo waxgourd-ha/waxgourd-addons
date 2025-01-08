@@ -1,3 +1,6 @@
+### 2.25.1 (08-01-2025)
+- 从portainer/portainer更新到最新版本 (更改日志：https://github.com/portainer/portainer/releases)
+
 ### 2.24.1 (07-12-2024)
 - 从portainer/portainer更新到最新版本 (更改日志：https://github.com/portainer/portainer/releases)
 
