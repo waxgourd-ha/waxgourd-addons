@@ -61,17 +61,17 @@ serial：
 
 ```
      port: /dev/ttyUSB0
-     adapter:zstack
+     adapter: zstack
 ```
 ```
      port: tcp://xzg.local:6638
-     adapter:zstack
+     adapter: zstack
 ```
 
 
 ```
      port: /dev/ttyUSB0
-     adapter:ember
+     adapter: ember
 ```
 
 
