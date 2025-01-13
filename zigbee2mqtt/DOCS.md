@@ -60,18 +60,18 @@ TI的芯片（Texa Instrument）：zstack
 serial：
 
 ```
-     port: /dev/ttyUSB0
-     adapter: zstack
+port: /dev/ttyUSB0
+adapter: zstack
 ```
 ```
-     port: tcp://xzg.local:6638
-     adapter: zstack
+port: tcp://xzg.local:6638
+adapter: zstack
 ```
 
 
 ```
-     port: /dev/ttyUSB0
-     adapter: ember
+port: /dev/ttyUSB0
+adapter: ember
 ```
 
 
