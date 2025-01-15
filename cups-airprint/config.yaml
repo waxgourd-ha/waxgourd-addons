@@ -1,0 +1,24 @@
+name: CUPS AirPrint
+version: "2.4.2"
+slug: opencups
+description: 著名的开源打印共享服务器
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/addon-cups-airprint
+arch:
+  - amd64
+  - aarch64
+usb: true
+init: false
+homeassistant_api: true
+host_network: true
+webui: "[PROTO:http]://[HOST]:[PORT:631]"
+ports:
+  631/tcp: 631
+  631/udp: 631
+ports_description:
+  631/tcp: 让本地网络上的其他设备打印到此服务器
+  631/udp: 让本地网络上的其他设备打印到此服务器
+# ingress: false
+map:
+  - addon_config:rw
+
