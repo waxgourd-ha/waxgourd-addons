@@ -1,5 +1,5 @@
 name: "Firefox"
-version: "24.11.1"
+version: "24.12.1"
 slug: "firefox"
 panel_icon: "mdi:firefox"
 description: "火狐浏览器的Docker容器"
