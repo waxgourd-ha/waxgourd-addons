@@ -1,5 +1,5 @@
 name: CUPS AirPrint
-version: "2.4.2"
+version: "2.4.2-2"
 slug: opencups
 description: 著名的开源打印共享服务器
 url: https://github.com/waxgourd-ha/waxgourd-addons
