@@ -1,0 +1,19 @@
+{
+  "version": "1.0.1",
+  "name": "节点小宝",
+  "url": "https://www.ionewu.com",
+  "slug": "jdxb",
+  "description": "A Home Assistant add-on for jdxb service. 这是一个节点小宝客户端",
+  "arch": ["amd64", "aarch64"],
+  "image": "wghaos/addon-wghaos-jdxb",
+  "startup": "application",
+  "init": false,
+  "ports": {
+    "9118/tcp": 9118
+  },
+  "webui": "[PROTO:http]://[HOST]:[PORT:9118]",
+  "boot": "manual",
+  "map": [
+    "addon_config:rw"
+  ]
+}
