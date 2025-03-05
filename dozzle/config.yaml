@@ -1,5 +1,5 @@
 name: docker日志监控Dozzle
-version: 8.10.4
+version: 8.11.7
 slug: dozzle
 codenotary: wghaos@163.com
 description: 'Dozzle 是一个小型轻量级应用程序，具有基于 Web 的界面来监控 Docker 日志'

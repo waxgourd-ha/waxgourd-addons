@@ -1,3 +1,26 @@
+### 2.27.1 (03-03-2025)
+- 已知问题
+  <hr>
+  
+ - Docker支持的已知问题
+
+ 1. 在Docker上首次从Git部署堆栈时，GitOps更新选项不可见（但可以在部署堆栈后进行配置）
+
+ - Podman支持的已知问题
+
+ 1. Podman环境不受自动入职脚本的支持
+ 1. 在Docker上运行Portainer服务器时，无法通过socket添加Podman环境（反之亦然）
+ 1. 仅支持CentOS 9，Podman 5 rootful
+
+- 变化
+  <hr>
+
+ 1. 安全：已解决CVE-2024-50338
+
+ 1. 修复了未使用.env插入Compose文件的问题
+
+
+
 ### 2.27.0 (24-02-2025)
 
 - 从portainer/portainer更新到最新版本 (更改日志：https://github.com/portainer/portainer/releases)

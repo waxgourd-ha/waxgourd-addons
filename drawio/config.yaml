@@ -1,5 +1,5 @@
 name: 'DrawIO'
-version: '26.0.9'
+version: '26.0.16'
 slug: 'drawio'
 codenotary: 'wghaos@163.com'
 description: "DrawIO是运行在浏览器中的在线绘图工具"
