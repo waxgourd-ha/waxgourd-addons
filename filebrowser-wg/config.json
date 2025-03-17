@@ -3,14 +3,8 @@
     "aarch64",
     "amd64"
   ],
-  "backup_exclude": [
-    "*/cache/",
-    "*/transcoding-temp/",
-    "*/logs/*",
-    "*/metadata/"
-  ],
   "codenotary": "wghaos@163.com",
-  "description": "一款开源的媒体管理平台，让您更轻松的管理和操作流媒体",
+  "description": "filebrowser冬瓜版,提供指定目录下的文件管理界面，可用于上传、删除、预览、重命名和编辑文件",
   "devices": [
     "/dev/dri",
     "/dev/dri/card0",
@@ -72,60 +66,67 @@
     "/dev/sda8",
     "/dev/nvme0",
     "/dev/nvme1",
-    "/dev/nvme2"
+    "/dev/nvme2",
+    "/dev/md0",
+    "/dev/md1",
+    "/dev/md2",
+    "/dev/md3"
   ],
-  "host_network": true,
-  "image": "ghcr.io/alexbelgium/emby-{arch}",
+  "environment": {
+    "FB_BASEURL": "/filebrowser",
+    "PGID": "0",
+    "PUID": "0"
+  },
+  "image": "wghaos/addon-wghaos-filebrowser",
   "ingress": true,
-  "ingress_port": 0,
   "ingress_stream": true,
-  "init": false,
   "map": [
-    "config:rw",
-    "share:rw",
+    "addon_config:rw",
     "media:rw",
+    "all_addon_configs:rw",
+    "homeassistant_config:rw",
+    "addons:rw",
+    "backup:rw",
+    "share:rw",
     "ssl:rw"
   ],
-  "name": "Emby NAS",
+  "name": "Filebrowser冬瓜版",
   "options": {
-    "PGID": 0,
-    "PUID": 0,
-    "silent": true
+    "NoAuth": true,
+    "certfile": "fullchain.pem",
+    "disable_thumbnails": true,
+    "keyfile": "privkey.pem",
+    "TZ": "Asia/shanghai",
+    "ssl": false
   },
-  "panel_admin": false,
-  "panel_icon": "mdi:emby",
+  "panel_icon": "mdi:file-search",
   "ports": {
-    "1900/udp": null,
-    "7359/udp": null,
-    "8096/tcp": 8096,
-    "8920/tcp": null
+    "8080/tcp": null
   },
   "ports_description": {
-    "1900/udp": "dlna (optional)",
-    "7359/udp": "udp server discover (optional)",
-    "8096/tcp": "web interface",
-    "8920/tcp": "https web interface (optional)"
+    "8080/tcp": "Web UI port"
   },
   "privileged": [
     "SYS_ADMIN",
     "DAC_READ_SEARCH"
   ],
   "schema": {
-    "PGID": "int",
-    "PUID": "int",
-    "TZ": "str?",
+    "NoAuth": "bool",
+    "TZ":"str",
+    "base_folder": "str?",
+    "certfile": "str",
     "cifsdomain": "str?",
     "cifspassword": "str?",
     "cifsusername": "str?",
+    "disable_thumbnails": "bool?",
+    "keyfile": "str",
     "localdisks": "str?",
     "networkdisks": "str?",
-    "silent": "bool?",
-    "smbv1": "bool?"
+    "ssl": "bool"
   },
-  "slug": "emby_nas",
-  "udev": true,
+  "slug": "filebrowser-wg",
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "4.9.0.41",
-  "video": true,
+  "version": "2.32.0",
+  "udev": true,
   "boot": "manual"
 }

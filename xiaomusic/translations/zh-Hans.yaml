@@ -1,0 +1,14 @@
+---
+configuration:
+  song_media:
+    name: song media
+    description: >-
+      Media可存放音乐目录/media下,请手动填写自定义目录
+  song_share:
+    name: song share
+    description: >-
+      Share可存放音乐目录/share下,请手动填写自定义目录
+  song_download:
+    name: song download
+    description: >-
+      Download下载音乐目录/media下,请手动填写自定义目录

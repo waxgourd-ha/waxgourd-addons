@@ -1,0 +1,39 @@
+---
+configuration:
+  NoAuth:
+    name: 无认证运行模式
+    description: >-
+      删除密码，更改时重置数据库。
+  base_folder:
+    name: 初始文件夹
+    description: >-
+      可选项，默认值 /
+  certfile:
+    name: 证书文件
+    description: ssl证书文件
+  cifsdomain:
+    name: cifs域
+  cifspassword:
+    name: cifs密码
+    description: 可选项，smb密码，与smb shares密码相同
+  cifsusername:
+    name: cifs用户名
+    description: 可选项，smb用户名，与smb shares用户名相同
+  keyfile:
+    name: 密钥
+    description: >-
+      ssl密钥
+  localdisks:
+    name: 本地磁盘
+    description: >-
+      用逗号分隔要挂载的驱动器的硬件名称或其标签。例如sda1, sdb1, MYNAS… 
+  networkdisks:
+    name: 网络磁盘
+    description: >-
+      可选，要挂载的smbv2/3服务器列表，以逗号分隔
+  disable_thumbnails:
+    name: 禁用缩略图
+    description: >-
+      True /false(设置禁用缩略图为True或false;速度默认为true)
+  ssl:
+    name: ssl

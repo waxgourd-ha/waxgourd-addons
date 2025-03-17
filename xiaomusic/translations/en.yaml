@@ -1,0 +1,14 @@
+---
+configuration:
+  song_media:
+    name: song_media
+    description: >-
+      Media Song Catalog.
+  song_share:
+    name: song_share
+    description: >-
+      Share Song Catalog.
+  song_download:
+    name: song_download
+    description: >-
+      Song Download Catalog.
