@@ -1,3 +1,7 @@
+## 4.9.0.43-3 (09-04-2025)
+- 修复了小错误
+## 4.9.0.43 (09-04-2025)
+- 从linuxserver/docker-emby更新到最新版本 (日志: https://github.com/linuxserver/docker-emby/releases)
 ## 4.9.0.42 (01-04-2025)
 - 从linuxserver/docker-emby更新到最新版本
 ## 4.9.0.41 (08-03-2025)

@@ -1,6 +1,6 @@
 name: "小雅-TvBox"
 description: "AList代理，支持xiaoya版AList界面管理"
-version: "latest-2025040209"
+version: "latest-2025041009"
 slug: "xiaoya-tvbox"
 url: https://github.com/waxgourd-ha/waxgourd-addons
 image: wghaos/xiaoya-tvbox
