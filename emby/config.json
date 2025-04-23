@@ -6,8 +6,7 @@
   "backup_exclude": [
     "*/cache/",
     "*/transcoding-temp/",
-    "*/logs/*",
-    "*/metadata/"
+    "*/logs/*"
   ],
   "codenotary": "wghaos@163.com",
   "description": "一款开源的媒体管理平台，让您更轻松的管理和操作流媒体",
@@ -125,7 +124,7 @@
   "slug": "emby_nas",
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "4.9.0.43-3",
+  "version": "4.9.0.48",
   "video": true,
   "boot": "manual"
 }

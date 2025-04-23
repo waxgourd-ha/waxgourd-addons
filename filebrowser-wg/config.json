@@ -99,6 +99,7 @@
     "TZ": "Asia/shanghai",
     "ssl": false
   },
+  "panel_admin": false,
   "panel_icon": "mdi:file-search",
   "ports": {
     "8080/tcp": null

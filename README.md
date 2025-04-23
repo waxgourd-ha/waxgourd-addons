@@ -64,10 +64,6 @@ HA中有名的播放器。
 
 小米体脂称插件
 
-&#10003;  [haos_turbo](haos_turbo/) : 
-
-HA加速器
-
 &#10003;  [青龙面板 for HA](qinglong/) : 
 
 定时任务管理平台
