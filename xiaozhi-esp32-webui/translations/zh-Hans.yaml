@@ -1,0 +1,29 @@
+---
+configuration:
+  mysql_host:
+    name: "MySQL主机"
+    description: "MySQL/MariaDB数据库主机地址"
+  mysql_port:
+    name: "MySQL端口"
+    description: "MySQL/MariaDB数据库端口（默认: 3306）"
+  mysql_database:
+    name: "MySQL数据库名"
+    description: "要使用的数据库名称"
+  mysql_username:
+    name: "MySQL用户名"
+    description: "数据库认证用户名"
+  mysql_password:
+    name: "MySQL密码"
+    description: "数据库认证密码"
+  redis_host:
+    name: "Redis主机"
+    description: "Redis服务器主机地址"
+  redis_port:
+    name: "Redis端口"
+    description: "Redis服务器端口（默认: 6379）"
+  timezone:
+    name: "时区"
+    description: "设置服务器时区"
+
+network:
+  8002/tcp: "Web管理界面端口"

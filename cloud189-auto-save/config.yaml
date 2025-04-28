@@ -1,0 +1,16 @@
+name: "cloud189-auto-save"
+version: '2.2.18'
+slug: 'cloud189'
+codenotary: wghaos@163.com
+description: '天翼云盘自动转存系统，支持自动监控更新并转存文件, 支持STRM生成, Emby入库通知'
+# image: r.hassbus.com/wghaos/{arch}-calendar-poetry
+image: r.hassbus.com/wghaos/cloud189-auto-save
+url: https://github.com/waxgourd-ha/waxgourd-addons
+init: false
+arch:
+  - aarch64
+  - amd64
+ports:
+  3000/tcp: 3000
+webui: "[PROTO:http]://[HOST]:[PORT:3000]"
+boot: manual

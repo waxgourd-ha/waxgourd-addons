@@ -1,0 +1,30 @@
+name: "Redis Server"
+version: "7.2.7"
+slug: "redis-server"
+description: "Redis数据库服务器插件，为您的Home Assistant提供高性能缓存和数据存储服务"
+url: https://github.com/waxgourd-ha/waxgourd-addons
+codenotary: wghaos@163.com
+startup: services
+boot: manual
+init: false
+host_network: false
+ingress: false
+arch:
+  - aarch64
+  - amd64
+map:
+  - config:rw
+ports:
+  6379/tcp: 6379
+ports_description:
+  6379/tcp: "Redis服务器端口"
+schema:
+  port: "int(1025,65535)?"
+  databases: "int(1,16)?"
+  password: "str?"
+  appendonly: "bool?"
+options:
+  port: 6379
+  databases: 4
+  appendonly: true
+image: "wghaos/redis-server"

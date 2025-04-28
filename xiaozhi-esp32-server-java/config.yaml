@@ -1,0 +1,38 @@
+name: "小智ESP32语音助手JAVA版"
+version: "2.7.22"
+slug: "xiaozhi_esp32_server_java"
+description: "基于ESP32的语音交互助手，支持语音识别和播放功能"
+url: "https://github.com/waxgourd-ha/waxgourd-addons"
+arch:
+  - aarch64
+  - amd64
+startup: application
+boot: manual
+init: false
+host_network: false
+map:
+  - config:rw
+services:
+  - mysql:need
+options:
+  mysql_host: "core-mariadb"
+  mysql_port: 3306
+  mysql_database: "xiaozhi"
+  mysql_user: "homeassistant"
+  mysql_password: "homeassistant"
+  java_memory: "512m"
+schema:
+  mysql_host: str
+  mysql_port: port
+  mysql_database: str
+  mysql_user: str
+  mysql_password: password
+  java_memory: str
+ports:
+  8091/tcp: 8091
+  8084/tcp: 8084
+ports_description:
+  8091/tcp: "API/WS服务端口"
+  8084/tcp: "Web管理界面"
+webui: "http://[HOST]:[PORT:8084]"
+image: wghaos/xiaozhi-esp32-server-java-{arch}

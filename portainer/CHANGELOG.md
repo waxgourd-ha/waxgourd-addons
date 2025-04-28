@@ -1,3 +1,15 @@
+### 2.29.2 (27-04-2025)
+
+- 已知问题
+ - Podman支持的已知问题
+  1. Podman环境不受自动入职脚本的支持
+  1. 在Docker上运行Portainer服务器时，无法通过socket添加Podman环境（反之亦然）
+  1. 仅支持CentOS 9，Podman 5 rootful
+- 变化
+1. 撤销了github.com/gorilla/csrf库的版本升级
+
+
+
 ### 2.29.0 (19-04-2025)
 - 从portainer/portainer更新到最新版本 (更改日志：https://github.com/portainer/portainer/releases)
 ### 2.28.1 (22-03-2025)

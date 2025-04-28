@@ -1,0 +1,61 @@
+name: "小智 AI Server 极速版"
+version: "0.3.11"
+slug: "xiaozhi_esp32_server_mini"
+description: "小智 AI Server 极速版 - 提供语音识别、对话和控制功能，支持与ESP32设备通信"
+url: "https://github.com/waxgourd-ha/waxgourd-addons"
+arch:
+  - aarch64
+  - amd64
+startup: application
+boot: manual
+translations: true
+ports:
+  8000/tcp: 8000
+ports_description:
+  8000/tcp: "WebSocket服务端口"
+map:
+  - addon_config:rw
+host_network: false
+init: false
+watchdog: "tcp://[HOST]:[PORT:8000]"
+journald: true
+options:
+  plugins.home_assistant.base_url: http://homeassistant.local:8123
+  plugins.home_assistant.api_key: ""
+  plugins.home_assistant.devices: [ ]
+  llm.type: DoubaoLLM
+  model_name: "doubao-1-5-pro-32k-250115"
+  llm.api_key: ""
+  tts.type: DoubaoTTS
+  tts.appid: ""
+  tts.access_token: ""
+  tts.voice: ""
+  asr.type: DoubaoASR
+  asr.appid: ""
+  asr.access_token: ""
+  asr.secret_key: ""
+  plugins.get_weather.api_key: a861d0d5e7bf4ee1a83d9a9e4f96d4da
+  plugins.get_weather.default_location: 广州
+  log_level: INFO
+  timezone: Asia/Shanghai
+schema:
+  plugins.home_assistant.base_url: url
+  plugins.home_assistant.api_key: str
+  plugins.home_assistant.devices:
+    - str
+  llm.type: list(DoubaoLLM|ChatGLMLLM|DeepSeekLLM)
+  model_name: str
+  llm.api_key: str
+  tts.type: list(DoubaoTTS|EdgeTTS)
+  tts.appid: str?
+  tts.access_token: str?
+  tts.voice: str?
+  asr.type: list(DoubaoASR|TencentASR|FunASR)
+  asr.appid: str?
+  asr.access_token: str?
+  asr.secret_key: str?
+  plugins.get_weather.api_key: str
+  plugins.get_weather.default_location: str
+  log_level: list(INFO|DEBUG)
+  timezone: str
+image: wghaos/xiaozhi-esp32-server-mini-{arch}

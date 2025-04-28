@@ -1,0 +1,59 @@
+---
+configuration:
+  timezone:
+    name: "时区"
+    description: "设置服务器时区"
+  log_level:
+    name: "日志级别"
+    description: "设置日志详细程度"
+  llm.type:
+    name: "大语言模型（LLM）"
+    description: "选择使用哪个大语言模型（LLM）， DoubaoLLM：豆包大语言模型， ChatGLMLLM：智谱 AI 大语言模型， DeepSeekLLM：DeepSeek 大语言模型"
+  model_name:
+    name: "LLM模型名称"
+    description: "大语言模型的具体模型名称"
+  llm.api_key:
+    name: "LLM API密钥"
+    description: "所选大语言模型服务的API密钥"
+  tts.type:
+    name: "文本转语音（TTS）"
+    description: "选择使用哪个文本转语音服务（TTS），DoubaoTTS：豆包/火山引擎 文本转语音，EdgeTTS：微软 Edge 浏览器 文本转语音"
+  tts.appid:
+    name: "语音合成AppID"
+    description: "语音合成服务的应用ID（仅DoubaoTTS需要）"
+  tts.access_token:
+    name: "语音合成访问令牌"
+    description: "语音合成服务的访问令牌（仅DoubaoTTS需要）"
+  tts.voice:
+    name: "语音合成音色"
+    description: "语音合成服务的音色设置（可选，默认为BV001_streaming）"
+  asr.type:
+    name: "语音识别模型（ASR）"
+    description: "选择使用哪种语音识别模型，不同模型支持不同语言，DoubaoASR：豆包语音识别，TencentASR：腾讯云语音识别，FunASR：Fun语音识别"
+  asr.appid:
+    name: "语音识别AppID"
+    description: "语音识别服务的应用ID（仅在线服务需要）"
+  asr.access_token:
+    name: "语音识别Token/Secret ID"
+    description: "语音识别服务的访问令牌或密钥ID（仅在线服务需要）"
+  asr.secret_key:
+    name: "语音识别Secret Key"
+    description: "语音识别服务的密钥（仅腾讯ASR需要）"
+  plugins.get_weather.api_key:
+    name: "天气API密钥"
+    description: "和风天气API密钥"
+  plugins.get_weather.default_location:
+    name: "默认位置"
+    description: "天气查询的默认位置"
+  plugins.home_assistant.base_url:
+    name: "Home Assistant地址"
+    description: "您的Home Assistant实例地址"
+  plugins.home_assistant.api_key:
+    name: "Home Assistant令牌"
+    description: "Home Assistant的长期访问令牌"
+  plugins.home_assistant.devices:
+    name: "Home Assistant设备"
+    description: "要控制的Home Assistant设备列表"
+
+network:
+  8000/tcp: "ESP32设备通信的WebSocket服务器端口"

@@ -1,6 +1,6 @@
 name: "FRP Client"
 slug: "frp_client"
-version: "0.61.2"
+version: "0.62.1"
 description: "您可以使用此工具通过端口转发实现对本地Home Assistant操作系统的远程访问"
 url: https://github.com/waxgourd-ha/waxgourd-addons
 host_network: true

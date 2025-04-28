@@ -1,0 +1,30 @@
+configuration:
+  mysql_host:
+    name: MySQL Host
+    description: MySQL database host address
+  mysql_port:
+    name: MySQL Port
+    description: MySQL database port
+  mysql_database:
+    name: Database Name
+    description: Database name, default is xiaozhi
+  mysql_user:
+    name: Database Username
+    description: Username for database connection
+  mysql_password:
+    name: Database Password
+    description: Password for database connection
+  java_memory:
+    name: Java Memory Size
+    description: Memory allocation for Java application in format like XmXg, e.g. 512m, 1g
+
+addon:
+  start: Starting Xiaozhi ESP32 Voice Assistant...
+  stop: Stopping Xiaozhi ESP32 Voice Assistant...
+  configure: After configuration, click Save and restart the add-on to apply changes
+  logs:
+    starting: Starting service...
+    started: Service started
+    stopping: Stopping service...
+    stopped: Service stopped
+    error: Service failed to start, please check logs

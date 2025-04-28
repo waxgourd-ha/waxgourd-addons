@@ -1,0 +1,29 @@
+---
+configuration:
+  mysql_host:
+    name: "MySQL Host"
+    description: "MySQL/MariaDB database host address"
+  mysql_port:
+    name: "MySQL Port"
+    description: "MySQL/MariaDB database port (default: 3306)"
+  mysql_database:
+    name: "MySQL Database"
+    description: "Name of the database to use"
+  mysql_username:
+    name: "MySQL Username"
+    description: "Username for database authentication"
+  mysql_password:
+    name: "MySQL Password"
+    description: "Password for database authentication"
+  redis_host:
+    name: "Redis Host"
+    description: "Redis server host address"
+  redis_port:
+    name: "Redis Port"
+    description: "Redis server port (default: 6379)"
+  timezone:
+    name: "Timezone"
+    description: "Set the server timezone"
+
+network:
+  8002/tcp: "Web management interface port"

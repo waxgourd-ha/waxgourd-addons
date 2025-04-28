@@ -1,0 +1,39 @@
+name: "小智 AI OTA 管理"
+version: "0.3.12"
+slug: "xiaozhi_esp32_webui"
+description: "小智 AI OTA 管理 - 提供语音识别、对话和控制功能，支持与ESP32设备通信，集成WEB管理界面"
+url: "https://github.com/waxgourd-ha/waxgourd-addons"
+arch:
+  - aarch64
+  - amd64
+startup: application
+boot: manual
+translations: true
+ports:
+  8002/tcp: 8002
+ports_description:
+  8002/tcp: "WEB服务端口"
+host_network: false
+init: false
+webui: "http://[HOST]:[PORT:8002]/"
+watchdog: "http://[HOST]:[PORT:8002]/"
+journald: true
+options:
+  mysql_host: core-mariadb
+  mysql_port: 3306
+  mysql_database: xiaozhi_esp32_server
+  mysql_username: homeassistant
+  mysql_password:
+  redis_host:
+  redis_port: 6379
+  timezone: Asia/Shanghai
+schema:
+  mysql_host: str
+  mysql_port: port
+  mysql_database: str
+  mysql_username: str
+  mysql_password: str
+  redis_host: str
+  redis_port: port
+  timezone: str
+image: "wghaos/xiaozhi-esp32-webui"

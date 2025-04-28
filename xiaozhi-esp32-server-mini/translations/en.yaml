@@ -1,0 +1,59 @@
+---
+configuration:
+  timezone:
+    name: "Timezone"
+    description: "Set the server timezone"
+  log_level:
+    name: "Log Level"
+    description: "Set the verbosity of logs"
+  llm.type:
+    name: "LLM Type"
+    description: "Choose which Large Language Model service to use"
+  model_name:
+    name: "LLM Model Name"
+    description: "Specific model name for the LLM"
+  llm.api_key:
+    name: "LLM API Key"
+    description: "API key for the selected Large Language Model service"
+  tts.type:
+    name: "TTS Type"
+    description: "Choose which Text-to-Speech service to use"
+  tts.appid:
+    name: "TTS AppID"
+    description: "Application ID for text-to-speech service (required for DoubaoTTS only)"
+  tts.access_token:
+    name: "TTS Access Token"
+    description: "Access token for text-to-speech service (required for DoubaoTTS only)"
+  tts.voice:
+    name: "TTS Voice"
+    description: "Voice setting for text-to-speech service (optional, defaults to BV001_streaming)"
+  asr.type:
+    name: "Speech Recognition Model"
+    description: "Choose which speech recognition model to use, different models support different languages"
+  asr.appid:
+    name: "Speech Recognition AppID"
+    description: "Application ID for speech recognition service (required for online services only)"
+  asr.access_token:
+    name: "Speech Recognition Token/Secret ID"
+    description: "Access token or secret ID for speech recognition service (required for online services only)"
+  asr.secret_key:
+    name: "Speech Recognition Secret Key"
+    description: "Secret key for speech recognition service (required for Tencent ASR only)"
+  plugins.get_weather.api_key:
+    name: "Weather API Key"
+    description: "QWeather API key"
+  plugins.get_weather.default_location:
+    name: "Default Location"
+    description: "Default location for weather queries"
+  plugins.home_assistant.base_url:
+    name: "Home Assistant URL"
+    description: "URL of your Home Assistant instance"
+  plugins.home_assistant.api_key:
+    name: "Home Assistant Token"
+    description: "Long-lived access token for Home Assistant"
+  plugins.home_assistant.devices:
+    name: "Home Assistant Devices"
+    description: "List of Home Assistant devices to control"
+
+network:
+  8000/tcp: "WebSocket server port for ESP32 device communication"
