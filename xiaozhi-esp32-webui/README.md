@@ -1,6 +1,6 @@
-# 冬瓜甄选addons：小智 AI OTA 管理
+# 冬瓜甄选addons：小智 AI 智控台
 
-适用于 Home Assistant 的 小智 AI OTA 管理加载项。
+适用于 Home Assistant 的 小智 AI 智控台 加载项。
 
 ## 使用方法
 

@@ -3,6 +3,9 @@ configuration:
   timezone:
     name: "时区"
     description: "设置服务器时区"
+  host_ip:
+    name: "主机IP地址"
+    description: "用于WebSocket连接的IP地址，留空将自动获取内网IP"
   log_level:
     name: "日志级别"
     description: "设置日志详细程度"

@@ -1,7 +1,7 @@
-name: "小智 AI OTA 管理"
+name: "小智 AI 智控台"
 version: "0.3.12"
 slug: "xiaozhi_esp32_webui"
-description: "小智 AI OTA 管理 - 提供语音识别、对话和控制功能，支持与ESP32设备通信，集成WEB管理界面"
+description: "小智 AI 智控台 - 提供语音识别、对话和控制功能，支持与ESP32设备通信，集成WEB管理界面"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
 arch:
   - aarch64
@@ -32,7 +32,7 @@ schema:
   mysql_port: port
   mysql_database: str
   mysql_username: str
-  mysql_password: str
+  mysql_password: password
   redis_host: str
   redis_port: port
   timezone: str

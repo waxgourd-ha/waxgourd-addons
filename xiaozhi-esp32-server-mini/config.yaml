@@ -1,5 +1,5 @@
 name: "小智 AI Server 极速版"
-version: "0.3.11"
+version: "0.3.12"
 slug: "xiaozhi_esp32_server_mini"
 description: "小智 AI Server 极速版 - 提供语音识别、对话和控制功能，支持与ESP32设备通信"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
@@ -11,18 +11,22 @@ boot: manual
 translations: true
 ports:
   8000/tcp: 8000
+  8002/tcp: 8002
 ports_description:
   8000/tcp: "WebSocket服务端口"
+  8002/tcp: "OTA设备激活升级固件端口"
 map:
   - addon_config:rw
 host_network: false
 init: false
 watchdog: "tcp://[HOST]:[PORT:8000]"
+# webui: "http://[HOST]:[PORT:8002]"
 journald: true
+hassio_api: true
 options:
   plugins.home_assistant.base_url: http://homeassistant.local:8123
   plugins.home_assistant.api_key: ""
-  plugins.home_assistant.devices: [ ]
+  plugins.home_assistant.devices: []
   llm.type: DoubaoLLM
   model_name: "doubao-1-5-pro-32k-250115"
   llm.api_key: ""
@@ -38,6 +42,7 @@ options:
   plugins.get_weather.default_location: 广州
   log_level: INFO
   timezone: Asia/Shanghai
+  host_ip: "homeassistant.local"
 schema:
   plugins.home_assistant.base_url: url
   plugins.home_assistant.api_key: str
@@ -58,4 +63,5 @@ schema:
   plugins.get_weather.default_location: str
   log_level: list(INFO|DEBUG)
   timezone: str
+  host_ip: str?
 image: wghaos/xiaozhi-esp32-server-mini-{arch}

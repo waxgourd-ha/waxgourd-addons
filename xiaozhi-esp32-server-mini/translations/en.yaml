@@ -3,6 +3,9 @@ configuration:
   timezone:
     name: "Timezone"
     description: "Set the server timezone"
+  host_ip:
+    name: "Host IP Address"
+    description: "IP address for WebSocket connection, leave empty to auto-detect LAN IP"
   log_level:
     name: "Log Level"
     description: "Set the verbosity of logs"

@@ -12,8 +12,6 @@ init: false
 host_network: false
 map:
   - config:rw
-services:
-  - mysql:need
 options:
   mysql_host: "core-mariadb"
   mysql_port: 3306
