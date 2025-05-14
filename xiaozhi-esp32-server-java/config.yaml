@@ -1,5 +1,5 @@
 name: "小智ESP32语音助手JAVA版"
-version: "2.7.40"
+version: "2.7.42"
 slug: "xiaozhi_esp32_server_java"
 description: "基于ESP32的语音交互助手，支持语音识别和播放功能"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
