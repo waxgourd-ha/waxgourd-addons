@@ -1,0 +1,39 @@
+---
+configuration:
+  NoAuth:
+    name: NoAuth
+    description: >-
+      Remove password. Resets database when changed.
+  base_folder:
+    name: base_folder
+    description: >-
+      optional, default is /
+  certfile:
+    name: certfile
+    description: ssl certificate
+  cifsdomain:
+    name: cifsdomain
+  cifspassword:
+    name: cifspassword
+    description: optional, smb password, same for all smb shares
+  cifsusername:
+    name: cifsusername
+    description: optional, smb username, same for all smb shares
+  keyfile:
+    name: keyfile
+    description: >-
+      sslkeyfile
+  localdisks:
+    name: localdisks
+    description: >-
+      put the hardware name of your drive to mount separated by commas, or its label. ex. sda1, sdb1, MYNAS...  
+  networkdisks:
+    name: networkdisks
+    description: >-
+      optional, list of smbv2/3 servers to mount, separated by commas
+  disable_thumbnails:
+    name: disable_thumbnails
+    description: >-
+      true/false (set disable_thumbnails to true or false ; default true for speed)
+  ssl:
+    name: ssl
