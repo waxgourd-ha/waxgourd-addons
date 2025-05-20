@@ -1,0 +1,10 @@
+configuration:
+  XIAOZHI_MCP_ENDPOINT:
+    name: XIAOZHI_MCP_ENDPOINT
+    description: 你的小智 MCP 接入点
+  HA_MCP_ENDPOINT:
+    name: HA_MCP_ENDPOINT
+    description: 你的 HA MCP SERVER 地址
+  API_ACCESS_TOKEN:
+    name: API_ACCESS_TOKEN
+    description: 你的长效 API 令牌

@@ -1,0 +1,10 @@
+configuration:
+  XIAOZHI_MCP_ENDPOINT:
+    name: XIAOZHI_MCP_ENDPOINT
+    description: Your XiaoZhi MCP access point
+  HA_MCP_ENDPOINT:
+    name: HA_MCP_ENDPOINT
+    description: Your HA MCP server address
+  API_ACCESS_TOKEN:
+    name: API_ACCESS_TOKEN
+    description: Your HA MCP server address
