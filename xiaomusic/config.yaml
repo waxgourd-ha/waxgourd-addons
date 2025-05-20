@@ -1,5 +1,5 @@
 name: "XiaoMusic"
-version: "0.3.77"
+version: "0.3.80"
 slug: "xiaomusic"
 panel_icon: "mdi:music-box"
 description: "Xiaomusic for Home Assistant Addons"

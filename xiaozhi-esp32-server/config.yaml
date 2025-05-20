@@ -1,5 +1,5 @@
 name: "小智 AI Server 最简化版"
-version: "0.4.2"
+version: "0.4.3"
 slug: "xiaozhi_esp32_server"
 description: "小智 AI Server 最简化版 - 提供语音识别、对话和控制功能，支持与ESP32设备通信"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"

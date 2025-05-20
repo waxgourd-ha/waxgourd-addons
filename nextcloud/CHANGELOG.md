@@ -1,3 +1,7 @@
+## 31.0.4-3 (15-05-2025)
+- 修复了小错误
+## 31.0.4-2 (15-05-2025)
+- 禁用文件上传限制
 ## 31.0.4 (19-04-2025)
 - 升级到linuxserver/docker-nextcloud最新版本 (日志 : https://github.com/linuxserver/docker-nextcloud/releases)
 ## 31.0.2-2 (01-04-2025)
