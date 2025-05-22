@@ -2,7 +2,7 @@ name: "小智 Mcp Server"
 version: "1.0"
 slug: "mcp_ha_xiaozhi"
 description: "小智官方服务器(虾哥)对接home assistant的mcp server"
-url: "https://gitcode.com/waxgourd/addons"
+url: "https://github.com/waxgourd-ha/waxgourd-addons"
 arch:
   - aarch64
   - amd64
@@ -12,11 +12,11 @@ translations: true
 init: false
 environment:
   XIAOZHI_MCP_ENDPOINT: "wss://api.xiaozhi.me/mcp/?token="
-  HA_MCP_ENDPOINT: "http://homeassistant.local:8123/mcp_server/sse"
+  HA_MCP_ENDPOINT: "http://homeassistant:8123/mcp_server/sse"
   API_ACCESS_TOKEN: ""
 options:
   XIAOZHI_MCP_ENDPOINT: "wss://api.xiaozhi.me/mcp/?token="
-  HA_MCP_ENDPOINT: "http://homeassistant.local:8123/mcp_server/sse"
+  HA_MCP_ENDPOINT: "http://homeassistant:8123/mcp_server/sse"
   API_ACCESS_TOKEN:
 schema:
   XIAOZHI_MCP_ENDPOINT: str

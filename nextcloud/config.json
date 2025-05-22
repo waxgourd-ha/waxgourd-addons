@@ -4,7 +4,7 @@
     "amd64"
   ],
   "codenotary": "alexandrep.github@gmail.com",
-  "description": "nextcloud个人专属或团队共享的私有云同步网盘",
+  "description": "Nextcloud个人专属或团队共享的私有云同步网盘",
   "devices": [
     "/dev/dri",
     "/dev/dri/card0",
@@ -159,7 +159,7 @@
   "uart": true,
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "31.0.4-3",
+  "version": "31.0.5",
   "webui": "https://[HOST]:[PORT:443]",
   "boot": "manual"
 }
