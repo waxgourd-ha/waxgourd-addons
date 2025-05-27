@@ -77,8 +77,10 @@
     "PGID": "0",
     "PUID": "0"
   },
+  "homeassistant": "2025.5.0",
   "image": "ghcr.io/alexbelgium/filebrowser-{arch}",
   "ingress": true,
+  "ingress_port": 8071,
   "ingress_stream": true,
   "map": [
     "addon_config:rw",
@@ -101,7 +103,7 @@
   "panel_admin": false,
   "panel_icon": "mdi:file-search",
   "ports": {
-    "8080/tcp": null
+    "8080/tcp": 8071
   },
   "ports_description": {
     "8080/tcp": "Web UI port"
@@ -125,7 +127,7 @@
   },
   "slug": "filebrowser",
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "2.23.0_14",
+  "version": "2.32.0",
   "udev": true,
   "boot": "manual"
 }
