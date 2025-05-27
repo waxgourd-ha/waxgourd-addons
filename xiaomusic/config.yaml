@@ -3,7 +3,7 @@ version: "0.3.80"
 slug: "xiaomusic"
 panel_icon: "mdi:music-box"
 description: "Xiaomusic for Home Assistant Addons"
-url: https://github.com/hanxi/xiaomusic
+url: https://github.com/waxgourd-ha/waxgourd-addons
 image: wghaos/addon-wghaos-xiaomusic
 init: false
 arch:

@@ -77,11 +77,9 @@
     "PGID": "0",
     "PUID": "0"
   },
-  "homeassistant": "2025.5.0",
   "image": "wghaos/addon-wghaos-filebrowser",
   "ingress": true,
   "ingress_stream": true,
-  "ingress_port": 8071,
   "map": [
     "addon_config:rw",
     "media:rw",
@@ -104,7 +102,7 @@
   "panel_admin": false,
   "panel_icon": "mdi:file-search",
   "ports": {
-    "8080/tcp": 8071
+    "8080/tcp": null
   },
   "ports_description": {
     "8080/tcp": "Web UI port"
@@ -129,7 +127,7 @@
   },
   "slug": "filebrowser-wg",
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "2.32.0",
+  "version": "2.32.0-1",
   "udev": true,
   "boot": "manual"
 }
