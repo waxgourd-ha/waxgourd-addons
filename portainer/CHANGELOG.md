@@ -1,3 +1,10 @@
+### 2.30.1-2 (30-05-2025)
+- 映射内部/config以允许自定义脚本执行和变量
+- 修复无效的来源
+### 2.30.1 (24-05-2025)
+- 从portainer/portainer更新到最新版本 (更改日志：https://github.com/portainer/portainer/releases)
+### 2.30.0 (17-05-2025)
+- 从portainer/portainer更新到最新版本 (更改日志：https://github.com/portainer/portainer/releases)
 ### 2.29.2 (27-04-2025)
 
 - 已知问题

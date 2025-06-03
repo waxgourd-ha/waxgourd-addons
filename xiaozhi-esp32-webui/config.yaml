@@ -1,5 +1,5 @@
 name: "小智 AI 智控台"
-version: "0.4.4"
+version: "0.5.1"
 slug: "xiaozhi_esp32_webui"
 description: "小智 AI 智控台 - 提供语音识别、对话和控制功能，支持与ESP32设备通信，集成WEB管理界面"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
