@@ -1,0 +1,20 @@
+name: '冬瓜伴侣'
+version: '1.0.3'
+slug: 'wghaos-meta'
+codenotary: 'wghaos@163.com'
+description: "冬瓜伴侣的外链8124端口的查看在内部使用界面"
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/addons-wghaos-meta
+init: false
+arch:
+  - aarch64
+  - amd64
+ingress: true
+ingress_port: 8124
+ingress_entry: "home/#/dashboard"
+panel_icon: 'mdi:application-variable'
+host_network: true
+boot: manual
+environment:
+  TZ: "Asia/Shanghai"
+hassio_api: true

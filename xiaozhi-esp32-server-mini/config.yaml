@@ -1,5 +1,5 @@
 name: "小智 AI Server 极速版"
-version: "0.5.1"
+version: "0.5.4"
 slug: "xiaozhi_esp32_server_mini"
 description: "小智 AI Server 极速版 - 提供语音识别、对话和控制功能，支持与ESP32设备通信"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
@@ -11,10 +11,10 @@ boot: manual
 translations: true
 ports:
   8000/tcp: 8000
-  8002/tcp: 8002
+  8003/tcp: 8002
 ports_description:
   8000/tcp: "WebSocket服务端口"
-  8002/tcp: "OTA设备激活升级固件端口"
+  8003/tcp: "http服务的端口，用于简单OTA接口(单服务部署)，以及视觉分析接口"
 map:
   - addon_config:rw
 host_network: false
@@ -38,6 +38,7 @@ options:
   asr.appid: ""
   asr.access_token: ""
   asr.secret_key: ""
+  #vllm.api_key: ""
   plugins.get_weather.api_key: a861d0d5e7bf4ee1a83d9a9e4f96d4da
   plugins.get_weather.default_location: 广州
   log_level: INFO
@@ -59,6 +60,7 @@ schema:
   asr.appid: str?
   asr.access_token: str?
   asr.secret_key: str?
+  #vllm.api_key: str?
   plugins.get_weather.api_key: str
   plugins.get_weather.default_location: str
   log_level: list(INFO|DEBUG)
