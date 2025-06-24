@@ -1,3 +1,7 @@
+### 2.33.0 (21-06-2025)
+
+- 从filebrowser/filebrowser更新到最新版本（更新日志：https://github.com/filebrowser/filebrowser/releases）
+
 ### 2.32.0 (27-05-2025)
 - 需要 Home Assistant 核心版本 > 2025.5.0
 - 更新到最新镜像

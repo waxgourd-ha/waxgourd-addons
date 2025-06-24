@@ -127,7 +127,7 @@
   },
   "slug": "filebrowser",
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "2.32.0",
+  "version": "2.33.0",
   "udev": true,
   "boot": "manual"
 }
