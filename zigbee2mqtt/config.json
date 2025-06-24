@@ -1,8 +1,11 @@
 {
   "name": "Zigbee2MQTT",
-  "version": "2.3.0-1",
+  "version": "2.4.0-1",
   "slug": "zigbee2mqtt",
   "description": "可以自定义ZigBee的接收连接器",
+  "breaking_versions": [
+    "2.0.0-1"
+  ],
   "uart": true,
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
@@ -10,6 +13,7 @@
   "services": [
     "mqtt:need"
   ],
+  "hassio_api": true,
   "arch": [
     "aarch64",
     "amd64"

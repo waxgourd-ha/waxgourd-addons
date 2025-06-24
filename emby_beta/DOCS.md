@@ -1,4 +1,4 @@
-# Emby
+# Emby Beta
 
 ## 使用方法
 

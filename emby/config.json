@@ -73,19 +73,22 @@
     "/dev/nvme1",
     "/dev/nvme2"
   ],
+  "environment": {
+    "data_location": "/config/database"
+  },
   "host_network": true,
-  "image": "ghcr.io/alexbelgium/emby-{arch}",
+  "image": "ghcr.io/alexbelgium/emby_stable-{arch}",
   "ingress": true,
   "ingress_port": 0,
   "ingress_stream": true,
   "init": false,
   "map": [
-    "config:rw",
+    "addon_config:rw",
     "share:rw",
     "media:rw",
     "ssl:rw"
   ],
-  "name": "Emby NAS",
+  "name": "Emby",
   "options": {
     "PGID": 0,
     "PUID": 0,
@@ -121,7 +124,7 @@
     "silent": "bool?",
     "smbv1": "bool?"
   },
-  "slug": "emby_nas",
+  "slug": "emby",
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
   "version": "4.8.11.0",

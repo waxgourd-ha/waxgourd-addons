@@ -3,8 +3,13 @@
     "aarch64",
     "amd64"
   ],
-  "codenotary": "alexandrep.github@gmail.com",
-  "description": "Nextcloud个人专属或团队共享的私有云同步网盘",
+  "backup_exclude": [
+    "*/cache/",
+    "*/transcoding-temp/",
+    "*/logs/*"
+  ],
+  "codenotary": "wghaos@163.com",
+  "description": "一个免费的软件媒体系统，让你掌控管理和流媒体内容（测试版）",
   "devices": [
     "/dev/dri",
     "/dev/dri/card0",
@@ -19,10 +24,6 @@
     "/dev/video15",
     "/dev/video16",
     "/dev/ttyUSB0",
-    "/dev/dri",
-    "/dev/dri/card0",
-    "/dev/dri/card1",
-    "/dev/dri/renderD128",
     "/dev/sda",
     "/dev/sdb",
     "/dev/sdc",
@@ -35,15 +36,6 @@
     "/dev/nvme0n1",
     "/dev/nvme0n1p1",
     "/dev/nvme0n1p2",
-    "/dev/nvme0n1p3",
-    "/dev/nvme1n1",
-    "/dev/nvme1n1p1",
-    "/dev/nvme1n1p2",
-    "/dev/nvme1n1p3",
-    "/dev/nvme2n1",
-    "/dev/nvme2n1p1",
-    "/dev/nvme2n1p2",
-    "/dev/nvme2n3p3",
     "/dev/nvme0n1p3",
     "/dev/nvme1n1",
     "/dev/nvme1n1p1",
@@ -82,13 +74,13 @@
     "/dev/nvme2"
   ],
   "environment": {
-    "NEXTCLOUD_PATH": "/data/config/www/nextcloud",
-    "SKIP_DATA_DIRECTORY_PERMISSION_CHECK": "yes",
-    "TRUSTED_PROXIES": "**"
+    "data_location": "/share/emby"
   },
-  "hassio_api": true,
-  "image": "ghcr.io/alexbelgium/nextcloud_ocr-{arch}",
+  "host_network": true,
+  "image": "ghcr.io/alexbelgium/emby-{arch}",
+  "ingress": true,
   "ingress_port": 0,
+  "ingress_stream": true,
   "init": false,
   "map": [
     "addon_config:rw",
@@ -97,69 +89,46 @@
     "media:rw",
     "ssl:rw"
   ],
-  "name": "Nextcloud",
+  "name": "Emby Beta",
   "options": {
-    "Full_Text_Search": false,
-    "OCR": false,
-    "OCRLANG": "fra",
-    "PGID": 1000,
-    "PUID": 1000,
-    "additional_apps": "inotify-tools",
-    "certfile": "fullchain.pem",
-    "elasticsearch_server": "<ip:port>",
-    "enable_thumbnails": true,
-    "keyfile": "privkey.pem",
-    "trusted_domains": "your-domain, your-domain2",
-    "use_own_certs": false
+    "PGID": 0,
+    "PUID": 0,
+    "silent": true
   },
   "panel_admin": false,
-  "panel_icon": "mdi:cloud",
+  "panel_icon": "mdi:emby",
   "ports": {
-    "443/tcp": 8099,
-    "80/tcp": null
+    "1900/udp": null,
+    "7359/udp": null,
+    "8096/tcp": 8096,
+    "8920/tcp": null
   },
   "ports_description": {
-    "443/tcp": "Https Web Interface",
-    "80/tcp": "Web interface"
+    "1900/udp": "dlna (optional)",
+    "7359/udp": "udp server discover (optional)",
+    "8096/tcp": "web interface",
+    "8920/tcp": "https web interface (optional)"
   },
   "privileged": [
     "SYS_ADMIN",
     "DAC_READ_SEARCH"
   ],
   "schema": {
-    "Full_Text_Search": "bool?",
-    "OCR": "bool?",
-    "OCRLANG": "str?",
     "PGID": "int",
     "PUID": "int",
     "TZ": "str?",
-    "additional_apps": "str?",
-    "certfile": "str",
     "cifsdomain": "str?",
     "cifspassword": "str?",
     "cifsusername": "str?",
-    "default_phone_region": "match(^[A-Z]{2}$)?",
-    "disable_updates": "bool?",
-    "elasticsearch_server": "str?",
-    "enable_thumbnails": "bool",
-    "env_memory_limit": "str?",
-    "env_post_max_size": "str?",
-    "env_upload_max_filesize": "str?",
-    "keyfile": "str",
     "localdisks": "str?",
     "networkdisks": "str?",
-    "skip_permissions_check": "bool?",
-    "trusted_domains": "str?",
-    "use_own_certs": "bool"
+    "silent": "bool?",
+    "smbv1": "bool?"
   },
-  "services": [
-    "mysql:want"
-  ],
-  "slug": "nextcloud_ocr",
-  "uart": true,
+  "slug": "emby_nas",
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "31.0.6",
-  "webui": "https://[HOST]:[PORT:443]",
+  "version": "4.9.1.1",
+  "video": true,
   "boot": "manual"
 }
