@@ -1,3 +1,5 @@
+### 2.31.2-5 (01-07-2025)
+- 修复了小错误
 ### 2.31.1 (23-06-2025)
 - 从portainer/portainer更新到最新版本 (更改日志 : https://github.com/portainer/portainer/releases)
 ### 2.31.0 (18-06-2025)
@@ -10,7 +12,6 @@
 ### 2.30.0 (17-05-2025)
 - 从portainer/portainer更新到最新版本 (更改日志：https://github.com/portainer/portainer/releases)
 ### 2.29.2 (27-04-2025)
-
 - 已知问题
  - Podman支持的已知问题
   1. Podman环境不受自动入职脚本的支持

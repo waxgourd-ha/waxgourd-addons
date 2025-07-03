@@ -1,8 +1,5 @@
 {
-  "arch": [
-    "aarch64",
-    "amd64"
-  ],
+  "arch": ["aarch64","amd64"],
   "codenotary": "wghaos@163.com",
   "description": "filebrowser提供指定目录下的文件管理界面，可用于上传、删除、预览、重命名和编辑文件",
   "devices": [
@@ -108,10 +105,7 @@
   "ports_description": {
     "8080/tcp": "Web UI port"
   },
-  "privileged": [
-    "SYS_ADMIN",
-    "DAC_READ_SEARCH"
-  ],
+  "privileged": ["SYS_ADMIN","DAC_READ_SEARCH"],
   "schema": {
     "NoAuth": "bool",
     "base_folder": "str?",
@@ -127,7 +121,7 @@
   },
   "slug": "filebrowser",
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "2.33.0",
+  "version": "2.33.10",
   "udev": true,
   "boot": "manual"
 }
