@@ -1,3 +1,5 @@
+## 31.0.6-2 (11-07-2025)
+- 将超时时间增加到600秒。
 ## 31.0.6 (19-06-2025)
 - 升级到linuxserver/docker-nextcloud最新版本 (日志 : https://github.com/linuxserver/docker-nextcloud/releases)
 ## 31.0.5 (22-05-2025)
