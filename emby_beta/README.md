@@ -1,4 +1,4 @@
-# Home assistant add-on: emby beta
+# Home assistant add-on: emby
 
 [![Donate][donation-badge]](https://www.buymeacoffee.com/alexbelgium)
 [![Donate][paypal-badge]](https://www.paypal.com/donate/?hosted_button_id=DZFULJZTP3UQA)

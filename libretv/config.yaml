@@ -1,5 +1,5 @@
 name: "LibreTV"
-version: 'latest'
+version: '202507251119'
 slug: 'wg-libretv'
 codenotary: wghaos@163.com
 description: 'LibreTV 是一个轻量级、免费的在线视频搜索与观看平台，提供来自多个视频源的内容搜索与播放服务'

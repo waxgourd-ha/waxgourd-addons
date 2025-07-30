@@ -1,5 +1,5 @@
 ## 4.8.11.0 (23-04-2025)
-- 从linuxserver/docker-emby更新到最新版本 (日志: https://github.com/linuxserver/docker-emby/releases)
+- 警告：配置将迁移到addon_config，而不是homeassistant配置文件夹。这允许自动备份。然而，数据库的位置不会改变。
 ## 4.9.0.48 (19-04-2025)
 - 从linuxserver/docker-emby更新到最新版本 (日志: https://github.com/linuxserver/docker-emby/releases)
 ## 4.9.0.43-3 (09-04-2025)

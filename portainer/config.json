@@ -1,6 +1,13 @@
 {
-  "arch": ["aarch64","amd64"],
-  "backup_exclude": ["backups","docker_config/cli-plugins"],
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armv7"
+  ],
+  "backup_exclude": [
+    "backups",
+    "docker_config/cli-plugins"
+  ],
   "codenotary": "wghaos@163.com",
   "description": "轻松管理您的Docker环境",
   "docker_api": true,
@@ -10,8 +17,11 @@
   "ingress_port": 1337,
   "ingress_stream": true,
   "init": false,
-  "boot": "manual",
-  "map": ["addon_config:rw","share:rw","ssl"],
+  "map": [
+    "addon_config:rw",
+    "share:rw",
+    "ssl"
+  ],
   "name": "Portainer",
   "options": {
     "certfile": "fullchain.pem",
@@ -38,5 +48,6 @@
   "slug": "portainer",
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "2.31.3"
+  "version": "2.32.0-6",
+  "boot": "manual"
 }

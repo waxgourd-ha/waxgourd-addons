@@ -1,0 +1,8 @@
+---
+configuration:
+  device:
+    name: device
+    description: >-
+      Please select the device to use
+  log_level:
+    name: logLevel
