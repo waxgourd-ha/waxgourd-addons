@@ -2,7 +2,7 @@
 
 ## 关于
 
-网心云 Home Assistant 插件
+网心云容器魔方的 Home Assistant 插件
 
 ## 来源
 
