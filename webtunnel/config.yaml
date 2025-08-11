@@ -1,0 +1,25 @@
+name: WebTunnel
+version: 20250808
+slug: webtunnel
+codenotary: wghaos@163.com
+description: "安全好用的内网穿透软件，云端同步，安全互联"
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/webtunnel-{arch}
+init: false
+map:
+  - share:rw
+arch:
+  - aarch64
+  - amd64
+privileged:
+  - SYS_ADMIN
+  - NET_ADMIN
+  - BPF
+devices:
+  - /dev/net/tun
+apparmor: false
+host_network: true
+webui: "[PROTO:http]://[HOST]:[PORT:9600]"
+ports:
+  9600/tcp: 9600
+

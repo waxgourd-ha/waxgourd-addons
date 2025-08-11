@@ -2,7 +2,7 @@ name: Openlist
 slug: openlist
 description: 'OpenList 是一个有韧性、长期治理、社区驱动的 AList 分支，旨在防御基于信任的开源攻击'
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: 4.0.9
+version: 4.1.0
 image: wghaos/addons-wghaos-openlist
 codenotary: wghaos@163.com
 arch:

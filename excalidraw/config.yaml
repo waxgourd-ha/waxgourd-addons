@@ -1,5 +1,5 @@
 name: 'Excalidraw'
-version: '0.17.4'
+version: '0.18.0'
 slug: 'excalidraw'
 codenotary: 'wghaos@163.com'
 description: "Excalidraw是支持多人协同的私有化在线画板工具"
