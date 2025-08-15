@@ -1,3 +1,5 @@
+### 2.32.0-7 (15-08-2025)
+- 通过清除冲突的安全头信息来修复入口问题。
 ### 2.32.0-6 (25-07-2025)
 - 从portainer/portainer更新到最新版本 (更改日志 : https://github.com/portainer/portainer/releases)
 ### 2.31.3 (11-07-2025)
