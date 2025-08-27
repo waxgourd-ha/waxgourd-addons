@@ -48,6 +48,6 @@
   "slug": "portainer",
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "2.32.0-7",
+  "version": "2.33.0",
   "boot": "manual"
 }
