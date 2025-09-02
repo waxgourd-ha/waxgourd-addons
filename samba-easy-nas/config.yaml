@@ -1,5 +1,5 @@
 ---
-version: 12.3.0.0-2
+version: 12.4.0.0
 slug: sambaeasynas
 name: Samba Easy NAS
 description: 轻量级的Samba NAS
@@ -128,6 +128,7 @@ options:
   interfaces: 
     - end0
     - enp2s1
+    - eth0
 schema:
   username: str
   password: password
