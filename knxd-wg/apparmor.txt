@@ -31,7 +31,7 @@ profile knxdaddon flags=(attach_disconnected,mediate_deleted) {
   /usr/sbin/knxd cx -> knxd,
   /usr/sbin/knxtool cx -> knxd,
 
-  profile knxd flags=(attach_disconnected,mediate_deleted) {
+  profile knxd-wg flags=(attach_disconnected,mediate_deleted) {
     #include <abstractions/base>
 
     # Receive signals from S6-Overlay

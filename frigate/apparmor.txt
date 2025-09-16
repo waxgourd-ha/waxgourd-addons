@@ -1,6 +1,6 @@
 #include <tunables/global>
 
-profile local_frigate flags=(attach_disconnected,mediate_deleted) {
+profile frigate-rknpu flags=(attach_disconnected,mediate_deleted) {
   #include <abstractions/base>
 
   capability,

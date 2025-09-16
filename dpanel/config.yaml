@@ -1,5 +1,5 @@
 name: DPanel
-version: "1.8.0"
+version: "1.8.1.2"
 slug: dpanel
 description: Docker 可视化管理面板，提供完善的管理容器的功能
 url: "https://github.com/donknap/dpanel"

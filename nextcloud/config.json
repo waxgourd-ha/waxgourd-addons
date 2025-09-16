@@ -159,7 +159,7 @@
   "uart": true,
   "udev": true,
   "url": "https://github.com/waxgourd-ha/waxgourd-addons",
-  "version": "31.0.8",
+  "version": "31.0.8-2",
   "webui": "https://[HOST]:[PORT:443]",
   "boot": "manual"
 }

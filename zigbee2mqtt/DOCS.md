@@ -8,8 +8,8 @@
 
 ```
 server: mqtt://localhost:1883
-user: Mqtt的账号
-password: "Mqtt的密码"
+user: mqtt
+password: "123456"
 ```
 
 注意:如果密码包含某些特殊字符(由yaml规范保留)，则需要加上引号。所以我们建议如果日志显示密码错误时，优先考虑加上引号。

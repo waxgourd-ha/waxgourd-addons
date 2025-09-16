@@ -1,5 +1,5 @@
 name: 网心云容器魔方
-version: 3.5.1-1
+version: 3.5.1-2
 slug: wxedge
 codenotary: wghaos@163.com
 description: "闲置资源再利用，每月至高赚千元，上线即享30天20%加成"
@@ -19,7 +19,7 @@ devices:
   - /dev
 apparmor: false
 host_network: true
-full_access: true
+# full_access: true
 tmpfs: true
 webui: "[PROTO:http]://[HOST]:[PORT:18888]"
 ports:

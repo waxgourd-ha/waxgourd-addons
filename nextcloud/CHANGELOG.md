@@ -1,3 +1,5 @@
+## 31.0.8-2 (09-09-2025)
+- Removed pdfannotate
 ## 31.0.8 (18-08-2025)
 - 升级到linuxserver/docker-nextcloud最新版本 (changelog : https://github.com/linuxserver/docker-nextcloud/releases)
 ## 31.0.7 (29-07-2025)

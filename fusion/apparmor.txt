@@ -1,6 +1,6 @@
 #include <tunables/global>
 
-profile fusion flags=(attach_disconnected,mediate_deleted) {
+profile ha_fusion flags=(attach_disconnected,mediate_deleted) {
   #include <abstractions/base>
 
   # Network for HA supervised, issue #5

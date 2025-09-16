@@ -9,7 +9,7 @@
     "boot": "auto",
     "url": "https://www.facebook.com/ewelink.support",
     "image":"wghaos/ewelink",
-    "host_network": false,
+    "host_network": true,
     "ports": {
         "3000/tcp": 3000
     },
