@@ -3,7 +3,7 @@ version: 0.2.1
 slug: zigstargw-mt-web
 description: ZigStarGW MT WEB
 url: https://github.com/waxgourd-ha/waxgourd-addons
-codenotary: waxgourd2021@163.com
+codenotary: wghaos@163.com
 arch:
   - aarch64
   - amd64
