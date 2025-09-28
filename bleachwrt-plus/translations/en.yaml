@@ -1,0 +1,20 @@
+---
+configuration:
+  virtual_ip:
+    name: "Virtual IP Address"
+    description: "Set the IP address for OpenWrt LAN interface (required)"
+  netmask:
+    name: "Subnet Mask"
+    description: "Set the subnet mask for OpenWrt LAN interface (default: 255.255.255.0)"
+  gateway:
+    name: "Default Gateway"
+    description: "Set the default gateway for OpenWrt LAN interface"
+  enable_forwarding:
+    name: "Enable IP Forwarding"
+    description: "Enable IP forwarding to allow packets to be routed through this device (default: enabled)"
+  log_level:
+    name: "Log Level"
+    description: "Set the log level (default: info)"
+
+network:
+  80/tcp: "Web management interface port"

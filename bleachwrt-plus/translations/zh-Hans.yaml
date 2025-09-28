@@ -1,0 +1,20 @@
+---
+configuration:
+  virtual_ip:
+    name: "虚拟IP地址"
+    description: "设置OpenWrt的LAN接口IP地址（必填项）"
+  netmask:
+    name: "子网掩码"
+    description: "设置OpenWrt的LAN接口子网掩码（默认: 255.255.255.0）"
+  gateway:
+    name: "默认网关"
+    description: "设置OpenWrt的LAN接口默认网关"
+  enable_forwarding:
+    name: "启用IP转发"
+    description: "启用IP转发功能，允许数据包通过此设备转发（默认: 启用）"
+  log_level:
+    name: "日志级别"
+    description: "设置日志级别（默认: info）"
+
+network:
+  80/tcp: "Web管理界面端口"
