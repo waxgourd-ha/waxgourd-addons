@@ -1,10 +1,10 @@
-name: frigate-rknpu
-version: 0.16.2-rk
-slug: 'frigate-rknpu'
-codenotary: 'wghaos@163.com'
+name: frigate-rknpu-old
+version: rknn1.6-13.2-3
+slug: "frigate-rknpu-old"
+codenotary: "wghaos@163.com"
 description: NVR with realtime local object detection for IP cameras
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
-image: wghaos/frigate
+image: r.hassbus.com/wghaos/frigate
 init: false
 startup: application
 boot: manual
@@ -12,9 +12,7 @@ arch:
   - aarch64
 map:
   - "media:rw"
-  #- "config:rw"
-  - "addon_config:rw"
-  - "homeassistant_config:rw"
+  - "config:rw"
 webui: "http://[HOST]:[PORT:5000]/"
 watchdog: "http://[HOST]:[PORT:5000]/"
 ingress: true
@@ -30,7 +28,6 @@ ports:
   8555/tcp: 8555
   8555/udp: 8555
   8554/tcp: null
-  8971/tcp: null
   5000/tcp: null
   1984/tcp: null
   1935/tcp: null
@@ -38,7 +35,6 @@ ports_description:
   8555/tcp: WebRTC over tcp
   8555/udp: WebRTC over udp
   8554/tcp: RTSP Restream
-  8971/tcp: Authenticated Web interface
   5000/tcp: Web interface (Not required for Hass.io Ingress)
   1984/tcp: go2rtc API
   1935/tcp: RTMP streams

@@ -1,5 +1,5 @@
 name: Lucky(万吉)
-version: 2.19.4
+version: 2.19.5
 slug: lucky
 codenotary: wghaos@163.com
 description: '替代socat,IPv6 tcp/udp 转发内网IPv4,动态域名服务'

@@ -1,3 +1,5 @@
+## 2.6.2-1
+- 升级Zigbee2MQTT最新版本[2.6.2](https://github.com/Koenkk/zigbee2mqtt/releases/tag/2.6.2)
 ## 2.6.1-1
 - 升级Zigbee2MQTT最新版本[2.6.1](https://github.com/Koenkk/zigbee2mqtt/releases/tag/2.6.1)
 ## 2.6.0-1
