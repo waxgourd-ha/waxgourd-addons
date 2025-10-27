@@ -1,3 +1,5 @@
+## 2.44.1 (24-10-2025)
+- 从filebrowser/filebrowser更新到最新版本 (更新日志 : https://github.com/filebrowser/filebrowser/releases)
 ## 2.44.0 (14-10-2025)
 - 从filebrowser/filebrowser更新到最新版本 (更新日志 : https://github.com/filebrowser/filebrowser/releases)
 ## 2.43.0 (26-09-2025)
