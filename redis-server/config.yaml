@@ -3,7 +3,6 @@ version: "7.2.7"
 slug: "redis-server"
 description: "Redis数据库服务器插件，为您的Home Assistant提供高性能缓存和数据存储服务"
 url: https://github.com/waxgourd-ha/waxgourd-addons
-codenotary: wghaos@163.com
 startup: services
 boot: manual
 init: false

@@ -4,7 +4,6 @@ slug: sambaeasynas
 name: Samba Easy NAS
 description: 轻量级的Samba NAS
 url: https://github.com/waxgourd-ha/waxgourd-addons
-codenotary: wghaos@163.com
 arch:
   - aarch64
   - amd64

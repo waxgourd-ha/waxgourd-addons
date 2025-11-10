@@ -1,7 +1,6 @@
 name: "Sun Panel"
 version: 1.8.0
 slug: sun-panel
-codenotary: wghaos@163.com
 description: '一个服务器、NAS导航面板、Homepage、浏览器首页'
 url: https://github.com/waxgourd-ha/waxgourd-addons
 image: wghaos/sun-panel

@@ -5,7 +5,6 @@ version: 1.0.1
 description: HAOS综合网络访问健康度检查的应用，具有运行状态、网络状态、网络响应检测等功能
 init: false
 startup: services
-codenotary: wghaos@163.com
 ingress: true
 ingress_port: 8991
 ingress_stream: true

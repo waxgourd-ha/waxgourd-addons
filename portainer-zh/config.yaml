@@ -2,7 +2,7 @@ name: Portainer汉化版
 version: 2.19.1
 slug: portainerZH
 description: 轻松管理您的Docker环境
-codenotary: wghaos@163.com
+
 url: 'https://github.com/waxgourd-ha/waxgourd-addons'
 image: wghaos/portainer-zh
 arch:

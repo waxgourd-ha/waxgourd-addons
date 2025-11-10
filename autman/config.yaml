@@ -1,6 +1,5 @@
 name: 奥特曼机器人
 slug: autman
-codenotary: wghaos@163.com
 description: '机器人自动化工具'
 url: https://github.com/waxgourd-ha/waxgourd-addons
 version: 1.0.0

@@ -1,7 +1,6 @@
 name: "Cpolar极点云"
 version: '3.3.18'
 slug: 'cpolar'
-codenotary: wghaos@163.com
 description: 'Cpolar 安全的内网穿透工具'
 image: wghaos/addon-wghaos-cpolar
 url: https://github.com/waxgourd-ha/waxgourd-addons

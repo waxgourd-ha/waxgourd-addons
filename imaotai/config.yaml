@@ -1,7 +1,6 @@
 name: i茅台
 version: 1.0.13
 slug: imaotai
-codenotary: wghaos@163.com
 description: 'i茅台app自动预约，每日自动预约，支持docker一键部署'
 url: https://github.com/waxgourd-ha/waxgourd-addons
 image: wghaos/imaotai

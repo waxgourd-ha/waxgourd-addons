@@ -1,7 +1,6 @@
 name: Xunlei(迅雷)
 version: 3.20.2
 slug: xunlei
-codenotary: wghaos@163.com
 description: 迅雷NAS版
 image: wghaos/xunlei
 url: https://github.com/waxgourd-ha/waxgourd-addons

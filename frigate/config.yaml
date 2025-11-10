@@ -1,7 +1,6 @@
 name: frigate-rknpu
 version: 0.16.2-rk
 slug: 'frigate-rknpu'
-codenotary: 'wghaos@163.com'
 description: NVR with realtime local object detection for IP cameras
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
 image: wghaos/frigate

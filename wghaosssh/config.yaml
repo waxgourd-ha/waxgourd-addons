@@ -1,7 +1,6 @@
 name: "WGHAOS SSH 配置器"
 version: '0.2.4'
 slug: 'wghaosssh'
-codenotary: wghaos@163.com
 description: '这将启用端口22222上的SSH WGHassOS控制台。仅适用于Home Assistant操作系统'
 image: wghaos/addons-wghaos-ssh
 url: https://github.com/waxgourd-ha/waxgourd-addons

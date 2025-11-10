@@ -1,7 +1,6 @@
 name: '冬瓜伴侣代理'
 version: '1.0.3'
 slug: 'wghaos-mate'
-codenotary: 'wghaos@163.com'
 description: "专门为远程访问冬瓜伴侣制作的代理"
 url: https://github.com/waxgourd-ha/waxgourd-addons
 image: wghaos/addons-wghaos-meta

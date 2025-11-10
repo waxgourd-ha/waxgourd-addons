@@ -1,7 +1,6 @@
 name: "LOCAL CALENDAR AND POETRY"
-version: 'latest-2024092512'
+version: 'latest-2025110811'
 slug: 'calendar_poetry'
-codenotary: wghaos@163.com
 description: '它是本地日历和古诗词相结合的接口'
 image: wghaos/{arch}-calendar-poetry
 url: https://github.com/waxgourd-ha/waxgourd-addons

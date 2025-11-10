@@ -5,7 +5,6 @@ slug: qinglong
 description: "支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台"
 url: https://github.com/waxgourd-ha/waxgourd-addons
 init: false
-codenotary: wghaos@163.com
 map:
   - share:rw
 arch:

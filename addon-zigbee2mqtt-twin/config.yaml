@@ -1,7 +1,6 @@
 name: "zigbee2MQTT分身"
 version: "1.2.0"
 slug: "addon-zigbee2mqtt-twin"
-codenotary: wghaos@163.com
 description: "zigbee2MQTT分身"
 image: wghaos/addon-wghaos-zigbee2mqtt-copy
 url: https://github.com/waxgourd-ha/waxgourd-addons

@@ -8,7 +8,6 @@
     "backups",
     "docker_config/cli-plugins"
   ],
-  "codenotary": "wghaos@163.com",
   "description": "轻松管理您的Docker环境",
   "docker_api": true,
   "hassio_api": true,
