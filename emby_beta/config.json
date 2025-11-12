@@ -8,7 +8,6 @@
     "*/transcoding-temp/",
     "*/logs/*"
   ],
-  "codenotary": "wghaos@163.com",
   "description": "一个免费的软件媒体系统，让你掌控管理和流媒体内容（测试版）",
   "devices": [
     "/dev/dri",

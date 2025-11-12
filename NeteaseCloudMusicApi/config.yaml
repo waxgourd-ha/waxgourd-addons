@@ -5,7 +5,6 @@ slug: cloud-music
 description: 网易云音乐 Node.js API service
 url: https://github.com/waxgourd-ha/waxgourd-addons
 init: false
-codenotary: wghaos@163.com
 arch:
   - aarch64
   - amd64

@@ -3,7 +3,6 @@
     "aarch64",
     "amd64"
   ],
-  "codenotary": "alexandrep.github@gmail.com",
   "description": "Nextcloud个人专属或团队共享的私有云同步网盘",
   "devices": [
     "/dev/dri",
