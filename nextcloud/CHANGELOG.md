@@ -1,3 +1,6 @@
+## 32.0.2 (25-11-2025)
+- 升级到linuxserver/docker-nextcloud最新版本 (changelog : https://github.com/linuxserver/docker-nextcloud/releases)
+- 除了config.yaml之外，还增加了通过`env_vars`插件选项配置额外环境变量的支持。详情请参阅https://github.com/alexbelgium/hassio-addons/wiki/Add-Environment-variables-to-your-Addon-2。
 ## 32.0.1 (17-11-2025)
 - 升级到linuxserver/docker-nextcloud最新版本 (changelog : https://github.com/linuxserver/docker-nextcloud/releases)
 ## 32.0.0 (14-10-2025)

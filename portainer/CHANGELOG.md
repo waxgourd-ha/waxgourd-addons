@@ -1,4 +1,9 @@
-- 添加了通过config.yaml旁边的“env_vars”附加选项配置额外环境变量的支持。看https://github.com/alexbelgium/hassio-addons/wiki/Add-Environment-variables-to-your-Addon-2 了解详情。
+## 2.33.4 (25-11-2025)
+- 从portainer/portainer更新到最新版本（更改日志：https://github.com/portainer/portainer/releases)
+- Home Assistant项目已经弃用了对armv7、armhf和i386架构的支持。在即将发布的家庭助理2025.12版本中，将完全放弃支持
+- 添加了通过config.yaml旁边的“env_vars”附加选项配置额外环境变量的支持。看https://github.com/alexbelgium/hassio-addons/wiki/Add-Environment-variables-to-your-Addon-2了解详情。
+## "2.35.0" (24-10-2025)
+- 修正了已知错误
 ## 2.35.0 (24-10-2025)
 - 从portainer/portainer更新到最新版本 (更改日志 : https://github.com/portainer/portainer/releases)
 ## 2.34.0 (26-09-2025)
