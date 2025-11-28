@@ -1,0 +1,62 @@
+---
+configuration:
+  tile_size:
+    name: tile_size
+    description: >-
+      Tile edge size in pixels. Helps the server choose tile packing; it’s best to keep it a multiple of 16.
+  full_frame_tile_count:
+    name: full_frame_tile_count
+    description: >-
+      Number of tiles the server should use for full-frame updates.
+  full_frame_area_threshold:
+    name: full_frame_area_threshold
+    description: >-
+      Area delta (fraction of screen) above which the server should send a full frame.
+  full_frame_every:
+    name: full_frame_every
+    description: >-
+      Force a full-frame update every N frames (0 disables).
+  every_nth_frame:
+    name: every_nth_frame
+    description: >-
+      Frame-rate divider. Server should send only every Nth frame.
+  min_frame_interval_ms:
+    name: min_frame_interval_ms
+    description: >-
+      Minimum time between frames on the wire, in milliseconds.
+  jpeg_quality:
+    name: jpeg_quality
+    description: >-
+      JPEG quality hint for the server’s encoder.
+  max_bytes_per_message:
+    name: max_bytes_per_message
+    description: >-
+      Upper bound for a single WS binary message.
+  ws_port:
+    name: ws_port
+    description: >-
+      ws port
+  debug_port:
+    name: debug_port
+    description: >-
+      debug port
+  expose_debug_proxy:
+    name: expose_debug_proxy
+    description: >-
+      expose debug proxy
+  debug_proxy_port:
+    name: debug_proxy_port
+    description: >-
+      debug proxy port
+  health_port:
+    name: health_port
+    description: >-
+      health port
+  prefers_reduced_motion:
+    name: prefers_reduced_motion
+    description: >-
+      prefers reduced motion
+  user_data_dir:
+    name: user_data_dir
+    description:
+      user data dir

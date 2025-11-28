@@ -1,0 +1,62 @@
+---
+configuration:
+  tile_size:
+    name: 图块边缘大小（像素单位）
+    description: >-
+      图块边缘大小（像素单位）。帮助服务器选择地块填充;最好保持在16的倍数。
+  full_frame_tile_count:
+    name: full_frame_tile_count
+    description: >-
+      服务器应使用用于全画面更新的瓦片数量。
+  full_frame_area_threshold:
+    name: full_frame_area_threshold
+    description: >-
+      服务器应发送全帧的区域差异（屏幕比例）。
+  full_frame_every:
+    name: full_frame_every
+    description: >-
+      每N帧强制更新一次全帧（0个禁用帧）。
+  every_nth_frame:
+    name: every_nth_frame
+    description: >-
+      帧率分频器。服务器应该每隔N帧发送一次。
+  min_frame_interval_ms:
+    name: min_frame_interval_ms
+    description: >-
+      线上帧间隔的最短时间，以毫秒计。
+  jpeg_quality:
+    name: jpeg_quality
+    description: >-
+      服务器编码器的JPEG画质提示。
+  max_bytes_per_message:
+    name: max_bytes_per_message
+    description: >-
+      单个WS二进制消息的上界。
+  ws_port:
+    name: ws_port
+    description: >-
+      WS端口
+  debug_port:
+    name: debug_port
+    description: >-
+      debug端口
+  expose_debug_proxy:
+    name: expose_debug_proxy
+    description: >-
+      暴露debug代理
+  debug_proxy_port:
+    name: debug_proxy_port
+    description: >-
+      debug代理端口
+  health_port:
+    name: health_port
+    description: >-
+      health端口
+  prefers_reduced_motion:
+    name: prefers_reduced_motion
+    description: >-
+      偏爱的简化的动作
+  user_data_dir:
+    name: user_data_dir
+    description:
+      用户数据目录
