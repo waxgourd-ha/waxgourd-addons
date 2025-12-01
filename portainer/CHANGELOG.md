@@ -1,3 +1,5 @@
+## 2.36.0 (01-12-2025)
+- 从portainer/portainer更新到最新版本 (更改日志 : https://github.com/portainer/portainer/releases)
 ## 2.33.4 (25-11-2025)
 - 从portainer/portainer更新到最新版本（更改日志：https://github.com/portainer/portainer/releases)
 - Home Assistant项目已经弃用了对armv7、armhf和i386架构的支持。在即将发布的家庭助理2025.12版本中，将完全放弃支持
