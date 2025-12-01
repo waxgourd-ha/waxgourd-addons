@@ -1,4 +1,4 @@
-name: "远程网页渲染服务器"
+name: "远程 WebView 服务器"
 version: "1.1.3"
 slug: "remote_webview_server"
 description: "把你的Home Assistant仪表盘通过WebSocket方式实时推送到ESP32的中控屏上。"
@@ -28,7 +28,7 @@ options:
   max_bytes_per_message: 61440
   ws_port: 8081
   debug_port: 9221
-  expose_debug_proxy: false
+  expose_debug_proxy: true
   debug_proxy_port: 9222
   health_port: 18080
   prefers_reduced_motion: false
