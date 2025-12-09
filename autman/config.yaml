@@ -2,7 +2,7 @@ name: 奥特曼机器人
 slug: autman
 description: '机器人自动化工具'
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: 1.0.0
+version: 3.9.3
 image: wghaos/autman
 init: false
 docker_api: true

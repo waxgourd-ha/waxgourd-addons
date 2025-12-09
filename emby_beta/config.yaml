@@ -121,6 +121,6 @@ schema:
 slug: emby_nas
 udev: true
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: "4.9.2.6"
+version: "4.9.2.7"
 video: true
 boot: manual
