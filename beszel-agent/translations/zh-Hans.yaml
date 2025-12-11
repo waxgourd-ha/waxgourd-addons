@@ -1,0 +1,20 @@
+---
+configuration:
+  listen_port:
+    name: "监听端口"
+    description: "监听端口"
+  ssh_key:
+    name: "公钥"
+    description: "公钥"
+  token:
+    name: "令牌"
+    description: "令牌"
+  hub_url:
+    name: "hub 地址"
+    description: "hub 地址"
+  data_path:
+    name: "数据地址"
+    description: "数据地址"
+  extra_filesystems:
+    name: "外部文件系统"
+    description: "外部文件系统"

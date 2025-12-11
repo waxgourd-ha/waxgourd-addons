@@ -1,0 +1,20 @@
+---
+configuration:
+  listen_port:
+    name: "listen_port"
+    description: "listen port"
+  ssh_key:
+    name: "ssh_key"
+    description: "ssh key"
+  token:
+    name: "token"
+    description: "token"
+  hub_url:
+    name: "hub_url"
+    description: "hub url"
+  data_path:
+    name: "data_path"
+    description: "data path"
+  extra_filesystems:
+    name: "extra_filesystems"
+    description: "extra filesystems"
