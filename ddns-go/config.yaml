@@ -1,5 +1,5 @@
 name: "DDNS-GO"
-version: '6.14.0'
+version: '6.14.1'
 slug: 'ddns_go'
 description: '自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务'
 image: wghaos/ddns-go
