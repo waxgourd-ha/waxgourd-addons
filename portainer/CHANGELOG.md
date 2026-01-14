@@ -1,4 +1,8 @@
 
+## 2.37.0-2 (02-01-2026)
+- 改进 Docker 套接字检测并添加回退路径日志记录
+- 当没有可用的 Docker 套接字时停止启动
+
 ## 2.37.0 (13-12-2025)
 - Update to latest version from portainer/portainer (changelog : https://github.com/portainer/portainer/releases)
 ## 2.36.0 (01-12-2025)

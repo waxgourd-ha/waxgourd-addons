@@ -1,6 +1,6 @@
 ---
 name: 青龙面板 for HA
-version: 2.19.2
+version: 2.20.1
 slug: qinglong
 description: "支持 Python3、JavaScript、Shell、Typescript 的定时任务管理平台"
 url: https://github.com/waxgourd-ha/waxgourd-addons

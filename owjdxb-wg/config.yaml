@@ -1,16 +1,23 @@
 {
-  "version": "21",
+  "version": "4.0.6",
   "name": "节点小宝冬瓜版",
   "url": "https://www.ionewu.com",
   "slug": "owjdxb-wg",
-  "description": "A Home Assistant add-on for jdxb service. 这是一个节点小宝客户端冬瓜版",
+  "description": "A Home Assistant add-on for jdxb service. 这是一个冬瓜版的节点小宝客户端",
   "arch": ["amd64", "aarch64"],
   "image": "wghaos/addon-wghaos-owjdxb",
-  "startup": "application",
+  "startup": "services",
   "init": false,
+  "host_network": true,
+  "boot": auto,
   "ports": {
     "9118/tcp": 9118
   },
-  "webui": "[PROTO:http]://[HOST]:[PORT:9118]",
-  "boot": "manual",
+  "map": [
+    "addon_config:rw",
+    "share:rw",
+  ],
+  "devices": ["/dev/net/tun"],
+  "privileged": ["SYS_ADMIN","NET_ADMIN"],
+  "webui": "[PROTO:http]://[HOST]:[PORT:9118]"
 }
