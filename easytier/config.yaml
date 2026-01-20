@@ -9,6 +9,8 @@ arch:
   - amd64
 startup: services
 boot: auto
+map:
+  - config:rw
 host_network: true
 privileged:
   - NET_ADMIN

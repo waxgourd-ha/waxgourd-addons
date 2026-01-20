@@ -1,8 +1,16 @@
-## 32.0.3-2 (09-01-2026)
-- 已修复小bug
+## 32.0.5-2 (18-01-2026)
+- Minor bugs fixed
+
+## 32.0.5 (2026-01-17)
+- 升级到linuxserver/docker-nextcloud最新版本  (changelog : https://github.com/linuxserver/docker-nextcloud/releases)
+
+## 32.0.4 (2026-01-16)
+- 升级到linuxserver/docker-nextcloud最新版本  (changelog : https://github.com/linuxserver/docker-nextcloud/releases)
+## 32.0.3-2 (2026-01-06)
+- Minor bugs fixed
 
 ## 32.0.3 (13-12-2025)
-- Update to latest version from linuxserver/docker-nextcloud (changelog : https://github.com/linuxserver/docker-nextcloud/releases)
+- 升级到linuxserver/docker-nextcloud最新版本  (changelog : https://github.com/linuxserver/docker-nextcloud/releases)
 ## 32.0.2-2 (25-11-2025)
 - 已修复小bug
 ## 32.0.2 (25-11-2025)

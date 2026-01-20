@@ -1,3 +1,5 @@
+## 4.9.3.0 (2026-01-10)
+- Update to latest version from linuxserver/docker-emby (changelog : https://github.com/linuxserver/docker-emby/releases)
 ## 4.9.1.90 (17-11-2025)
 - 从linuxserver/docker-emby更新至最新版本（日志：https://github.com/linuxserver/docker-emby/releases)
 - 添加了通过config.yaml旁边的“env_vars”附加选项配置额外环境变量的支持。看https://github.com/alexbelgium/hassio-addons/wiki/Add-Environment-variables-to-your-Addon-2了解详情。
