@@ -1,7 +1,7 @@
 ---
 name: HA健康检测
 slug: wgha-boost
-version: 1.0.1
+version: 1.0.2
 description: HAOS综合网络访问健康度检查的应用，具有运行状态、网络状态、网络响应检测等功能
 init: false
 startup: services

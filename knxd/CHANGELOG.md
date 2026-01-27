@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1
+
+- fixed validation of the add-on configuration to not require a defined device option for certain interface types (IP based interfaces as well as USB)
+
 ## 0.5.2
 
 - updated the definition of the default value for the "device" config option so that the visual editor will also render this option as optional. 

@@ -1,5 +1,5 @@
 name: "HA清理大师"
-version: '0.6.0'
+version: '0.6.1'
 slug: 'addon_data_clean'
 description: '一个专门为HAOS清理垃圾数据的工具，让HA也能直观的进行存储规划。'
 image: wghaos/addon-data-clean
