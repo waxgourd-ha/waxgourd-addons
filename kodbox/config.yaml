@@ -1,0 +1,31 @@
+name: "kodbox 可道云企业网盘"
+version: "1.64.05"
+slug: "kodbox"
+description: "一款强大的私有网盘系统，支持文件管理、在线预览、团队协作"
+url: https://github.com/waxgourd-ha/waxgourd-addons
+image: wghaos/kodbox
+init: false
+arch:
+  - amd64
+  - aarch64
+startup: "services"
+map:
+  - type: addon_config
+    read_only: false
+    path: /var/www/html
+  - ssl:ro
+  - share:rw
+ports:
+  80/tcp: 8080
+  443/tcp: 443
+ports_description:
+  80/tcp: "Web interface"
+  443/tcp: "Https Web Interface"
+webui: "[PROTO:http]://[HOST]:[PORT:8080]"
+boot: manual
+options:
+  env_vars: []
+schema:
+  env_vars:
+    - name: str?
+      value: str?
