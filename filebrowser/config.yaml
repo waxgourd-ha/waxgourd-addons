@@ -122,5 +122,5 @@ schema:
 slug: filebrowser
 udev: true
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: "2.55.0"
+version: "2.56.0.2"
 boot: manual
