@@ -42,6 +42,21 @@ configuration:
   asr.secret_key:
     name: "Speech Recognition Secret Key"
     description: "Secret key for speech recognition service (required for Tencent ASR only)"
+  vllm.type:
+    name: "Vision-Language Model (VLLM)"
+    description: "Select which vision-language model (VLLM) to use, ChatGLMVLLM: Zhipu AI (free), QwenVLVLLM: Alibaba Cloud (Tongyi Qianwen) paid with stronger performance, XunfeiSparkLLM: configuration pending correction, temporarily not recommended"
+  vllm.model_name:
+    name: "VLLM Model Name"
+    description: "Fill in according to selected provider: Zhipu AI use glm-4v-flash (free), Alibaba Cloud use qwen2.5-vl-3b-instruct or qwen-vl-max"
+  vllm.api_key:
+    name: "VLLM API Key"
+    description: "API key for selected provider, Zhipu at bigmodel.cn, Alibaba Cloud at bailian.console.aliyun.com"
+  intent.type:
+    name: "Intent Recognition Model"
+    description: "Select intent recognition method, nointent: disable intent recognition, intent_llm: independent LLM recognition (slower but accurate), function_call: processed by main LLM (recommended, requires LLM tool calling support)"
+  memory.type:
+    name: "Memory Storage"
+    description: "Select memory storage method, nomem: disabled (default), mem0ai: cloud memory (1000 free calls per month), mem_local_short: local short-term memory (privacy-focused)"
   plugins.get_weather.api_key:
     name: "Weather API Key"
     description: "QWeather API key"

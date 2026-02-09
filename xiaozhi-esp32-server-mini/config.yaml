@@ -1,5 +1,5 @@
 name: "小智 AI Server 极速版"
-version: "0.8.6"
+version: "0.9.1"
 slug: "xiaozhi_esp32_server_mini"
 description: "小智 AI Server 极速版 - 提供语音识别、对话和控制功能，支持与ESP32设备通信"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
@@ -41,6 +41,8 @@ options:
   vllm.type: ChatGLMVLLM
   vllm.model_name: "glm-4v-flash"
   vllm.api_key: ""
+  intent.type: function_call
+  memory.type: nomem
   plugins.get_weather.api_key: a861d0d5e7bf4ee1a83d9a9e4f96d4da
   plugins.get_weather.default_location: 广州
   log_level: INFO
@@ -65,6 +67,8 @@ schema:
   vllm.type: list(ChatGLMVLLM|QwenVLVLLM)
   vllm.model_name: str?
   vllm.api_key: str?
+  intent.type: list(nointent|intent_llm|function_call)?
+  memory.type: list(mem0ai|nomem|mem_local_short)?
   plugins.get_weather.api_key: str
   plugins.get_weather.default_location: str
   log_level: list(INFO|DEBUG)

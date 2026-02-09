@@ -1,3 +1,5 @@
+## 2.8.0-1
+- 升级Zigbee2MQTT最新版本[2.8.0](https://github.com/Koenkk/zigbee2mqtt/releases/tag/2.8.0)
 ## 2.7.2-1
 - 升级Zigbee2MQTT最新版本[2.7.2](https://github.com/Koenkk/zigbee2mqtt/releases/tag/2.7.2)
 ## 2.7.1-1

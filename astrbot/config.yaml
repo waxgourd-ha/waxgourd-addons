@@ -1,0 +1,23 @@
+name: "AstrBot"
+version: "v4.14.4"
+slug: "astrbot"
+description: "AstrBot - AI ChatBot"
+url: "https://docs.astrbot.app"
+startup: application
+image: wghaos/addon-astrbot
+arch:
+  - aarch64
+  - amd64
+map:
+  - config:rw
+  - share:rw
+webui: http://[HOST]:[PORT:6185]/
+boot: manual
+ingress: false
+ingress_port: 6185
+ingress_stream: true
+ports:
+  6185/tcp: 6185
+  6199/tcp: 6199
+options: {}
+schema: {}
