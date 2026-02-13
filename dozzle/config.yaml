@@ -1,5 +1,5 @@
 name: docker日志监控Dozzle
-version: 9.0.1
+version: 10.0.0
 slug: dozzle
 description: 'Dozzle 是一个小型轻量级应用程序，具有基于 Web 的界面来监控 Docker 日志'
 url: https://github.com/waxgourd-ha/waxgourd-addons

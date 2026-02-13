@@ -1,5 +1,5 @@
 name: Netdata
-version: 2.8.4
+version: 2.8.5
 slug: netdata
 description: 'Netdata每秒收集指标，并将其显示在漂亮的低延迟仪表板中'
 url: https://github.com/waxgourd-ha/waxgourd-addons

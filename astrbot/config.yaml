@@ -1,5 +1,5 @@
 name: "AstrBot"
-version: "v4.14.4"
+version: "v4.15.0"
 slug: "astrbot"
 description: "AstrBot - AI ChatBot"
 url: "https://docs.astrbot.app"
@@ -12,6 +12,7 @@ map:
   - config:rw
   - share:rw
 webui: http://[HOST]:[PORT:6185]/
+watchdog: "http://[HOST]:[PORT:6185]/"
 boot: manual
 ingress: false
 ingress_port: 6185

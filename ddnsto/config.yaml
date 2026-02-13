@@ -1,6 +1,6 @@
 name: "DDNSTO"
 slug: ddnsto
-version: "3.1.0"
+version: "4.0.0"
 description: "DDNSTO 是一款稳定、快速、简单易用的内网穿透工具"
 url: https://github.com/waxgourd-ha/waxgourd-addons
 startup: services
@@ -11,6 +11,7 @@ arch:
   - amd64
 host_network: true
 boot: manual
+docker_api: true
 options:
   user_token:
   device_id: 0
