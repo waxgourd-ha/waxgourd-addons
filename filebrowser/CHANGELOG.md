@@ -1,3 +1,5 @@
+## 2.60.0 (2026-02-24)
+- 从filebrowser/filebrowser更新到最新版本 (更新日志 : https://github.com/filebrowser/filebrowser/releases)
 ## 2.57.0-4 (04-02-2026)
 - Minor bugs fixed
 ## 2.56.0-2 (01-02-2026)

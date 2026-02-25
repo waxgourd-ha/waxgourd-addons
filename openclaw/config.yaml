@@ -1,0 +1,64 @@
+name: "OpenClaw WG"
+version: "2026.2.12"
+slug: "openclaw_wg"
+description: "AI 智能助手，深度集成 Home Assistant。支持本地/云端混合模型"
+url: "https://github.com/waxgourd-ha/waxgourd-addons"
+arch:
+  - amd64
+  - aarch64
+startup: services
+boot: auto
+init: false
+host_network: true
+image: r.hassbus.com/wghaos/addons-openclaw-{arch}
+ingress: true
+ingress_port: 8099
+panel_title: "OpenClaw HA"
+panel_icon: "mdi:robot"
+map:
+  - addon_config:rw
+  - share:rw
+options:
+  # ==================== 网关配置 ====================
+  # 时区设置
+  timezone: "Asia/Shanghai"
+
+  # 网关绑定模式：loopback=仅本地, lan=局域网访问
+  gateway_bind_mode: "lan"
+
+  # 网关端口（默认 18789）
+  gateway_port: 18789
+
+  # 允许 HTTP 认证（仅在无法使用 HTTPS 时启用，存在安全风险）
+  allow_insecure_auth: true
+
+  # 网关公开 URL（用于在新标签页中打开网关 UI）
+  gateway_public_url: ""
+
+  # Home Assistant 长效令牌（用于 HA API 集成）
+  homeassistant_token: ""
+
+  # ==================== 基础设置 ====================
+  # 启用 Web 终端（在 Home Assistant 内嵌的终端）
+  enable_terminal: true
+
+  # ==================== 高级设置 ====================
+  # 清理会话锁（启动时/退出时）
+  clean_session_locks_on_start: true
+  clean_session_locks_on_exit: true
+
+schema:
+  # 网关配置
+  timezone: str
+  gateway_bind_mode: list(loopback|lan)?
+  gateway_port: int(1,65535)?
+  allow_insecure_auth: bool?
+  gateway_public_url: str?
+  homeassistant_token: password?
+  # 基础设置
+  enable_terminal: bool?
+
+  # 高级设置
+  clean_session_locks_on_start: bool?
+  clean_session_locks_on_exit: bool?
+

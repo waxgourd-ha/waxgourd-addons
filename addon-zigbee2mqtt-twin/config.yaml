@@ -1,5 +1,5 @@
 name: "zigbee2MQTT分身"
-version: "1.2.0"
+version: "1.3.0"
 slug: "addon-zigbee2mqtt-twin"
 description: "zigbee2MQTT分身"
 image: wghaos/addon-wghaos-zigbee2mqtt-copy

@@ -1,0 +1,85 @@
+---
+configuration:
+  timezone:
+    name: "Timezone"
+    description: "Set the timezone for the add-on"
+  enable_terminal:
+    name: "Enable Web Terminal"
+    description: "Enable web-based terminal access inside Home Assistant"
+  gateway_public_url:
+    name: "Gateway Public URL"
+    description: "Public URL for the Gateway Web UI (opens in new tab)"
+  homeassistant_token:
+    name: "Home Assistant Token"
+    description: "Long-lived access token for Home Assistant API"
+  model_source:
+    name: "Model Source"
+    description: "Select the AI model source to use"
+    items:
+      local: "Local Model"
+      cloud: "Cloud Model"
+      hybrid: "Hybrid Mode"
+  model_url:
+    name: "Model API URL"
+    description: "Model API URL (e.g., http://host.docker.internal:11434 for local, or cloud API URL)"
+  model_name:
+    name: "Model Name"
+    description: "Model name (e.g., qwen2.5, gpt-4o, etc.)"
+  api_key:
+    name: "API Key"
+    description: "Cloud API key (required for cloud/hybrid mode)"
+  sandbox_mode:
+    name: "Sandbox Mode"
+    description: "Enable sandbox mode for enhanced security"
+  gateway_bind_mode:
+    name: "Gateway Bind Mode"
+    description: "Gateway bind mode (loopback = local only, lan = local network)"
+    items:
+      loopback: "Local Only (loopback)"
+      lan: "LAN Access (lan)"
+  gateway_port:
+    name: "Gateway Port"
+    description: "Gateway listening port"
+  allow_insecure_auth:
+    name: "Allow Insecure HTTP Auth"
+    description: "Allow browser to access Gateway UI (port 18789) via HTTP. Only enable if HTTPS is unavailable, security risk."
+  clean_session_locks_on_start:
+    name: "Clean Session Locks on Start"
+    description: "Clean stale session lock files on startup"
+  clean_session_locks_on_exit:
+    name: "Clean Session Locks on Exit"
+    description: "Clean session lock files on exit"
+
+options:
+  title: "Configuration Options"
+  submit: "Save"
+  cancel: "Cancel"
+  reset: "Reset"
+
+errors:
+  title: "Error"
+  connection_failed: "Connection failed"
+  invalid_config: "Invalid configuration"
+  api_key_required: "API key required"
+  model_not_available: "Model not available"
+
+services:
+  restart: "Restart"
+  update: "Update"
+  logs: "View Logs"
+  terminal: "Terminal"
+
+status:
+  running: "Running"
+  stopped: "Stopped"
+  starting: "Starting"
+  stopping: "Stopping"
+  error: "Error"
+
+info:
+  title: "OpenClaw Assistant"
+  description: "AI-powered assistant deeply integrated with Home Assistant"
+  version: "Version"
+  documentation: "Documentation"
+  issues: "Issue Tracker"
+  repository: "Repository"
