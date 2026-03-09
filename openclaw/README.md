@@ -8,7 +8,4 @@
  - Website https://openclaw.ai
  - GitHub https://github.com/openclaw/openclaw
  - Docs https://docs.openclaw.ai/zh-CN
-
-qwen-coder-plus-1106
-https://dashscope.aliyuncs.com/compatible-mode/v1
-sk-458816108f674348bee21d2060a8e43d
+ 

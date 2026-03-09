@@ -1,0 +1,13 @@
+configuration:
+  log_level:
+    name: Log Level
+    description: Set the logging level for the add-on
+  timezone:
+    name: Timezone
+    description: Set the timezone for the container
+  init_commands:
+    name: Initialization Commands
+    description: Commands to run before starting LangBot
+  use_china_mirror:
+    name: Use China Mirror
+    description: Use China mirror for faster download in mainland China

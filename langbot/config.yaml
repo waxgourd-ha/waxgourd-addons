@@ -1,0 +1,63 @@
+name: "LangBot"
+version: "4.8.7"
+slug: "langbot"
+description: "大语言模型原生即时通信机器人平台，支持微信、QQ、飞书、钉钉、Discord、Telegram 等多平台"
+url: "https://github.com/waxgourd-ha/waxgourd-addons"
+image: "wghaos/addons-wghaos-langbot"
+arch:
+  - amd64
+  - aarch64
+startup: services
+boot: auto
+host_network: false
+ports:
+  5300/tcp: 5300
+  2280/tcp: 2280
+  2281/tcp: 2281
+  2282/tcp: 2282
+  2283/tcp: 2283
+  2284/tcp: 2284
+  2285/tcp: 2285
+  2286/tcp: 2286
+  2287/tcp: 2287
+  2288/tcp: 2288
+  2289/tcp: 2289
+  2290/tcp: 2290
+ports_description:
+  5300/tcp: "WebUI 管理界面"
+  2280/tcp: "OneBot 协议适配器端口 0"
+  2281/tcp: "OneBot 协议适配器端口 1"
+  2282/tcp: "OneBot 协议适配器端口 2"
+  2283/tcp: "OneBot 协议适配器端口 3"
+  2284/tcp: "OneBot 协议适配器端口 4"
+  2285/tcp: "OneBot 协议适配器端口 5"
+  2286/tcp: "OneBot 协议适配器端口 6"
+  2287/tcp: "OneBot 协议适配器端口 7"
+  2288/tcp: "OneBot 协议适配器端口 8"
+  2289/tcp: "OneBot 协议适配器端口 9"
+  2290/tcp: "OneBot 协议适配器端口 10"
+map:
+  - type: addon_config
+    read_only: false
+    path: /config
+  - type: share
+    read_only: false
+    path: /share
+  - type: ssl
+    read_only: true
+    path: /ssl
+options:
+  log_level: info
+  timezone: Asia/Shanghai
+  init_commands: []
+  use_china_mirror: false
+schema:
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+  timezone: str
+  init_commands:
+    - str
+  use_china_mirror: bool
+environment:
+  TZ: Asia/Shanghai
+  LANG: C.UTF-8
+webui: "[PROTO:http]://[HOST]:[PORT:5300]"

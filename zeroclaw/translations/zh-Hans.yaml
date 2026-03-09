@@ -1,0 +1,43 @@
+configuration:
+  log_level:
+    name: 日志级别
+    description: 设置插件的日志级别
+  timezone:
+    name: 时区
+    description: 设置容器的时区
+  api_key:
+    name: API 密钥
+    description: LLM 提供商的 API 密钥（OpenRouter、OpenAI 等）
+  provider:
+    name: 模型提供商
+    description: 选择默认的 AI 模型提供商
+  model:
+    name: 模型名称
+    description: 指定具体模型（可选，留空使用提供商默认）
+  autonomy_mode:
+    name: 自治模式
+    description: 代理执行权限级别（readonly=只读，supervised=监督，full=完全自主）
+  enable_telegram:
+    name: 启用 Telegram
+    description: 启用 Telegram 机器人集成
+  telegram_token:
+    name: Telegram Bot Token
+    description: 从 @BotFather 获取的 Bot Token
+  enable_discord:
+    name: 启用 Discord
+    description: 启用 Discord 机器人集成
+  discord_token:
+    name: Discord Bot Token
+    description: Discord 机器人 Token
+  enable_slack:
+    name: 启用 Slack
+    description: 启用 Slack 集成
+  slack_token:
+    name: Slack Token
+    description: Slack Bot Token
+  workspace_path:
+    name: 工作区路径
+    description: 代理文件操作的工作目录
+  init_commands:
+    name: 初始化命令
+    description: 启动前执行的自定义命令

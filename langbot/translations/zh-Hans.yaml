@@ -1,0 +1,13 @@
+configuration:
+  log_level:
+    name: 日志级别
+    description: 设置插件的日志级别
+  timezone:
+    name: 时区
+    description: 设置容器的时区
+  init_commands:
+    name: 初始化命令
+    description: 启动 LangBot 前执行的命令
+  use_china_mirror:
+    name: 使用国内镜像
+    description: 在中国大陆使用时启用，加快下载速度

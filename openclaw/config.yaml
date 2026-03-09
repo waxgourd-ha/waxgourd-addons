@@ -1,5 +1,5 @@
 name: "OpenClaw WG"
-version: "2026.2.12"
+version: "2026.3.2"
 slug: "openclaw_wg"
 description: "AI 智能助手，深度集成 Home Assistant。支持本地/云端混合模型"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
@@ -10,7 +10,7 @@ startup: services
 boot: auto
 init: false
 host_network: true
-image: r.hassbus.com/wghaos/addons-openclaw-{arch}
+image: wghaos/addons-openclaw-{arch}
 ingress: true
 ingress_port: 8099
 panel_title: "OpenClaw HA"
