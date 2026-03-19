@@ -1,5 +1,5 @@
 name: Addon数据迁移工具
-version: 0.3.2
+version: 0.3.4
 slug: addonDataMigrate
 description: '解决不同仓库中addons的数据迁移'
 url: https://github.com/waxgourd-ha/waxgourd-addons

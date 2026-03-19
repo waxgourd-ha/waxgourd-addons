@@ -1,5 +1,5 @@
 name: "HomeBridge"
-version: "2025-12-28"
+version: "2026-03-07"
 slug: "homebridge"
 description: "Homebridge 是一款轻量级的Node.js服务器，你可以在家庭网络上运行，模拟 iOS HomeKit API。它支持插件，这些插件是由社区贡献的模块，提供从 HomeKit 到“智能家居”设备制造商提供的各种第三方 API 的基本桥梁。"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"

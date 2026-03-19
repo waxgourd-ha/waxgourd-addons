@@ -1,5 +1,5 @@
 name: "OpenClaw WG"
-version: "2026.3.2"
+version: "2026.3.13"
 slug: "openclaw_wg"
 description: "AI 智能助手，深度集成 Home Assistant。支持本地/云端混合模型"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
@@ -15,6 +15,14 @@ ingress: true
 ingress_port: 8099
 panel_title: "OpenClaw HA"
 panel_icon: "mdi:robot"
+
+# 环境变量 - 确保 OpenClaw 使用 /config 目录（持久化存储）
+environment:
+  HOME: "/config"
+  XDG_CONFIG_HOME: "/config"
+  OPENCLAW_CONFIG_DIR: "/config/.openclaw"
+  OPENCLAW_WORKSPACE_DIR: "/config/.openclaw/workspace"
+
 map:
   - addon_config:rw
   - share:rw
@@ -31,6 +39,9 @@ options:
 
   # 允许 HTTP 认证（仅在无法使用 HTTPS 时启用，存在安全风险）
   allow_insecure_auth: true
+
+  # 禁用设备身份验证（仅在内网可信环境使用）
+  disable_device_auth: true
 
   # 网关公开 URL（用于在新标签页中打开网关 UI）
   gateway_public_url: ""
@@ -53,6 +64,7 @@ schema:
   gateway_bind_mode: list(loopback|lan)?
   gateway_port: int(1,65535)?
   allow_insecure_auth: bool?
+  disable_device_auth: bool?
   gateway_public_url: str?
   homeassistant_token: password?
   # 基础设置

@@ -1,5 +1,5 @@
 name: "Addons镜像备份工具"
-version: "1.0.0"
+version: "1.0.1"
 slug: "addon-image-backup"
 description: "冬瓜镜像备份"
 image: wghaos/addon-wghaos-image-backup

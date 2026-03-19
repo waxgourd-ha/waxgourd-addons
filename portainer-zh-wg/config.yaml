@@ -37,5 +37,5 @@ schema:
 slug: portainer-zh-wg
 udev: true
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: "2.33.1"
+version: "2.39.0"
 boot: manual
