@@ -1,5 +1,5 @@
 name: "OpenClaw WG"
-version: "2026.3.13"
+version: "2026.3.13-2"
 slug: "openclaw_wg"
 description: "AI 智能助手，深度集成 Home Assistant。支持本地/云端混合模型"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
@@ -22,6 +22,7 @@ environment:
   XDG_CONFIG_HOME: "/config"
   OPENCLAW_CONFIG_DIR: "/config/.openclaw"
   OPENCLAW_WORKSPACE_DIR: "/config/.openclaw/workspace"
+  NODE_COMPILE_CACHE: "/config/.cache/node-compile-cache"
 
 map:
   - addon_config:rw

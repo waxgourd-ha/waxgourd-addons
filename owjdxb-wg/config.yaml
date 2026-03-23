@@ -1,23 +1,24 @@
-{
-  "version": "4.0.7",
-  "name": "节点小宝冬瓜版",
-  "url": "https://www.ionewu.com",
-  "slug": "owjdxb-wg",
-  "description": "A Home Assistant add-on for jdxb service. 这是一个冬瓜版的节点小宝客户端",
-  "arch": ["amd64", "aarch64"],
-  "image": "wghaos/addon-wghaos-owjdxb",
-  "startup": "services",
-  "init": false,
-  "host_network": true,
-  "boot": auto,
-  "ports": {
-    "9118/tcp": 9118
-  },
-  "map": [
-    "addon_config:rw",
-    "share:rw",
-  ],
-  "devices": ["/dev/net/tun"],
-  "privileged": ["SYS_ADMIN","NET_ADMIN"],
-  "webui": "[PROTO:http]://[HOST]:[PORT:9118]"
-}
+name: 节点小宝冬瓜版
+version: "4.0.8"
+slug: owjdxb-wg
+description: "A Home Assistant add-on for jdxb service. 这是一个冬瓜版的节点小宝客户端"
+url: "https://github.com/waxgourd-ha/waxgourd-addons"
+arch:
+  - amd64
+  - aarch64
+image: "wghaos/addon-wghaos-owjdxb"
+startup: services
+init: false
+host_network: true
+boot: auto
+ports:
+  "9118/tcp": 9118
+map:
+  - addon_config:rw
+  - share:rw
+devices:
+  - /dev/net/tun
+privileged:
+  - SYS_ADMIN
+  - NET_ADMIN
+webui: "[PROTO:http]://[HOST]:[PORT:9118]"
