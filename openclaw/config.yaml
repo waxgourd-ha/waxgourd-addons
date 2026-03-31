@@ -1,5 +1,5 @@
-name: "OpenClaw WG"
-version: "2026.3.13-2"
+name: "openclaw小龙虾经典版"
+version: "2026.3.13-13"
 slug: "openclaw_wg"
 description: "AI 智能助手，深度集成 Home Assistant。支持本地/云端混合模型"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
@@ -9,11 +9,15 @@ arch:
 startup: services
 boot: auto
 init: false
+hassio_api: true
+hassio_role: manager
+homeassistant_api: true
 host_network: true
+docker_api: true
 image: wghaos/addons-openclaw-{arch}
 ingress: true
 ingress_port: 8099
-panel_title: "OpenClaw HA"
+panel_title: "小龙虾经典版"
 panel_icon: "mdi:robot"
 
 # 环境变量 - 确保 OpenClaw 使用 /config 目录（持久化存储）
@@ -27,6 +31,12 @@ environment:
 map:
   - addon_config:rw
   - share:rw
+  - homeassistant_config:rw
+  - ssl:ro
+  - media:rw
+  - backup:ro
+  - all_addon_configs:ro
+
 options:
   # ==================== 网关配置 ====================
   # 时区设置
@@ -41,18 +51,25 @@ options:
   # 允许 HTTP 认证（仅在无法使用 HTTPS 时启用，存在安全风险）
   allow_insecure_auth: true
 
-  # 禁用设备身份验证（仅在内网可信环境使用）
-  disable_device_auth: true
-
   # 网关公开 URL（用于在新标签页中打开网关 UI）
   gateway_public_url: ""
-
-  # Home Assistant 长效令牌（用于 HA API 集成）
-  homeassistant_token: ""
 
   # ==================== 基础设置 ====================
   # 启用 Web 终端（在 Home Assistant 内嵌的终端）
   enable_terminal: true
+
+  # ==================== SSH Shell 设置 ====================
+  # 启用 SSH 登录（默认关闭，用于开发调试）
+  enable_ssh: false
+
+  # SSH 端口（默认 22）
+  ssh_port: 22
+
+  # SSH 登录用户名
+  ssh_username: "root"
+
+  # SSH 登录密码（留空则禁用密码认证）
+  ssh_password: ""
 
   # ==================== 高级设置 ====================
   # 清理会话锁（启动时/退出时）
@@ -65,13 +82,21 @@ schema:
   gateway_bind_mode: list(loopback|lan)?
   gateway_port: int(1,65535)?
   allow_insecure_auth: bool?
-  disable_device_auth: bool?
   gateway_public_url: str?
-  homeassistant_token: password?
   # 基础设置
   enable_terminal: bool?
+
+  # SSH Shell
+  enable_ssh: bool?
+  ssh_port: int(1,65535)?
+  ssh_username: str?
+  ssh_password: str?
 
   # 高级设置
   clean_session_locks_on_start: bool?
   clean_session_locks_on_exit: bool?
+
+  # 一键升级
+  ha_host_ssh_password: str?
+  ha_host_ssh_port: int(1,65535)?
 
