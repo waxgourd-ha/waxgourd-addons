@@ -11,12 +11,11 @@ If you already love Home Assistant, you know how powerful it gets when everythin
 
 **The idea is simple:** HA takes care of your home. OpenClaw takes care of the thinking. Together, they're more than the sum of their parts.
 
-<!-- screenshot: drag your panel screenshot into the GitHub README editor to upload it, then replace the src below with the generated URL -->
-<img width="1920" height="943" alt="OpenClaw panel — gateway status, chat, and terminal in one place" src="https://github.com/user-attachments/assets/7769ea86-d59d-4091-b803-f924d21cc1b0" />
+<img width="80%" alt="OpenClaw panel — gateway status, chat, and terminal in one place" src="https://github.com/user-attachments/assets/7769ea86-d59d-4091-b803-f924d21cc1b0" />
 
-<img width="1204" height="859" alt="Model config" src="https://github.com/user-attachments/assets/7fc74360-1a57-4470-9d99-a49b0bfc9da1" />
+<img width="49%" alt="Model config" src="https://github.com/user-attachments/assets/7fc74360-1a57-4470-9d99-a49b0bfc9da1" />
 
-<img width="889" height="609" alt="skills" src="https://github.com/user-attachments/assets/3c491dd7-e905-4fea-913f-0e80516e86d1" />
+<img width="49%" alt="skills" src="https://github.com/user-attachments/assets/3c491dd7-e905-4fea-913f-0e80516e86d1" />
 
 
 
