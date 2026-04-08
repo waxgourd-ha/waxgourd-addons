@@ -1,5 +1,5 @@
 name: "OpenClaw Proxy"
-version: "1.0.1"
+version: "1.0.2"
 slug: "openclaw_proxy"
 description: "将 OpenClaw 服务（默认18789端口）代理到 HA 页面框架中，通过 HA Ingress 访问"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"

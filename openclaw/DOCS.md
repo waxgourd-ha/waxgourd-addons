@@ -63,4 +63,4 @@ clean_session_locks_on_exit: true
 
 ## 📚 文档
 
-- [OpenClaw WG 文档](https://openclaw-wg.readthedocs.io/zh_CN/latest/)
+- [OpenClaw WG 文档](https://wiki.wghaos.com/node/019d099a-a267-70b5-8a44-d7cd68bf28df)
