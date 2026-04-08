@@ -1,0 +1,12 @@
+{
+  "configuration": {
+    "target_host": {
+      "name": "Target Host",
+      "description": "Host address where OpenClaw is running. Leave empty if OpenClaw is on the same machine as Home Assistant."
+    },
+    "target_port": {
+      "name": "Target Port",
+      "description": "Port of the OpenClaw gateway. Default is 18789. Only change this if you've configured a non-default port."
+    }
+  }
+}

@@ -1,41 +1,34 @@
-# OpenClaw Proxy
+# OpenClaw Bridge
 
-## 说明
+This add-on does not run OpenClaw itself. It bridges an existing OpenClaw gateway into the Home Assistant sidebar via Ingress.
 
-OpenClaw Proxy 是一个 Home Assistant Add-on。
-它不会启动 OpenClaw 主服务，而是将已有 OpenClaw Web 服务代理到 HA Ingress 页面中，
-便于在 Home Assistant 内统一访问。
+本插件不启动 OpenClaw 服务，只将已有的 OpenClaw 网关桥接到 HA 侧边栏。
 
-## 前提条件
+---
 
-- 已有可用的 OpenClaw 服务实例。
-- 已确认 OpenClaw 服务端口可访问（默认 `18789`）。
+## Before You Start / 使用前提
 
-## 安装
+You need an OpenClaw instance already running — either via the OpenClaw add-on on the same machine, or a standalone deployment on your local network.
 
-1. 进入 Home Assistant 的插件商店。
-2. 安装 OpenClaw Proxy。
-3. 根据实际部署环境填写配置。
-4. 启动插件，并在侧边栏打开 OpenClaw。
+需要已有可用的 OpenClaw 实例在运行——可以是同机安装的 OpenClaw 插件，也可以是局域网内独立部署的服务。
 
-## 配置项
+---
 
-```yaml
-target_host: ""
-target_port: 18789
-```
+## Configuration / 配置
 
-- `target_host`：目标 OpenClaw 服务地址（可选）。
-- `target_port`：目标 OpenClaw 服务端口，默认 `18789`。
+| Option / 选项 | Default / 默认值 | Description / 说明 |
+|---|---|---|
+| `target_host` | _(empty = localhost)_ | Leave empty if OpenClaw is on the same machine. Set to LAN IP if it's on another device. / 同机留空，其他设备填局域网 IP。 |
+| `target_port` | `18789` | OpenClaw gateway port. / OpenClaw 网关端口，未改过不需要动。 |
 
-## 使用建议
+---
 
-- OpenClaw 与 Proxy 在同一网络环境时，优先使用内网地址。
-- 如出现页面无法打开，先检查目标地址和端口是否可达。
+## Troubleshooting / 常见问题
 
-## 常见问题
+**Panel fails to open / 面板打不开**
+Check that OpenClaw is running and the `target_host` / `target_port` are correct.
+检查 OpenClaw 服务是否在运行，以及 `target_host` / `target_port` 配置是否正确。
 
-- 打开页面提示连接失败：
-	检查 OpenClaw 服务是否正在运行，并确认 `target_host` / `target_port` 配置正确。
-- 页面可打开但功能异常：
-	检查 OpenClaw 主服务日志，确认服务本身状态正常。
+**Panel opens but something looks wrong / 面板打开但功能异常**
+The issue is with the OpenClaw service itself, not this bridge. Check the OpenClaw add-on logs.
+问题在 OpenClaw 服务端，不是 Bridge 本身，查看 OpenClaw 插件日志。

@@ -1,35 +1,44 @@
-# 冬瓜甄选 Add-ons: OpenClaw Proxy
+# Home Assistant Add-on: OpenClaw Bridge
 
-## 关于
+Bridge your OpenClaw gateway into Home Assistant — access the panel directly from the HA sidebar, no extra ports needed.
 
-OpenClaw Proxy 用于将已运行的 OpenClaw 服务代理到 Home Assistant 页面框架中，
-通过 Ingress 在 HA 内直接访问 OpenClaw Web 界面。
+将已运行的 OpenClaw 服务桥接到 Home Assistant 侧边栏，无需额外暴露端口，直接在 HA 内访问 OpenClaw 面板。
 
-## 功能亮点
+---
 
-- 无需额外暴露端口，直接在 HA 侧边栏访问。
-- 可自定义目标地址与端口，适配本机或局域网中的 OpenClaw 服务。
-- 轻量代理，适合与 OpenClaw 主插件或独立部署实例配合使用。
+## What This Does
 
-## 快速开始
+If you already have OpenClaw running (via the [OpenClaw add-on](https://github.com/waxgourd-ha/waxgourd-addons) or a standalone install), this add-on brings the OpenClaw panel into your Home Assistant sidebar through Ingress. No new ports. No extra setup. Just install, start, and OpenClaw appears in the sidebar.
 
-1. 在 Home Assistant 插件商店安装 OpenClaw Proxy。
-2. 在插件配置中设置目标地址和端口（默认端口为 `18789`）。
-3. 启动插件后，从 HA 侧边栏打开 OpenClaw 页面。
+如果你已安装 OpenClaw 插件，或在本机/局域网内独立部署了 OpenClaw，用这个插件把它接进 HA 侧边栏即可。安装启动，侧边栏立刻出现 OpenClaw 入口。
 
-## 配置示例
+---
 
-```yaml
-# OpenClaw 服务地址（可选）
-target_host: ""
+## Getting Started / 快速开始
 
-# OpenClaw 服务端口
-target_port: 18789
-```
+1. Install **OpenClaw Bridge** from the add-on store / 在插件商店安装 **OpenClaw Bridge**
+2. Start the add-on / 启动插件
+3. **OpenClaw** appears in your HA sidebar — click to open / 侧边栏出现 **OpenClaw** 入口，点击打开
 
-## 相关链接
+Default settings work for most setups. The bridge connects to `localhost:18789` by default.
 
-- Website: https://openclaw.ai
-- GitHub: https://github.com/openclaw/openclaw
-- Docs: https://docs.openclaw.ai/zh-CN
- 
+默认配置适用于绝大多数场景，无需修改，启动即用。默认连接本机 `18789` 端口。
+
+---
+
+## Configuration / 配置说明
+
+| Option / 选项 | Default / 默认值 | Description / 说明 |
+|---|---|---|
+| `target_host` | _(empty = localhost)_ | Host where OpenClaw is running. Leave empty if on the same machine. / OpenClaw 所在主机。与 HA 同机运行时留空。 |
+| `target_port` | `18789` | Port of the OpenClaw gateway. / OpenClaw 网关端口。未改过端口不需要动。 |
+
+---
+
+## Links
+
+- **OpenClaw** — https://openclaw.ai
+- **GitHub** — https://github.com/openclaw/openclaw
+- **Docs** — https://docs.openclaw.ai
+- **Docs (中文)** — https://docs.openclaw.ai/zh-CN
+

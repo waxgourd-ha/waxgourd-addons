@@ -1,0 +1,12 @@
+{
+  "configuration": {
+    "target_host": {
+      "name": "目标主机",
+      "description": "OpenClaw 服务所在的主机地址。与 Home Assistant 同机运行时留空即可。"
+    },
+    "target_port": {
+      "name": "目标端口",
+      "description": "OpenClaw 网关端口，默认为 18789。未修改过端口的话不需要改。"
+    }
+  }
+}

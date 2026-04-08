@@ -1,8 +1,7 @@
-name: "OpenClaw Proxy"
+name: "OpenClaw Bridge"
 version: "1.0.2"
-slug: "openclaw_proxy"
-description: "将 OpenClaw 服务（默认18789端口）代理到 HA 页面框架中，通过 HA Ingress 访问"
-url: "https://github.com/waxgourd-ha/waxgourd-addons"
+slug: "openclaw_bridge"
+description: "Bridge your OpenClaw gateway into Home Assistant. Access the panel from the HA sidebar without any extra port setup."
 arch:
   - aarch64
   - amd64
