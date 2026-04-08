@@ -1,5 +1,5 @@
 name: "openclaw小龙虾经典版"
-version: "2026.3.13-13"
+version: "2026.3.13-15"
 slug: "openclaw_wg"
 description: "AI 智能助手，深度集成 Home Assistant。支持本地/云端混合模型"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
@@ -39,6 +39,9 @@ map:
 
 options:
   # ==================== 网关配置 ====================
+  # 仅通过 Ingress 访问管理 UI（8099），关闭局域网直连
+  ingress_only: false
+
   # 时区设置
   timezone: "Asia/Shanghai"
 
@@ -78,6 +81,7 @@ options:
 
 schema:
   # 网关配置
+  ingress_only: bool?
   timezone: str
   gateway_bind_mode: list(loopback|lan)?
   gateway_port: int(1,65535)?

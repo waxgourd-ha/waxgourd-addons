@@ -1,0 +1,25 @@
+name: "OpenClaw Proxy"
+version: "1.0.1"
+slug: "openclaw_proxy"
+description: "将 OpenClaw 服务（默认18789端口）代理到 HA 页面框架中，通过 HA Ingress 访问"
+url: "https://github.com/waxgourd-ha/waxgourd-addons"
+arch:
+  - aarch64
+  - amd64
+
+startup: application
+boot: auto
+init: false
+
+ingress: true
+ingress_port: 8099
+ingress_panel: true
+panel_title: "OpenClaw"
+panel_icon: "mdi:robot"
+image: wghaos/addons-openclaw-proxy-{arch}
+options:
+  target_port: 18789
+
+schema:
+  target_host: str?
+  target_port: int
