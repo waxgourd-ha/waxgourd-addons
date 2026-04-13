@@ -1,5 +1,5 @@
 name: "openclaw小龙虾经典版"
-version: "2026.3.13-16"
+version: "2026.3.13-17"
 slug: "openclaw_wg"
 description: "AI 智能助手，深度集成 Home Assistant。支持本地/云端混合模型"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"

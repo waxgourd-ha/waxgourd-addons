@@ -1,12 +1,8 @@
-# NOTE: English edition of the OpenClaw HA Addon.
-# Plugin installation is intentionally removed in this edition.
-
-name: "OpenClaw"
-version: "2026.3.24-1"
-slug: "openclaw"
-description: "AI assistant deeply integrated with Home Assistant. Supports local and cloud AI models."
+name: "OpenClaw小龙虾前沿版"
+version: "2026.4.2-1"
+slug: "openclaw_v2"
+description: "AI 智能助手，深度集成 Home Assistant。支持本地/云端混合模型，提供中英文配置界面。"
 url: "https://github.com/openclaw/openclaw"
-image: wghaos/addons-openclaw-en-{arch}
 arch:
   - amd64
   - aarch64
@@ -18,14 +14,14 @@ hassio_role: manager
 homeassistant_api: true
 host_network: true
 docker_api: true
-
+image: wghaos/addons-openclaw-v2-{arch}
 # Home Assistant Ingress (UI inside the add-on page)
 ingress: true
 ingress_port: 8099
-panel_title: "OpenClaw"
+panel_title: "小龙虾前沿版"
 panel_icon: "mdi:robot"
 
-# Environment variables
+# 环境变量（与发布配置尽量保持一致）
 environment:
   HOME: "/config"
   XDG_CONFIG_HOME: "/config"
@@ -43,52 +39,56 @@ map:
   - all_addon_configs:ro
 
 options:
-  # Restrict UI access to HA panel only (disables direct IP:8099 access)
+  # ==================== 网关配置 ====================
+  # 仅通过 Ingress 访问管理 UI（8099），关闭局域网直连
   ingress_only: false
 
-  # Timezone
-  timezone: "UTC"
+  # 时区设置
+  timezone: "Asia/Shanghai"
 
-  # Gateway bind mode: loopback = local only, lan = LAN access
+  # 网关绑定模式：loopback=仅本地, lan=局域网访问
   gateway_bind_mode: "lan"
 
-  # Gateway port (default 18789)
+  # 网关端口（默认 18789）
   gateway_port: 18789
 
-  # Allow HTTP auth (only enable if HTTPS is unavailable, security risk)
+  # 允许 HTTP 认证（仅在无法使用 HTTPS 时启用，存在安全风险）
   allow_insecure_auth: true
 
-  # Gateway public URL (for opening in a new tab)
+  # 网关公开 URL（用于在新标签页中打开网关 UI）
   gateway_public_url: ""
 
-  # Enable Web Terminal
+  # ==================== 基础设置 ====================
+  # 启用 Web 终端（在 Home Assistant 内嵌的终端）
   enable_terminal: true
 
-  # Enable SSH (disabled by default, for development use)
+  # ==================== SSH Shell 设置 ====================
+  # 启用 SSH 登录（默认关闭，用于开发调试）
   enable_ssh: false
 
-  # SSH port
+  # SSH 端口（默认 22）
   ssh_port: 22
 
-  # SSH username
+  # SSH 登录用户名
   ssh_username: "root"
 
-  # SSH password (leave empty to disable password auth)
+  # SSH 登录密码（留空则禁用密码认证）
   ssh_password: ""
 
-  # Clean session locks on start/exit
+  # ==================== 高级设置 ====================
+  # 清理会话锁（启动时/退出时）
   clean_session_locks_on_start: true
   clean_session_locks_on_exit: true
 
 schema:
-  # Gateway settings
+  # 网关配置
   ingress_only: bool?
   timezone: str
   gateway_bind_mode: list(loopback|lan)?
   gateway_port: int(1,65535)?
   allow_insecure_auth: bool?
   gateway_public_url: str?
-  # General settings
+  # 基础设置
   enable_terminal: bool?
 
   # SSH Shell
@@ -97,11 +97,11 @@ schema:
   ssh_username: str?
   ssh_password: str?
 
-  # Advanced settings
+  # 高级设置
   clean_session_locks_on_start: bool?
   clean_session_locks_on_exit: bool?
 
-  # One-click upgrade
+  # 一键升级
   ha_host_ssh_password: str?
   ha_host_ssh_port: int(1,65535)?
 

@@ -1,5 +1,5 @@
 name: "OpenClaw Bridge"
-version: "1.0.2"
+version: "1.0.3"
 slug: "openclaw_bridge"
 description: "Bridge your OpenClaw gateway into Home Assistant. Access the panel from the HA sidebar without any extra port setup."
 arch:

@@ -1,0 +1,100 @@
+---
+configuration:
+  timezone:
+    name: "Timezone"
+    description: "Set the timezone for the add-on"
+  enable_terminal:
+    name: "Enable Web Terminal"
+    description: "Enable web-based terminal access inside Home Assistant"
+  gateway_public_url:
+    name: "Gateway Public URL"
+    description: "Public URL for the Gateway Web UI (opens in new tab)"
+  model_source:
+    name: "Model Source"
+    description: "Select the AI model source to use"
+    items:
+      local: "Local Model"
+      cloud: "Cloud Model"
+      hybrid: "Hybrid Mode"
+  model_url:
+    name: "Model API URL"
+    description: "Model API URL (e.g., http://host.docker.internal:11434 for local, or cloud API URL)"
+  model_name:
+    name: "Model Name"
+    description: "Model name (e.g., qwen2.5, gpt-4o, etc.)"
+  api_key:
+    name: "API Key"
+    description: "Cloud API key (required for cloud/hybrid mode)"
+  sandbox_mode:
+    name: "Sandbox Mode"
+    description: "Enable sandbox mode for enhanced security"
+  ingress_only:
+    name: "Ingress Only (port 8099)"
+    description: "Restrict UI (port 8099) access to HA panel only. Disables direct LAN access. Requires addon restart."
+  gateway_bind_mode:
+    name: "Gateway Bind Mode"
+    description: "Gateway bind mode (loopback = local only, lan = local network)"
+    items:
+      loopback: "Local Only (loopback)"
+      lan: "LAN Access (lan)"
+  gateway_port:
+    name: "Gateway Port"
+    description: "Gateway listening port"
+  allow_insecure_auth:
+    name: "Allow Insecure HTTP Auth"
+    description: "Allow browser to access Gateway UI (port 18789) via HTTP. Only enable if HTTPS is unavailable, security risk."
+  disable_device_auth:
+    name: "Disable Device Authentication"
+    description: "Disable device authentication for gateway access. Only enable in trusted internal network, may reduce security."
+  clean_session_locks_on_start:
+    name: "Clean Session Locks on Start"
+    description: "Clean stale session lock files on startup"
+  clean_session_locks_on_exit:
+    name: "Clean Session Locks on Exit"
+    description: "Clean session lock files on exit"
+  ssl_enabled:
+    name: "Enable SSL/HTTPS"
+    description: "Enable SSL/HTTPS for Nginx reverse proxy. Requires certificate and key files when enabled."
+  ssl_certificate_file:
+    name: "SSL Certificate File Path"
+    description: "SSL certificate file path (PEM format). Can reuse if OpenClaw gateway already has certificate configured."
+  ssl_key_file:
+    name: "SSL Key File Path"
+    description: "SSL private key file path (PEM format). Can reuse if OpenClaw gateway already has key configured."
+  ssl_port:
+    name: "SSL Port"
+    description: "Nginx HTTPS listening port, default 8443"
+
+options:
+  title: "Configuration Options"
+  submit: "Save"
+  cancel: "Cancel"
+  reset: "Reset"
+
+errors:
+  title: "Error"
+  connection_failed: "Connection failed"
+  invalid_config: "Invalid configuration"
+  api_key_required: "API key required"
+  model_not_available: "Model not available"
+
+services:
+  restart: "Restart"
+  update: "Update"
+  logs: "View Logs"
+  terminal: "Terminal"
+
+status:
+  running: "Running"
+  stopped: "Stopped"
+  starting: "Starting"
+  stopping: "Stopping"
+  error: "Error"
+
+info:
+  title: "OpenClaw Assistant"
+  description: "AI-powered assistant deeply integrated with Home Assistant"
+  version: "Version"
+  documentation: "Documentation"
+  issues: "Issue Tracker"
+  repository: "Repository"
