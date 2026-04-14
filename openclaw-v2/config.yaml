@@ -1,5 +1,5 @@
 name: "OpenClaw小龙虾前沿版"
-version: "2026.4.2-1"
+version: "2026.4.2-2"
 slug: "openclaw_v2"
 description: "AI 智能助手，深度集成 Home Assistant。支持本地/云端混合模型，提供中英文配置界面。"
 url: "https://github.com/openclaw/openclaw"
@@ -43,6 +43,9 @@ options:
   # 仅通过 Ingress 访问管理 UI（8099），关闭局域网直连
   ingress_only: false
 
+  # 禁止局域网直接通过 ip:18789 访问（仅允许 HA 内部 bridge 网络访问，proxy addon 不受影响）
+  disable_direct_access: false
+
   # 时区设置
   timezone: "Asia/Shanghai"
 
@@ -83,6 +86,7 @@ options:
 schema:
   # 网关配置
   ingress_only: bool?
+  disable_direct_access: bool?
   timezone: str
   gateway_bind_mode: list(loopback|lan)?
   gateway_port: int(1,65535)?

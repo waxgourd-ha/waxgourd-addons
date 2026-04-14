@@ -2,7 +2,7 @@
 # Plugin installation is intentionally removed in this edition.
 
 name: "OpenClaw"
-version: "2026.3.24-1"
+version: "2026.3.24-2"
 slug: "openclaw"
 description: "AI assistant deeply integrated with Home Assistant. Supports local and cloud AI models."
 url: "https://github.com/openclaw/openclaw"
@@ -46,6 +46,9 @@ options:
   # Restrict UI access to HA panel only (disables direct IP:8099 access)
   ingress_only: false
 
+  # Block direct LAN access via ip:18789 (only HA internal bridge network allowed; proxy addon unaffected)
+  disable_direct_access: false
+
   # Timezone
   timezone: "UTC"
 
@@ -83,6 +86,7 @@ options:
 schema:
   # Gateway settings
   ingress_only: bool?
+  disable_direct_access: bool?
   timezone: str
   gateway_bind_mode: list(loopback|lan)?
   gateway_port: int(1,65535)?
