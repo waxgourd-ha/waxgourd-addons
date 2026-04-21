@@ -1,43 +1,19 @@
 configuration:
-  log_level:
-    name: 日志级别
-    description: 设置插件的日志级别
-  timezone:
-    name: 时区
-    description: 设置容器的时区
+  provider:
+    name: 默认提供商
+    description: ZeroClaw 的 default_provider，建议填 qwen、openrouter、openai 等上游 provider id。
+  model:
+    name: 默认模型
+    description: ZeroClaw 的 default_model，例如 qwen3.6-plus。
+  gateway_host:
+    name: 网关监听地址
+    description: ZeroClaw gateway.host，默认 0.0.0.0。
+  gateway_port:
+    name: 网关端口
+    description: ZeroClaw gateway.port，默认 42617。
   api_key:
     name: API 密钥
-    description: LLM 提供商的 API 密钥（OpenRouter、OpenAI 等）
-  provider:
-    name: 模型提供商
-    description: 选择默认的 AI 模型提供商
-  model:
-    name: 模型名称
-    description: 指定具体模型（可选，留空使用提供商默认）
-  autonomy_mode:
-    name: 自治模式
-    description: 代理执行权限级别（readonly=只读，supervised=监督，full=完全自主）
-  enable_telegram:
-    name: 启用 Telegram
-    description: 启用 Telegram 机器人集成
-  telegram_token:
-    name: Telegram Bot Token
-    description: 从 @BotFather 获取的 Bot Token
-  enable_discord:
-    name: 启用 Discord
-    description: 启用 Discord 机器人集成
-  discord_token:
-    name: Discord Bot Token
-    description: Discord 机器人 Token
-  enable_slack:
-    name: 启用 Slack
-    description: 启用 Slack 集成
-  slack_token:
-    name: Slack Token
-    description: Slack Bot Token
-  workspace_path:
-    name: 工作区路径
-    description: 代理文件操作的工作目录
-  init_commands:
-    name: 初始化命令
-    description: 启动前执行的自定义命令
+    description: 按 provider 自动映射到上游 API key 环境变量。内置 qwen、openrouter、openai、anthropic、groq；其他 provider 请在环境变量列表里填写其上游变量。
+  env_vars:
+    name: 环境变量列表
+    description: 高级扩展变量列表，仅使用 ZeroClaw 上游已定义变量。这里用于补充额外变量，不建议重复填写上面的固定字段。

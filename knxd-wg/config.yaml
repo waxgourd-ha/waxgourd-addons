@@ -1,6 +1,6 @@
 # https://gitcode.com/waxgourd/addons
 name: KNXD daemon (波特率版)
-version: "0.5.2-1"
+version: "0.6.1"
 slug: knxd-wg
 description: KNXD守护进程可用于通过TPUART或USB总线适配器创建KNX/IP网关
 url: https://github.com/waxgourd-ha/waxgourd-addons
@@ -44,3 +44,6 @@ ports_description:
 image: "wghaos/{arch}-knxd"
 uart: true
 usb: true
+map:
+  - type: addon_config
+    read_only: false

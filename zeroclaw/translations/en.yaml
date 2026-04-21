@@ -1,0 +1,19 @@
+configuration:
+  provider:
+    name: Default Provider
+    description: ZeroClaw default_provider, for example qwen, openrouter, or openai.
+  model:
+    name: Default Model
+    description: ZeroClaw default_model, for example qwen3.6-plus.
+  gateway_host:
+    name: Gateway Host
+    description: ZeroClaw gateway.host, default 0.0.0.0.
+  gateway_port:
+    name: Gateway Port
+    description: ZeroClaw gateway.port, default 42617.
+  api_key:
+    name: API Key
+    description: Auto-mapped to the upstream provider API key variable. Built-in mappings cover qwen, openrouter, openai, anthropic, and groq; use env_vars for other providers.
+  env_vars:
+    name: Environment Variables
+    description: Advanced extension variables only. Use upstream ZeroClaw environment variables and avoid duplicating the fixed fields above.

@@ -1,18 +1,40 @@
-name: ZeroClaw Gateway
+name: "ZeroClaw AI Assistant"
+version: "0.6.9"
 slug: zeroclaw
-description: ZeroClaw 🦀 网关与仪表盘（基于 v0.1.7 镜像）
-version: "0.1.7"
+description: ZeroClaw 🦀 网关与仪表盘
+
 url: https://github.com/waxgourd-ha/waxgourd-addons
 image: wghaos/addons-wghaos-zeroclaw
 arch:
   - aarch64
   - amd64
 startup: application
-host_network: false
+boot: auto
+init: false
+hassio_api: true
+homeassistant_api: true
+host_network: true
 ports:
   42617/tcp: 42617
 ports_description:
-  42617/tcp: Web Dashboard
-webui: http://[HOST]:[PORT:42617]/
+  42617/tcp: "ZeroClaw Gateway Web Dashboard"
+webui: "http://[HOST]:[PORT:42617]/"
 map:
-  - data:rw
+  - addon_config:rw
+  - ssl
+options:
+  provider: "qwen"
+  model: "qwen3.6-plus"
+  gateway_host: "0.0.0.0"
+  gateway_port: 42617
+  api_key: ""
+  env_vars: []
+schema:
+  provider: str
+  model: str
+  gateway_host: str
+  gateway_port: port
+  api_key: str?
+  env_vars:
+    - name: match(^[A-Za-z0-9_]+$)
+      value: str?

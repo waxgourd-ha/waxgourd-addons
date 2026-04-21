@@ -1,5 +1,5 @@
 name: "OpenClaw小龙虾前沿版"
-version: "2026.4.2-2"
+version: "2026.4.10"
 slug: "openclaw_v2"
 description: "AI 智能助手，深度集成 Home Assistant。支持本地/云端混合模型，提供中英文配置界面。"
 url: "https://github.com/openclaw/openclaw"
