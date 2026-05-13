@@ -1,0 +1,25 @@
+configuration:
+  repository:
+    name: Repository
+    description: Your Home Assistant add-ons repository, format `username/repository`, e.g., `alexbelgium/hassio-addons`.
+  gituser:
+    name: Git Username
+    description: Your GitHub username.
+  gitapi:
+    name: Git API Token
+    description: GitHub Personal Access Token (Classic) with `repo` scope.
+  gitmail:
+    name: Git Email
+    description: Email address for git commit signatures (optional).
+  date_iso8601:
+    name: ISO 8601 Date
+    description: Use `YYYY-MM-DD` date format if true, otherwise `DD-MM-YYYY`.
+  dry_run:
+    name: Dry Run
+    description: If true, the add-on will only check for updates without committing changes.
+  verbose:
+    name: Verbose Logging
+    description: Output more detailed logs for troubleshooting.
+  env_vars:
+    name: Environment Variables
+    description: List of additional environment variables as `name`/`value` pairs.

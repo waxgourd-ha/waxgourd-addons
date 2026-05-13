@@ -2,7 +2,7 @@ name: "BleachWRT Plus"
 version: "20250924"
 slug: "bleachwrt_plus"
 description: "BleachWRT Plus - 提供旁路由管理功能，集成WEB管理界面"
-url: "https://gitcode.com/waxgourd/addons"
+url: "https://github.com/waxgourd-ha/waxgourd-addons"
 arch:
   - aarch64
   - amd64

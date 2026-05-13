@@ -1,0 +1,25 @@
+configuration:
+  repository:
+    name: 插件仓库
+    description: 你的 Home Assistant 插件仓库，格式为 `用户名/仓库名`，例如 `alexbelgium/hassio-addons`。
+  gituser:
+    name: Git 用户名
+    description: 你的 GitHub 用户名。
+  gitapi:
+    name: Git API 令牌
+    description: 具备 `repo` 权限的 GitHub 个人访问令牌 (Personal Access Token)。
+  gitmail:
+    name: Git 邮箱
+    description: 用于 git commit 署名的邮箱地址（可选）。
+  date_iso8601:
+    name: ISO 8601 日期格式
+    description: 若为 true 则使用 `YYYY-MM-DD` 格式，否则使用 `DD-MM-YYYY`。
+  dry_run:
+    name: 演练模式 (Dry Run)
+    description: 若为 true，插件仅检查更新而不提交任何变更。
+  verbose:
+    name: 详细日志
+    description: 输出更详细的日志信息，用于故障排查。
+  env_vars:
+    name: 环境变量列表
+    description: 以 `name`/`value` 键值对形式定义的额外环境变量。

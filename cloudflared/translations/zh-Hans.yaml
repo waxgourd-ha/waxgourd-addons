@@ -1,0 +1,43 @@
+---
+configuration:
+  log_level:
+    name: 日志级别
+    description: >-
+      定义此应用/插件的日志级别。
+  external_hostname:
+    name: 外部 Home Assistant 主机名
+    description: >-
+      将其设置为你希望用于访问 Home Assistant 的域名或子域名。
+  tunnel_name:
+    name: Cloudflare 隧道名称
+    description: >-
+      定义用于本服务与 Cloudflare 边缘服务器之间通信所创建隧道的名称。
+      默认值在大多数情况下都可以正常使用。
+  additional_hosts:
+    name: 附加主机
+    description: >-
+      定义一个由 Cloudflare Tunnel 路由的附加主机列表。
+  post_quantum:
+    name: 使用后量子加密
+    description: >-
+      启用后可使隧道使用后量子加密。警告：这也会将隧道限制为仅使用
+      QUIC，可能会导致部分用户遇到问题。
+  run_parameters:
+    name: 添加运行参数
+    description: >-
+      可为 Cloudflared 添加额外的运行参数。
+  catch_all_service:
+    name: 兜底服务
+    description: >-
+      定义一个兜底服务，用于处理未被直接配置的服务请求。
+  nginx_proxy_manager:
+    name: 启用兜底 Nginx Proxy Manager
+    description: >-
+      将兜底服务设置为 “Nginx-Proxy-Manager Community App/Add-Ons” 插件。
+  tunnel_token:
+    name: Cloudflare Tunnel 令牌
+    description: >-
+      设置后将忽略其他所有选项。如果你是通过 Cloudflare 控制面板配置隧道，
+      请使用此选项。
+network:
+  36500/tcp: 指标 Web 界面（36500/tcp）

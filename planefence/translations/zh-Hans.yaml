@@ -1,0 +1,423 @@
+configuration:
+  # ── Required: Station & Data Source ─────────────────────────────────
+  PF_LAT:
+    name: 站点纬度 (PF_LAT)
+    description: >-
+      站点纬度，使用十进制度表示（北纬为正，南纬为负）。
+      当设置为 HOMEASSISTANT_LATITUDE 时，默认使用你的 Home Assistant 位置。
+  PF_LON:
+    name: 站点经度 (PF_LON)
+    description: >-
+      站点经度，使用十进制度表示（东经为正，西经为负）。
+      当设置为 HOMEASSISTANT_LONGITUDE 时，默认使用你的 Home Assistant 位置。
+  PF_SOCK30003HOST:
+    name: ADS-B 数据源主机名 (PF_SOCK30003HOST)
+    description: >-
+      SBS/BaseStation 数据源的主机名或 IP 地址（端口 30003）。
+      如果使用本仓库中的 ADS-B Multi-Portal Feeder 插件，请填写
+      f1c878cb-adsb-multi-portal-feeder；如果使用外部接收器，请填写其 IP 地址。
+  PF_SOCK30003PORT:
+    name: ADS-B 数据源端口 (PF_SOCK30003PORT)
+    description: SBS BaseStation 数据的 TCP 端口。默认值为 30003。
+  PF_MAXDIST:
+    name: 围栏半径 (PF_MAXDIST)
+    description: >-
+      从你的站点起，飞机被视为“附近”时的最大距离。
+      单位由 PF_DISTUNIT 控制（默认：海里）。
+  PF_MAXALT:
+    name: 最大高度 (PF_MAXALT)
+    description: >-
+      在围栏范围内追踪飞机时允许的最大高度。
+      单位由 PF_ALTUNIT 控制（默认：英尺）。
+  TZ:
+    name: 时区 (TZ)
+    description: >-
+      容器时区，例如 Europe/Berlin。用于日志时间戳和
+      通知时间。当设置为 HOMEASSISTANT_TIMEZONE 时，默认使用
+      你的 Home Assistant 时区（设置 → 系统 → 常规）。
+      参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones。
+
+  # ── General Parameters ───────────────────────────────────────────────
+  PF_DISTUNIT:
+    name: 距离单位 (PF_DISTUNIT)
+    description: PF_MAXDIST 和所有距离显示使用的单位。默认值为 nauticalmile。
+  PF_ALTUNIT:
+    name: 高度单位 (PF_ALTUNIT)
+    description: PF_MAXALT 和所有高度显示使用的单位。默认值为 feet。
+  PF_SPEEDUNIT:
+    name: 速度单位 (PF_SPEEDUNIT)
+    description: 飞机速度显示使用的单位。默认值为 knotph。
+  PF_INTERVAL:
+    name: 轮询间隔（秒）(PF_INTERVAL)
+    description: >-
+      Planefence 检查新飞机的时间间隔，单位为秒。
+      为避免负载过高，建议最小值为 60。默认值为 80。
+  PF_NAME:
+    name: 站点名称 (PF_NAME)
+    description: 显示在页面标题和通知中的简短标签。
+  PF_MAPURL:
+    name: 站点地图 URL (PF_MAPURL)
+    description: 指向你站点实时地图的 URL（例如 tar1090 实例）。
+  PF_MAPZOOM:
+    name: 热力图缩放级别 (PF_MAPZOOM)
+    description: >-
+      热力图页面默认的 OpenStreetMap 缩放级别。
+      数值越大放大越多；可在 openstreetmap.org 上试验不同级别。
+  PF_ELEVATION:
+    name: 站点海拔（MSL）(PF_ELEVATION)
+    description: >-
+      站点高于平均海平面的海拔高度，单位为 PF_ALTUNIT。
+      当其大于 0 时，高度将以 AGL（离地高度）方式报告。
+  PF_FUDGELOC:
+    name: 隐私位置取整 (PF_FUDGELOC)
+    description: >-
+      对显示的站点坐标进行取整以保护隐私。
+      0 = 整度；1 = 0.1°；2 = 0.01°（约 0.5 英里）；3 = 0.001°（约 300 英尺）。
+  PF_CHECKROUTE:
+    name: 补充航线信息 (PF_CHECKROUTE)
+    description: 启用后，将从 adsb.lol API 获取航线信息以显示出发地和目的地。
+  PF_TRACKSERVICE:
+    name: 跟踪链接服务 (PF_TRACKSERVICE)
+    description: >-
+      Planefence 中飞机跟踪链接所使用的地图服务。
+      示例：globe.adsbexchange.com、globe.airplanes.live。
+  PF_SHOWIMAGES:
+    name: 显示飞机照片 (PF_SHOWIMAGES)
+    description: 启用后，在界面和通知中显示来自 planespotters.net 的飞机照片。
+  PF_NOISECAPT:
+    name: NoiseCapt 基础 URL (PF_NOISECAPT)
+    description: >-
+      你的 NoiseCapt 容器的基础 URL，用于噪声级别日志记录和集成。
+      留空可禁用。参见 https://github.com/kx1t/docker-noisecapt。
+  PF_CHECKREMOTEDB:
+    name: 使用远程航空公司数据库 (PF_CHECKREMOTEDB)
+    description: >-
+      使用 kx1t 远程辅助数据库根据航班号解析航空公司名称。
+      隐私相关细节请参阅上游文档。
+  PF_DELETEAFTER:
+    name: 日志保留天数 (PF_DELETEAFTER)
+    description: >-
+      日志、JSON 和 CSV 文件的保留天数。留空则使用默认值（14 天）。
+      设为 0 表示永久保留（可能导致磁盘被占满）。
+  PF_IGNOREDUPES:
+    name: 忽略重复航班 (PF_IGNOREDUPES)
+    description: >-
+      开启时，每天每个 ICAO + 航班号组合只显示第一次出现。
+      关闭时，则改用 PF_COLLAPSEWITHIN。
+  PF_COLLAPSEWITHIN:
+    name: 合并时间窗口（秒）(PF_COLLAPSEWITHIN)
+    description: >-
+      同一架飞机两次观测之间最少相隔多少秒，才会被视为独立条目。
+      仅在 PF_IGNOREDUPES 为 OFF 时使用。
+  PF_MOTD:
+    name: Planefence 每日消息 (PF_MOTD)
+    description: >-
+      显示在 Planefence 页面顶部的 HTML 消息。
+      支持简单的 HTML 标签。
+  GENERATE_CSV:
+    name: 生成 CSV 导出 (GENERATE_CSV)
+    description: 为 Planefence 和 Plane-Alert 数据生成每日 CSV 导出文件。
+  OPENSKYDB_DOWNLOAD:
+    name: 下载 OpenSky 数据库 (OPENSKYDB_DOWNLOAD)
+    description: >-
+      启动时下载并更新 OpenSky 飞机数据库（约 100 MB）。
+      该数据库可作为识别飞机所有者的后备数据源。设为 OFF 可禁用下载，
+      但会保留先前已经存储的副本。
+
+  # ── Web Page ─────────────────────────────────────────────────────────
+  PF_TABLESIZE:
+    name: Planefence 每页行数 (PF_TABLESIZE)
+    description: Planefence 表格在分页前每页默认显示的行数。
+  PF_OPENAIP_LAYER:
+    name: 显示 OpenAIP 图层 (PF_OPENAIP_LAYER)
+    description: >-
+      在热力图上叠加 OpenAIP 空域图层。
+      需要有效的 PF_OPENAIPKEY。
+  PF_OPENAIPKEY:
+    name: OpenAIP API 密钥 (PF_OPENAIPKEY)
+    description: >-
+      OpenAIP 空域图层所需的 API 密钥。可在 https://www.openaip.net 获取。
+      当 PF_OPENAIP_LAYER 为 ON 时必须提供。
+
+  # ── Plane-Alert ──────────────────────────────────────────────────────
+  PF_PLANEALERT:
+    name: 启用 Plane-Alert (PF_PLANEALERT)
+    description: 启用 Plane-Alert 功能及其子页面。
+  PF_PARANGE:
+    name: Plane-Alert 半径 (PF_PARANGE)
+    description: >-
+      Plane-Alert 的工作半径，单位为 PF_DISTUNIT。
+      留空或设为较大值（例如 999999）时，无论距离多远，
+      只要你的站点接收到该飞机数据就会触发警报。
+  PF_PA_SQUAWKS:
+    name: 警报应答机代码 (PF_PA_SQUAWKS)
+    description: >-
+      用逗号分隔的 4 位 squawk 代码列表，匹配时会触发 Plane-Alert
+      通知。可使用 x 作为单个数字通配符（例如 7x00）。
+      留空可禁用基于 squawk 的警报。
+  PF_ALERTLIST:
+    name: 警报列表来源 (PF_ALERTLIST)
+    description: >-
+      用逗号分隔的文件名（位于 addon_configs/planefence/）或
+      Plane-Alert CSV 列表 URL。最多支持 10 个来源。它们会替代内置的
+      plane-alert-db.txt，因此如果你还想保留默认列表，请一并包含它。
+  PF_ALERTHEADER:
+    name: 警报列表表头 (PF_ALERTHEADER)
+    description: >-
+      警报列表 CSV 文件的列标题定义。
+      使用 $Col 表示显示并包含在通知中，#Col 表示隐藏，
+      #$Col 表示隐藏但仍包含在通知中。
+      名为 "ICAO Type" 的列可启用飞机剪影图标。
+  PA_HISTTIME:
+    name: 警报历史保留天数 (PA_HISTTIME)
+    description: Plane-Alert 条目在网站上保持可见的天数。
+  PA_SILHOUETTES_LINK:
+    name: 剪影图标包 URL (PA_SILHOUETTES_LINK)
+    description: >-
+      用于获取 Plane-Alert 飞机剪影图标包更新的 URL。
+      留空则使用默认上游 URL，设为 OFF 可禁用更新。
+  PA_TRACKSERVICE:
+    name: Plane-Alert 跟踪服务 (PA_TRACKSERVICE)
+    description: >-
+      Plane-Alert 中飞机跟踪链接所使用的地图服务。
+      示例：globe.adsbexchange.com、globe.airplanes.live。
+  PA_EXCLUSIONS:
+    name: 警报排除项 (PA_EXCLUSIONS)
+    description: >-
+      用逗号分隔的过滤规则，用于抑制 Plane-Alert 通知和界面条目。
+      可填写 ICAO 机型代码、ADS-B 十六进制地址，或飞机记录中的任意文本。
+      不区分大小写。留空可禁用过滤。
+  PA_TABLESIZE:
+    name: Plane-Alert 每页行数 (PA_TABLESIZE)
+    description: Plane-Alert 表格在分页前每页默认显示的行数。
+  PA_MOTD:
+    name: Plane-Alert 每日消息 (PA_MOTD)
+    description: >-
+      显示在 Plane-Alert 页面顶部的 HTML 消息。
+      支持简单的 HTML 标签。
+
+  # ── Screenshot ───────────────────────────────────────────────────────
+  PF_SCREENSHOTURL:
+    name: 截图服务 URL (PF_SCREENSHOTURL)
+    description: >-
+      截图服务的基础 URL（默认 http://screenshot:5042）。
+      该服务必须能响应 GET /snap/<flight> 并返回 PNG 图片。
+  PF_SCREENSHOT_TIMEOUT:
+    name: 截图超时（秒）(PF_SCREENSHOT_TIMEOUT)
+    description: 在放弃前等待截图生成的最长时间。
+
+  # ── Notifications — General ──────────────────────────────────────────
+  NOTIF_DATEFORMAT:
+    name: 通知日期格式 (NOTIF_DATEFORMAT)
+    description: >-
+      通知和表格中使用的日期/时间格式字符串。
+      使用 Linux 日期格式，例如 "%F %T %Z" 表示 2024-01-15 14:30:00 UTC。
+  PF_NOTIFEVERY:
+    name: 每次出现都通知 (PF_NOTIFEVERY)
+    description: >-
+      启用后，每次符合条件的飞机观测都会发送通知。
+      请谨慎使用，因为这可能会产生大量通知。
+  PF_ATTRIB:
+    name: Planefence 署名文本 (PF_ATTRIB)
+    description: 附加到 Planefence 通知末尾的署名文本。
+  PA_ATTRIB:
+    name: Plane-Alert 署名文本 (PA_ATTRIB)
+    description: 附加到 Plane-Alert 通知末尾的署名文本。
+  DISCORD_FEEDER_NAME:
+    name: Discord 站点名称 (DISCORD_FEEDER_NAME)
+    description: >-
+      显示在 Discord 消息中的易读站点名称。
+      如果想让它变成可点击链接，请使用 Markdown 格式 [name](url)。
+  DISCORD_MEDIA:
+    name: Discord 媒体附件 (DISCORD_MEDIA)
+    description: >-
+      附加到 Discord 消息中的媒体类型。
+      screenshot = tar1090 截图；photo = planespotters.net 照片；
+      photo+screenshot 或 screenshot+photo = 两者都附带（顺序决定主媒体）。
+
+  # ── Discord ──────────────────────────────────────────────────────────
+  PF_DISCORD:
+    name: 为 Planefence 启用 Discord (PF_DISCORD)
+    description: 通过 webhook 将 Planefence 警报发送到 Discord。
+  PF_DISCORD_WEBHOOKS:
+    name: Planefence 的 Discord webhook (PF_DISCORD_WEBHOOKS)
+    description: 用逗号分隔的 Discord webhook URL，用于发送 Planefence 通知。
+  PF_DISCORD_COLOR:
+    name: Planefence 的 Discord 嵌入颜色 (PF_DISCORD_COLOR)
+    description: >-
+      Planefence Discord 嵌入消息的高亮颜色。
+      支持颜色名称、0xRRGGBB 十六进制值或十进制 RGB。默认值为 0xf2e718。
+  PA_DISCORD:
+    name: 为 Plane-Alert 启用 Discord (PA_DISCORD)
+    description: 通过 webhook 将 Plane-Alert 警报发送到 Discord。
+  PA_DISCORD_WEBHOOKS:
+    name: Plane-Alert 的 Discord webhook (PA_DISCORD_WEBHOOKS)
+    description: 用逗号分隔的 Discord webhook URL，用于发送 Plane-Alert 通知。
+  PA_DISCORD_COLOR:
+    name: Plane-Alert 的 Discord 嵌入颜色 (PA_DISCORD_COLOR)
+    description: >-
+      Plane-Alert Discord 嵌入消息的高亮颜色。
+      支持颜色名称、0xRRGGBB 十六进制值或十进制 RGB。默认值为 0xf2e718。
+
+  # ── Mastodon ─────────────────────────────────────────────────────────
+  PF_MASTODON:
+    name: 为 Planefence 启用 Mastodon (PF_MASTODON)
+    description: 将 Planefence 警报发布到 Mastodon。
+  PA_MASTODON:
+    name: 为 Plane-Alert 启用 Mastodon (PA_MASTODON)
+    description: 将 Plane-Alert 警报发布到 Mastodon。
+  MASTODON_SERVER:
+    name: Mastodon 服务器 (MASTODON_SERVER)
+    description: Mastodon 实例主机名，不包含 https://，例如 airwaves.social。
+  MASTODON_ACCESS_TOKEN:
+    name: Mastodon 访问令牌 (MASTODON_ACCESS_TOKEN)
+    description: >-
+      你的 Mastodon 应用所使用的 OAuth 访问令牌。
+      可在你的 Mastodon 实例中通过“偏好设置 → 开发”创建。
+  PF_MASTODON_VISIBILITY:
+    name: Planefence 的 Mastodon 可见性 (PF_MASTODON_VISIBILITY)
+    description: Planefence Mastodon 帖文的可见性，可选 public、unlisted 或 private。
+  PA_MASTODON_VISIBILITY:
+    name: Plane-Alert 的 Mastodon 可见性 (PA_MASTODON_VISIBILITY)
+    description: Plane-Alert Mastodon 帖文的可见性，可选 public、unlisted 或 private。
+  PA_MASTODON_MAXIMGS:
+    name: Plane-Alert 的 Mastodon 最大图片数 (PA_MASTODON_MAXIMGS)
+    description: 每条 Plane-Alert Mastodon 帖文可附加的最大图片数量。
+  MASTODON_RETENTION_TIME:
+    name: Mastodon 帖文保留天数 (MASTODON_RETENTION_TIME)
+    description: Mastodon 帖文在自动删除前保留的天数。
+
+  # ── Telegram ─────────────────────────────────────────────────────────
+  TELEGRAM_BOT_TOKEN:
+    name: Telegram 机器人令牌 (TELEGRAM_BOT_TOKEN)
+    description: >-
+      你的 Telegram 机器人令牌（格式如 123456789:ABCDef…）。
+      可通过 @BotFather 创建机器人。完整设置请参阅 README-telegram.md。
+  PF_TELEGRAM_CHAT_ID:
+    name: Planefence 的 Telegram 聊天 ID (PF_TELEGRAM_CHAT_ID)
+    description: >-
+      接收 Planefence 通知的数字聊天 ID 或公开频道名称（例如 @yourchannel）。
+      机器人必须是该频道的管理员。
+  PA_TELEGRAM_CHAT_ID:
+    name: Plane-Alert 的 Telegram 聊天 ID (PA_TELEGRAM_CHAT_ID)
+    description: >-
+      接收 Plane-Alert 通知的数字聊天 ID 或公开频道名称（例如 @yourchannel）。
+      机器人必须是该频道的管理员。
+  PF_TELEGRAM_ENABLED:
+    name: 为 Planefence 启用 Telegram (PF_TELEGRAM_ENABLED)
+    description: 将 Planefence 警报发送到 Telegram。
+  PA_TELEGRAM_ENABLED:
+    name: 为 Plane-Alert 启用 Telegram (PA_TELEGRAM_ENABLED)
+    description: 将 Plane-Alert 警报发送到 Telegram。
+  PF_TELEGRAM_CHAT_TYPE:
+    name: Planefence 的 Telegram 聊天类型 (PF_TELEGRAM_CHAT_TYPE)
+    description: >-
+      设为 dm、private 或 user 时，将作为私信发送，而不是频道帖子。
+      留空则使用频道/群组行为。
+  PA_TELEGRAM_CHAT_TYPE:
+    name: Plane-Alert 的 Telegram 聊天类型 (PA_TELEGRAM_CHAT_TYPE)
+    description: >-
+      设为 dm、private 或 user 时，将作为私信发送，而不是频道帖子。
+      留空则使用频道/群组行为。
+
+  # ── BlueSky ──────────────────────────────────────────────────────────
+  BLUESKY_HANDLE:
+    name: BlueSky 账号名 (BLUESKY_HANDLE)
+    description: 你的 BlueSky 账号名，不包含前导 @，例如 yourname.bsky.social。
+  BLUESKY_APP_PASSWORD:
+    name: BlueSky 应用密码 (BLUESKY_APP_PASSWORD)
+    description: >-
+      BlueSky 的应用密码（格式为 aaaa-bbbb-cccc-dddd）。
+      可在 https://bsky.app/settings/app-passwords 创建。
+  PF_BLUESKY_ENABLED:
+    name: 为 Planefence 启用 BlueSky (PF_BLUESKY_ENABLED)
+    description: 将 Planefence 警报发布到 BlueSky。设为 ON 以启用。
+  PA_BLUESKY_ENABLED:
+    name: 为 Plane-Alert 启用 BlueSky (PA_BLUESKY_ENABLED)
+    description: 将 Plane-Alert 警报发布到 BlueSky。设为 ON 以启用。
+
+  # ── MQTT — Planefence ────────────────────────────────────────────────
+  PF_MQTT_URL:
+    name: Planefence 的 MQTT 代理 URL (PF_MQTT_URL)
+    description: >-
+      MQTT 代理的主机名、IP 或完整 URL（mqtt:// 或 mqtts://）。
+      留空可禁用 Planefence 的 MQTT。
+  PF_MQTT_PORT:
+    name: Planefence 的 MQTT 端口 (PF_MQTT_PORT)
+    description: MQTT 代理的 TCP 端口。默认值为 1883。
+  PF_MQTT_TLS:
+    name: Planefence 的 MQTT TLS (PF_MQTT_TLS)
+    description: 为 Planefence 的 MQTT 连接启用 TLS 加密。
+  PF_MQTT_CLIENT_ID:
+    name: Planefence 的 MQTT 客户端 ID (PF_MQTT_CLIENT_ID)
+    description: 可选的 MQTT 客户端标识符（不能包含空格）。默认使用容器主机名。
+  PF_MQTT_TOPIC:
+    name: Planefence 的 MQTT 主题 (PF_MQTT_TOPIC)
+    description: Planefence 消息使用的 MQTT 主题。默认值为 <hostname>/planefence。
+  PF_MQTT_DATETIME_FORMAT:
+    name: Planefence 的 MQTT 日期时间格式 (PF_MQTT_DATETIME_FORMAT)
+    description: MQTT 消息中时间戳所用的 Linux 日期格式。默认值为 Unix 时间戳（%s）。
+  PF_MQTT_QOS:
+    name: Planefence 的 MQTT QoS (PF_MQTT_QOS)
+    description: MQTT 服务质量等级：0（最多一次）、1（至少一次）、2（恰好一次）。
+  PF_MQTT_FIELDS:
+    name: Planefence 的 MQTT 字段 (PF_MQTT_FIELDS)
+    description: 要包含的字段列表，可用逗号或空格分隔。留空则发送所有字段。
+  PF_MQTT_USERNAME:
+    name: Planefence 的 MQTT 用户名 (PF_MQTT_USERNAME)
+    description: 用于 MQTT 代理认证的用户名。
+  PF_MQTT_PASSWORD:
+    name: Planefence 的 MQTT 密码 (PF_MQTT_PASSWORD)
+    description: 用于 MQTT 代理认证的密码。
+
+  # ── MQTT — Plane-Alert ───────────────────────────────────────────────
+  PA_MQTT_URL:
+    name: Plane-Alert 的 MQTT 代理 URL (PA_MQTT_URL)
+    description: >-
+      MQTT 代理的主机名、IP 或完整 URL（mqtt:// 或 mqtts://）。
+      留空可禁用 Plane-Alert 的 MQTT。
+  PA_MQTT_PORT:
+    name: Plane-Alert 的 MQTT 端口 (PA_MQTT_PORT)
+    description: MQTT 代理的 TCP 端口。默认值为 1883。
+  PA_MQTT_TLS:
+    name: Plane-Alert 的 MQTT TLS (PA_MQTT_TLS)
+    description: 为 Plane-Alert 的 MQTT 连接启用 TLS 加密。
+  PA_MQTT_CLIENT_ID:
+    name: Plane-Alert 的 MQTT 客户端 ID (PA_MQTT_CLIENT_ID)
+    description: 可选的 MQTT 客户端标识符（不能包含空格）。默认使用容器主机名。
+  PA_MQTT_TOPIC:
+    name: Plane-Alert 的 MQTT 主题 (PA_MQTT_TOPIC)
+    description: Plane-Alert 消息使用的 MQTT 主题。默认值为 <hostname>/plane-alert。
+  PA_MQTT_DATETIME_FORMAT:
+    name: Plane-Alert 的 MQTT 日期时间格式 (PA_MQTT_DATETIME_FORMAT)
+    description: MQTT 消息中时间戳所用的 Linux 日期格式。默认值为 Unix 时间戳（%s）。
+  PA_MQTT_QOS:
+    name: Plane-Alert 的 MQTT QoS (PA_MQTT_QOS)
+    description: MQTT 服务质量等级：0（最多一次）、1（至少一次）、2（恰好一次）。
+  PA_MQTT_FIELDS:
+    name: Plane-Alert 的 MQTT 字段 (PA_MQTT_FIELDS)
+    description: 要包含的字段列表，可用逗号或空格分隔。留空则发送所有字段。
+  PA_MQTT_USERNAME:
+    name: Plane-Alert 的 MQTT 用户名 (PA_MQTT_USERNAME)
+    description: 用于 MQTT 代理认证的用户名。
+  PA_MQTT_PASSWORD:
+    name: Plane-Alert 的 MQTT 密码 (PA_MQTT_PASSWORD)
+    description: 用于 MQTT 代理认证的密码。
+
+  # ── RSS ──────────────────────────────────────────────────────────────
+  PF_RSS_SITELINK:
+    name: Planefence 的 RSS 站点 URL (PF_RSS_SITELINK)
+    description: >-
+      你的 Planefence 站点的公开基础 URL，用于生成有效的 RSS 订阅链接。
+      留空可禁用 Planefence RSS 订阅源。
+  PF_RSS_FAVICONLINK:
+    name: Planefence 的 RSS favicon URL (PF_RSS_FAVICONLINK)
+    description: 要包含在 Planefence RSS 订阅源中的 favicon URL。
+  PA_RSS_SITELINK:
+    name: Plane-Alert 的 RSS 站点 URL (PA_RSS_SITELINK)
+    description: >-
+      你的 Plane-Alert 站点的公开基础 URL，用于生成有效的 RSS 订阅链接。
+      留空可禁用 Plane-Alert RSS 订阅源。
+  PA_RSS_FAVICONLINK:
+    name: Plane-Alert 的 RSS favicon URL (PA_RSS_FAVICONLINK)
+    description: 要包含在 Plane-Alert RSS 订阅源中的 favicon URL。
