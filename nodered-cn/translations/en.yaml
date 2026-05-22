@@ -1,0 +1,46 @@
+configuration:
+  port:
+    name: Listening port
+    description: Internal listening port for Node-RED. Default is 1880. Restart the add-on after changing it.
+  log_level:
+    name: Log level
+    description: Log output verbosity. Info is recommended; use debug or trace when troubleshooting.
+  credential_secret:
+    name: Credential encryption secret
+    description: Secret used to encrypt node credentials, similar to a password. Store it safely. Once set, do not change it or existing credentials can no longer be decrypted.
+  theme:
+    name: Editor theme
+    description: Color theme for the Node-RED editor UI. Default is default.
+  http_node:
+    name: HTTP node authentication
+    description: Sets username and password protection for HTTP node endpoints under /endpoint/. Leave empty to disable authentication.
+  http_static:
+    name: Static file authentication
+    description: Sets username and password protection for static files hosted by Node-RED. Leave empty to disable authentication.
+  ssl:
+    name: Enable SSL (HTTPS)
+    description: Use certificate-based encryption for direct access when enabled. Note that SSL only affects direct port access, not HA Ingress.
+  certfile:
+    name: SSL certificate file
+    description: SSL certificate filename, for example fullchain.pem. The file must be placed in the /ssl/ directory.
+  keyfile:
+    name: SSL private key file
+    description: SSL private key filename, for example privkey.pem. The file must be placed in the /ssl/ directory.
+  system_packages:
+    name: Extra system packages
+    description: Additional Alpine Linux packages to install on startup, such as ffmpeg or g++. Installing more packages increases startup time.
+  npm_packages:
+    name: Extra NPM packages
+    description: Additional npm packages or Node-RED nodes to install on startup, such as node-red-contrib-xxx. Installing more packages increases startup time.
+  init_commands:
+    name: Init commands
+    description: List of shell commands to run each time the add-on starts, useful for environment customization.
+  leave_front_door_open:
+    name: Disable authentication
+    description: Set to true to disable Node-RED HTTP authentication. Strongly discouraged unless the local network is fully trusted.
+  safe_mode:
+    name: Start in safe mode
+    description: Set to true to start in safe mode without loading any flows. Useful for fixing configuration mistakes or runaway flows.
+  max_old_space_size:
+    name: Maximum memory (MB)
+    description: Maximum Node.js heap size in MB. Increase it for complex flows or large data workloads, for example 512 or 1024.

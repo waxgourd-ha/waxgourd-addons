@@ -1,0 +1,46 @@
+configuration:
+  port:
+    name: 监听端口
+    description: Node-RED 内部监听端口，默认 1880，修改后需重启插件。
+  log_level:
+    name: 日志级别
+    description: "日志输出详细程度。推荐 info；排查问题时改用 debug 或 trace。"
+  credential_secret:
+    name: 凭据加密密钥
+    description: 用于加密节点凭据的密钥（类似密码），请妥善保存。一旦设置请勿修改，否则已有凭据将无法解密。
+  theme:
+    name: 编辑器主题
+    description: Node-RED 编辑器界面的配色主题，默认 default。
+  http_node:
+    name: HTTP 节点访问认证
+    description: 为 /endpoint/ 下的 HTTP 节点端点设置用户名和密码保护。不填则不启用认证。
+  http_static:
+    name: 静态文件访问认证
+    description: 为 Node-RED 托管的静态文件目录设置用户名和密码保护。不填则不启用认证。
+  ssl:
+    name: 启用 SSL（HTTPS）
+    description: 开启后使用证书加密直连访问。注意：SSL 仅影响直接端口访问，不影响 HA Ingress。
+  certfile:
+    name: SSL 证书文件
+    description: "SSL 证书文件名（如 fullchain.pem），文件须放在 /ssl/ 目录下。"
+  keyfile:
+    name: SSL 私钥文件
+    description: "SSL 私钥文件名（如 privkey.pem），文件须放在 /ssl/ 目录下。"
+  system_packages:
+    name: 额外系统软件包
+    description: 启动时额外安装的 Alpine Linux 软件包（如 ffmpeg、g++），安装越多启动越慢。
+  npm_packages:
+    name: 额外 NPM 软件包
+    description: 启动时额外安装的 npm 包或 Node-RED 节点（如 node-red-contrib-xxx），安装越多启动越慢。
+  init_commands:
+    name: 初始化命令
+    description: 每次插件启动时执行的 Shell 命令列表，可用于自定义环境。
+  leave_front_door_open:
+    name: 禁用身份验证
+    description: 设为 true 可关闭 Node-RED 的 HTTP 认证。除非内网完全可信，否则强烈不建议开启。
+  safe_mode:
+    name: 安全模式启动
+    description: 设为 true 时以安全模式启动，不加载任何流程，用于修复配置错误或死循环流程。
+  max_old_space_size:
+    name: 最大内存（MB）
+    description: Node.js 堆内存上限（MB）。流程复杂或数据量大时可适当调高，如 512 或 1024。
