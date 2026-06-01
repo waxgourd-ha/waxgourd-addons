@@ -1,0 +1,33 @@
+---
+version: 20260601
+slug: turbo3
+name: Turbo3 (GUI for SingBox)
+description: GUI for SingBox Web 模式，支持多协议代理管理
+url: https://github.com/GUI-for-Cores/GUI.for.SingBox
+image: wghaos/haos-turbo3-{arch}
+arch:
+  - aarch64
+  - amd64
+hassio_api: false
+host_network: true
+init: false
+map:
+  - addon_config:rw
+privileged:
+  - NET_ADMIN
+  - NET_RAW
+apparmor: true
+ingress: false
+panel_icon: mdi:router-network
+ports:
+  2097/tcp: 2097
+ports_description:
+  2097/tcp: "Turbo3 管理面板"
+options:
+  panel_port: 2097
+  auto_start_kernel: true
+schema:
+  panel_port: port
+  auto_start_kernel: bool
+startup: services
+webui: "[PROTO:http]://[HOST]:[PORT:2097]"
