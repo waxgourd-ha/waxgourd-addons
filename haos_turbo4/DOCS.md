@@ -1,8 +1,8 @@
-# Turbo3 Documentation
+# Turbo4 Documentation
 
 ## 1. 文档范围
 
-本文档面向 Turbo3 的使用者与维护者，重点说明：
+本文档面向 Turbo4 的使用者与维护者，重点说明：
 
 - Add-on 的运行结构
 - 启动流程
@@ -16,7 +16,7 @@
 
 ## 2. 项目定位
 
-Turbo3 是一个 Home Assistant Add-on，提供 SingBox 的 Web 管理界面。
+Turbo4 是一个 Home Assistant Add-on，提供 SingBox 的 Web 管理界面。
 
 它由以下几部分组成：
 
@@ -61,7 +61,7 @@ Turbo3 是一个 Home Assistant Add-on，提供 SingBox 的 Web 管理界面。
 
 ### 4.1 数据目录初始化
 
-Turbo3 主要使用 `/config/data` 作为持久化目录。启动时会检查并初始化：
+Turbo4 主要使用 `/config/data` 作为持久化目录。启动时会检查并初始化：
 
 - `/config/data/sing-box`
 - `/config/data/plugins`
@@ -91,7 +91,7 @@ Turbo3 主要使用 `/config/data` 作为持久化目录。启动时会检查并
 - `profiles.yaml`
   - 把 `strict_route: true` 改成 `strict_route: false`
 
-这意味着 Turbo3 启动时**会修改已有数据文件**，并不是纯只读运行。
+这意味着 Turbo4 启动时**会修改已有数据文件**，并不是纯只读运行。
 
 ### 4.4 Plugin Hub 缓存初始化
 
@@ -228,7 +228,7 @@ password: admin123
 
 ## 7. Clash API 代理
 
-Turbo3 提供一个反向代理入口：
+Turbo4 提供一个反向代理入口：
 
 - `/clash-api/{host:port}/{path}`
 

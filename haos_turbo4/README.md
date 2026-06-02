@@ -1,14 +1,14 @@
-# 冬瓜甄选addons：Turbo3 (GUI for SingBox)
+# 冬瓜甄选addons：Turbo4 (GUI for SingBox)
 
-Turbo3 是一个 Home Assistant Add-on，用于提供 **SingBox Web 管理界面**。它把前端界面和本地管理后端打包到同一个插件中，便于在 HAOS 环境下管理配置、订阅、规则集、插件和计划任务。
+Turbo4 是一个 Home Assistant Add-on，用于提供 **SingBox Web 管理界面**。它把前端界面和本地管理后端打包到同一个插件中，便于在 HAOS 环境下管理配置、订阅、规则集、插件和计划任务。
 
-> 当前 Add-on 名称：`Turbo3 (GUI for SingBox)`  
+> 当前 Add-on 名称：`Turbo4 (GUI for SingBox)`  
 > 默认面板端口：`2097`  
 > 默认首次登录账号：`admin` / `admin123`
 
 ## 功能概览
 
-根据当前界面路由，Turbo3 主要提供以下模块：
+根据当前界面路由，Turbo4 主要提供以下模块：
 
 - **Overview**：运行概览、连接、日志、快速控制
 - **Profiles**：SingBox 配置文件管理
@@ -32,7 +32,7 @@ Turbo3 是一个 Home Assistant Add-on，用于提供 **SingBox Web 管理界面
 
 ## 安装与使用
 
-1. 在 Home Assistant 中添加此 Add-on 仓库并安装 `Turbo3`。
+1. 在 Home Assistant 中添加此 Add-on 仓库并安装 `Turbo4`。
 2. 启动 Add-on。
 3. 通过 **Home Assistant 主机 IP + 面板端口** 访问，例如：
    - `http://<HA-IP>:2097`
@@ -75,7 +75,7 @@ Web 面板在没有自定义凭据时，会使用默认账号：
 - 增加 `ip rule` 路由规则
 - 修改 DNS 解析文件为 `1.1.1.1`
 
-因此 Turbo3 的行为不只是“打开一个 Web 面板”，还会影响网络与代理运行方式。
+因此 Turbo4 的行为不只是“打开一个 Web 面板”，还会影响网络与代理运行方式。
 
 ### 3. 使用 host network 与特权能力
 
@@ -83,7 +83,7 @@ Web 面板在没有自定义凭据时，会使用默认账号：
 
 ## 目录与持久化
 
-Turbo3 的数据主要保存在 `/config/data` 下，包括：
+Turbo4 的数据主要保存在 `/config/data` 下，包括：
 
 - sing-box 运行目录
 - 插件与缓存
