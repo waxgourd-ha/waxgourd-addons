@@ -1,5 +1,5 @@
 ---
-version: 20260601
+version: 20260602
 slug: turbo4
 name: Turbo4 (GUI for SingBox)
 description: GUI for SingBox Web 模式，支持多协议代理管理
