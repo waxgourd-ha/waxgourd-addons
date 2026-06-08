@@ -1,5 +1,5 @@
 name: "LangBot"
-version: "4.8.7"
+version: "4.9.7"
 slug: "langbot"
 description: "大语言模型原生即时通信机器人平台，支持微信、QQ、飞书、钉钉、Discord、Telegram 等多平台"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"

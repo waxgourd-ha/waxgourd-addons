@@ -1,5 +1,5 @@
 name: Beszel Hub
-version: 0.17.0
+version: 0.18.7
 slug: beszel-hub
 description: Beszel Hub 是一个轻量级服务器监控平台，包含 Docker 统计信息、历史数据和告警功能
 url: https://github.com/waxgourd-ha/waxgourd-addons

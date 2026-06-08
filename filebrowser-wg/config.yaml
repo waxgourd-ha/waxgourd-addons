@@ -76,6 +76,7 @@ environment:
 homeassistant: 2025.5.0
 image: wghaos/addon-wghaos-filebrowser-{arch}
 ingress: true
+ingress_entry: files
 ingress_port: 8071
 ingress_stream: true
 map:
@@ -122,5 +123,5 @@ schema:
 slug: filebrowser-wg
 udev: true
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: "2.62.1"
+version: "2.63.5"
 boot: manual

@@ -1,3 +1,6 @@
+### v6.4.1 (2026-06-03)
+- Update to latest version from jason5ng32/MyIP (changelog : https://github.com/jason5ng32/MyIP/releases)
+
 ### v6.2.0 (2026-05-19)
 - 版本升级
 ### v6.1.0 (2026-04-27)

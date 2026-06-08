@@ -1,3 +1,6 @@
+## 2026.05 (2026-06-01)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/addons_updater-{arch}, upstream version: 2026.05)
+
 ## description: Automatic addons update by aligning version tag with upstream releases 3.19.16 (2026-01-10)
 - Minor bugs fixed
 ## 3.19.16 (2026-01-10)

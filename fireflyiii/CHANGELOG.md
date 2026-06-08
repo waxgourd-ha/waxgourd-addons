@@ -1,3 +1,5 @@
+## 6.6.3 (2026-06-01)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/fireflyiii-{arch}, upstream version: 6.6.3)
 
 ## 6.6.2-1 (2026-05-10)
 - Fix MariaDB connection on HAOS >=17.3 by forcing IPv4 host resolution (#2688)
