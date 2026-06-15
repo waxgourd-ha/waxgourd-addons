@@ -1,3 +1,6 @@
+## 22.0.0.1 (2026-06-12)
+- Update to latest version from TinkeringHa/addons-hage (changelog : https://github.com/TinkeringHa/addons-hage/tree/master/node-red-cn)
+
 # Changelog
 
 ## [21.0.10.1] - 2026-05-19

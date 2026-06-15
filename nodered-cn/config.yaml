@@ -1,6 +1,6 @@
 ---
 name: Node-RED 汉化版
-version: "21.0.10.1"
+version: "22.0.0.1"
 slug: nodered-cn
 description: 基于物联网的可视化流程编程工具（汉化增强版）
 image: tinkeringha/node-red-cn-{arch}
