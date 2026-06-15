@@ -1,0 +1,27 @@
+arch:
+  - amd64
+  - aarch64
+description: manage your personal workouts, weight and diet plans
+image: ghcr.io/alexbelgium/wger-{arch}
+map:
+  - share:rw
+  - config:rw
+  - ssl:ro
+name: Wger
+options:
+  env_vars: []
+  CONFIG_LOCATION: /config/addons_config/wger/config.yaml
+ports:
+  80/tcp: 9927
+ports_description:
+  80/tcp: Web interface
+schema:
+  env_vars:
+    - name: match(^[A-Za-z0-9_]+$)
+      value: str?
+  CONFIG_LOCATION: str
+slug: wger
+udev: true
+url: https://github.com/alexbelgium/hassio-addons
+version: "2.6-dev"
+webui: "[PROTO:ssl]://[HOST]:[PORT:80]"

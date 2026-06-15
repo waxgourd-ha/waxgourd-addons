@@ -1,0 +1,34 @@
+name: Aurral
+version: "1.76.42"
+slug: aurral
+description: >-
+  Self-hosted music discovery, request management, flows, and playlist
+  importing for Lidarr with library-aware recommendations.
+url: https://github.com/alexbelgium/hassio-addons/blob/master/aurral/README.md
+arch:
+  - aarch64
+  - amd64
+
+image: ghcr.io/alexbelgium/aurral-{arch}
+
+init: false
+
+ports:
+  3001/tcp: 3001
+ports_description:
+  3001/tcp: Aurral Web UI
+
+webui: http://[HOST]:[PORT:3001]
+
+map:
+  - addon_config:rw
+  - share:rw
+  - media:rw
+
+options:
+  download_folder: /share/aurral/downloads
+  weekly_flow_folder: weekly-flow
+
+schema:
+  download_folder: str
+  weekly_flow_folder: str
