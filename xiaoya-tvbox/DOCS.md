@@ -4,7 +4,7 @@
 
 小雅addons版
 1. 加载项一键安装和更新
-1. 打开WEB UI：http://your-ip:4567/#/accounts 默认用户名：admin 密码：admin
+1. 打开WEB UI：http://your-ip:4567/#/accounts 默认用户名：admin 密码：请从日志中获取
 1. 账号/添加账号，获取并填写阿里token、开放token
 1. 将订阅地址http://your-ip:4567/sub/0 输入到TvBox配置
 

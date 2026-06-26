@@ -1,3 +1,6 @@
+### 30.2.5 (2026-06-23)
+- Update to latest version from jgraph/docker-drawio (changelog : https://github.com/jgraph/docker-drawio/tags)
+
 ### 30.0.4 (2026-06-03)
 - Update to latest version from jgraph/docker-drawio (changelog : https://github.com/jgraph/docker-drawio/tags)
 
