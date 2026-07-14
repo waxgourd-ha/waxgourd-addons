@@ -38,6 +38,8 @@ profile addon_data_clean flags=(attach_disconnected,mediate_deleted) {
   # Data access
   /data/** rw,
   /addon_configs/** rw,
+  /app_configs/** rw,
+  /apps/** rw,
 
 
   # suppress ptrace denials when using 'docker ps' or using 'ps' inside a container

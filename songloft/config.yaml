@@ -1,0 +1,21 @@
+name: "Songloft"
+version: "2.10.0"
+slug: "songloft"
+panel_icon: "mdi:music-box-multiple"
+description: "Songloft 音乐服务 Home Assistant Add-on"
+url: "https://github.com/waxgourd-ha/waxgourd-addons"
+image: wghaos/addon-wghaos-songloft
+init: false
+arch:
+  - amd64
+  - aarch64
+startup: application
+boot: manual
+apparmor: false
+map:
+  - media:rw
+webui: "[PROTO:http]://[HOST]:[PORT:58091]/"
+ports:
+  58091/tcp: 58091
+ports_description:
+  58091/tcp: "Songloft Web UI"

@@ -1,3 +1,6 @@
+## 34.0.1 (2026-06-29)
+- Sync addon version with alexbelgium/hassio-addons (image: r.hassbus.com/alexbelgium/nextcloud_ocr-{arch}, upstream version: 34.0.1)
+
 ## 34.0.0 (2026-06-12)
 - Sync addon version with alexbelgium/hassio-addons (image: r.hassbus.com/alexbelgium/nextcloud_ocr-{arch}, upstream version: 34.0.0)
 

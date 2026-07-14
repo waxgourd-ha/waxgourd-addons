@@ -1,3 +1,6 @@
+## 2.3.4 (2026-07-13)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/fireflyiii_data_importer-{arch}, upstream version: 2.3.4)
+
 ## 2.3.2-5 (2026-06-01)
 - Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/fireflyiii_data_importer-{arch}, upstream version: 2.3.2-5)
 

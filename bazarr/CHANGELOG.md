@@ -1,3 +1,5 @@
+## 1.6.0 (2026-07-13)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/bazarr-{arch}, upstream version: 1.6.0)
 
 ## 1.5.6-4 (2026-04-22)
 - Fix Bazarr crash on startup: base_url must start with '/' for Flask blueprint registration

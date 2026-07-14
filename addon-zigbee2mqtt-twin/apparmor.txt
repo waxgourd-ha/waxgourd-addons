@@ -38,6 +38,8 @@ profile addon-zigbee2mqtt-twin flags=(attach_disconnected,mediate_deleted) {
   # Data access
   /data/** rw,
   /addons/** rw,
+  /apps/** rw,
+  /addon_config/** rw,
 
 
   # suppress ptrace denials when using 'docker ps' or using 'ps' inside a container

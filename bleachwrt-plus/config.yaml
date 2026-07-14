@@ -1,5 +1,5 @@
 name: "BleachWRT Plus"
-version: "20250924"
+version: "20260707"
 slug: "bleachwrt_plus"
 description: "BleachWRT Plus - 提供旁路由管理功能，集成WEB管理界面"
 url: "https://github.com/waxgourd-ha/waxgourd-addons"
