@@ -1,3 +1,6 @@
+## 3.18.0 (2026-07-28)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/maintainerr-{arch}, upstream version: 3.18.0)
+
 ## 3.16.0 (2026-07-04)
 - Update to latest version from maintainerr/maintainerr (changelog : https://github.com/maintainerr/maintainerr/releases)
 

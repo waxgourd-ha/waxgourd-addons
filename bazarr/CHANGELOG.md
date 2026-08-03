@@ -1,3 +1,6 @@
+## 1.6.0.2 (2026-07-28)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/bazarr-{arch}, upstream version: 1.6.0.2)
+
 ## 1.6.0 (2026-07-13)
 - Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/bazarr-{arch}, upstream version: 1.6.0)
 
