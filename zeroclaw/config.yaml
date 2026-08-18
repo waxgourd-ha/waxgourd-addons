@@ -1,5 +1,5 @@
 name: "ZeroClaw AI Assistant"
-version: "0.7.5"
+version: "0.8.4-2"
 slug: zeroclaw
 description: ZeroClaw 🦀 网关与仪表盘
 
@@ -25,14 +25,12 @@ map:
 options:
   provider: "qwen"
   model: "qwen3.6-plus"
-  gateway_host: "0.0.0.0"
   gateway_port: 42617
   api_key: ""
   env_vars: []
 schema:
   provider: str
   model: str
-  gateway_host: str
   gateway_port: port
   api_key: str?
   env_vars:

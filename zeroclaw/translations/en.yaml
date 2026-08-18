@@ -5,9 +5,6 @@ configuration:
   model:
     name: Default Model
     description: ZeroClaw default_model, for example qwen3.6-plus.
-  gateway_host:
-    name: Gateway Host
-    description: ZeroClaw gateway.host, default 0.0.0.0.
   gateway_port:
     name: Gateway Port
     description: ZeroClaw gateway.port, default 42617.

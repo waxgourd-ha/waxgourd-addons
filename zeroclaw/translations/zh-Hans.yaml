@@ -5,9 +5,6 @@ configuration:
   model:
     name: 默认模型
     description: ZeroClaw 的 default_model，例如 qwen3.6-plus。
-  gateway_host:
-    name: 网关监听地址
-    description: ZeroClaw gateway.host，默认 0.0.0.0。
   gateway_port:
     name: 网关端口
     description: ZeroClaw gateway.port，默认 42617。

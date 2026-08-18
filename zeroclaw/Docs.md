@@ -10,8 +10,8 @@
 - 使用 Home Assistant Debian Base 镜像封装
 - 通过 s6 服务启动 ZeroClaw
 - 外部监听端口默认是 `42617`
-- 内部通过 nginx 代理到 ZeroClaw 实际监听端口 `42618`
-- 对 `/api/channels` 提供兼容响应 `{"channels":[]}`，避免前端 JSON 解析错误
+- add-on 通过 nginx 对外监听，并代理到 ZeroClaw 实际监听端口 `42618`
+- Web dashboard 静态资源路径固定为 `/usr/share/zeroclawlabs/web/dist`
 
 ## 访问方式
 
@@ -29,7 +29,6 @@ add-on 配置页当前固定字段如下：
 ```yaml
 provider: qwen
 model: qwen3.6-plus
-gateway_host: 0.0.0.0
 gateway_port: 42617
 api_key: ""
 env_vars: []
@@ -43,11 +42,8 @@ env_vars: []
 - `model`
   ZeroClaw 的默认模型名称，例如 `qwen3.6-plus`。
 
-- `gateway_host`
-  网关监听地址，通常保持 `0.0.0.0` 即可。
-
 - `gateway_port`
-  对外暴露端口，默认 `42617`。
+  add-on 对外暴露端口，默认 `42617`。当前 add-on 通过 nginx 反向代理到 ZeroClaw 内部网关，内部 ZeroClaw 实际监听 `42618`。
 
 - `api_key`
   配置页里的通用密钥输入框。当前 add-on 不会再把它写成 ZeroClaw 顶层 `api_key` 配置，而是按 provider 映射到对应的上游环境变量。
@@ -78,7 +74,6 @@ env_vars: []
 ```yaml
 provider: openrouter
 model: openai/gpt-4o-mini
-gateway_host: 0.0.0.0
 gateway_port: 42617
 api_key: sk-or-xxxx
 env_vars: []
@@ -89,7 +84,6 @@ env_vars: []
 ```yaml
 provider: some-custom-provider
 model: your-model
-gateway_host: 0.0.0.0
 gateway_port: 42617
 api_key: ""
 env_vars:

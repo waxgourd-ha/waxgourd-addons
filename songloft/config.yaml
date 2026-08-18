@@ -1,5 +1,5 @@
 name: "Songloft"
-version: "2.10.0"
+version: "2.11.5-1"
 slug: "songloft"
 panel_icon: "mdi:music-box-multiple"
 description: "Songloft 音乐服务 Home Assistant Add-on"
