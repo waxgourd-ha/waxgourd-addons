@@ -1,3 +1,6 @@
+### 7.0.16 (2026-09-21)
+- Update to latest version from homeassistant-apps/app-cloudflared (changelog : https://github.com/homeassistant-apps/app-cloudflared/releases)
+
 ### 7.0.15 (2026-09-09)
 - Update to latest version from homeassistant-apps/app-cloudflared (changelog : https://github.com/homeassistant-apps/app-cloudflared/releases)
 

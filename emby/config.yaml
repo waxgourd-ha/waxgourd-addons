@@ -120,6 +120,6 @@ schema:
 slug: emby
 udev: true
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: "4.9.5.0"
+version: "4.10.0.40"
 video: true
 boot: manual

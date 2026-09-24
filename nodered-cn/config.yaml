@@ -1,6 +1,6 @@
 ---
 name: Node-RED 汉化版
-version: "22.0.0.1"
+version: "22.0.6.3"
 slug: nodered-cn
 description: 基于物联网的可视化流程编程工具（汉化增强版）
 image: tinkeringha/node-red-cn-{arch}
@@ -47,7 +47,7 @@ options:
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   credential_secret: password?
-  theme: list(default|aurora|cobalt2|dark|dracula|espresso-libre|github-dark|github-dark-default|github-dark-dimmed|midnight-red|monoindustrial|monokai|monokai-dimmed|night-owl|noctis|noctis-azureus|noctis-bordo|noctis-minimus|noctis-obscuro|noctis-sereno|noctis-uva|noctis-viola|oceanic-next|oled|one-dark-pro|one-dark-pro-darker|railscasts-extended|selenized-dark|selenized-light|solarized-dark|solarized-light|tokyo-night|tokyo-night-light|tokyo-night-storm|totallyinformation|zenburn|zendesk-garden)?
+  theme: list(default|aurora|cobalt2|dark|dark-modern|dracula|espresso-libre|github-dark|github-dark-default|github-dark-dimmed|midnight-red|monoindustrial|monokai|monokai-dimmed|night-owl|noctis|noctis-azureus|noctis-bordo|noctis-minimus|noctis-obscuro|noctis-sereno|noctis-uva|noctis-viola|oceanic-next|oled|one-dark-pro|one-dark-pro-darker|railscasts-extended|selenized-dark|selenized-light|solarized-dark|solarized-light|tokyo-night|tokyo-night-light|tokyo-night-storm|totallyinformation|zenburn|zendesk-garden)?
   http_node:
     username: str
     password: password

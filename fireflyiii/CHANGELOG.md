@@ -1,3 +1,6 @@
+## 6.7.3 (2026-09-21)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/fireflyiii-{arch}, upstream version: 6.7.3)
+
 ## 6.6.6 (2026-07-13)
 - Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/fireflyiii-{arch}, upstream version: 6.6.6)
 

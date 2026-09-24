@@ -1,3 +1,6 @@
+## 2026.09 (2026-09-21)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/addons_updater-{arch}, upstream version: 2026.09)
+
 ## 2026.08 (2026-08-17)
 - Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/addons_updater-{arch}, upstream version: 2026.08)
 
