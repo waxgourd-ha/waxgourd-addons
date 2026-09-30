@@ -1,3 +1,6 @@
+## 1.3.0.8 (2026-09-30)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/fireflyiii_fints_importer-{arch}, upstream version: 1.3.0.8)
+
 - Added support for configuring extra environment variables via the `env_vars` add-on option alongside config.yaml. See https://github.com/alexbelgium/hassio-addons/wiki/Add-Environment-variables-to-your-Addon-2 for details.
 
 ## 1.3.0-6 (2025-10-18)

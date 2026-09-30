@@ -1,3 +1,6 @@
+## 1.87.0 (2026-09-30)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/autobrr-{arch}, upstream version: 1.87.0)
+
 ## 1.86.0 (2026-09-21)
 - Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/autobrr-{arch}, upstream version: 1.86.0)
 
