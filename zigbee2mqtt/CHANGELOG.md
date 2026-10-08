@@ -1,3 +1,6 @@
+## 2.14.2-1 (2026-10-08)
+- Update to latest version from Koenkk/zigbee2mqtt (changelog : https://github.com/Koenkk/zigbee2mqtt/releases)
+
 ## 2.14.1-1 (2026-09-09)
 - Update to latest version from Koenkk/zigbee2mqtt (changelog : https://github.com/Koenkk/zigbee2mqtt/releases)
 

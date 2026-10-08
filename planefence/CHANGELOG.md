@@ -1,3 +1,6 @@
+## 1.1.1 (2026-10-08)
+- Update to latest version from MaxWinterstein/homeassistant-addons (changelog : https://github.com/MaxWinterstein/homeassistant-addons/tree/main/planefence)
+
 # Changelog
 
 <!-- towncrier release notes start -->
