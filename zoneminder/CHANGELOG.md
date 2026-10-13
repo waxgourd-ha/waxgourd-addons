@@ -1,3 +1,6 @@
+## 1.38.6 (2026-10-10)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/zoneminder-{arch}, upstream version: 1.38.6)
+
 ## 1.38.4 (2026-08-17)
 - Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/zoneminder-{arch}, upstream version: 1.38.4)
 

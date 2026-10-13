@@ -13,7 +13,7 @@ ingress_port: 1337
 ingress_stream: true
 init: false
 map:
-  - addon_config:rw
+  - app_config:rw
   - share:rw
   - ssl
 name: Portainer
@@ -42,5 +42,5 @@ schema:
 slug: portainer
 udev: true
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: 2.45.1
+version: 2.45.2
 boot: manual

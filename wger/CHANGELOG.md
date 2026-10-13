@@ -1,3 +1,6 @@
+## 2.8.0-dev.1 (2026-10-10)
+- Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/wger-{arch}, upstream version: 2.8.0-dev.1)
+
 ## 2.8.0-dev.0 (2026-09-21)
 - Sync addon version with alexbelgium/hassio-addons (image: ghcr.io/alexbelgium/wger-{arch}, upstream version: 2.8.0-dev.0)
 
