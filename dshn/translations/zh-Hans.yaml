@@ -1,0 +1,63 @@
+configuration:
+  deepseek_api_key:
+    name: "DeepSeek API 密钥"
+    description: >-
+      可选 —— 可以留空，打开面板后向导会带你填。到 platform.deepseek.com 申请。
+  deepseek_base_url:
+    name: "DeepSeek 接口地址"
+    description: >-
+      可选，通常不用改。直连官方 API 就保持留空：dsh 0.1.6 起适配器改用 Messages 协议，
+      地址由它自己补。只有指向兼容网关时才填，形如 https://your-gw/anthropic
+  provider:
+    name: "提供商"
+    description: >-
+      可选，通常不用改。官方 DeepSeek 适配器。其它运营商的密钥在面板里的「运营商 / 模型配置」
+      页填写，然后在模型选择器里切换。
+  model:
+    name: "模型"
+    description: >-
+      可选，通常不用改。agent 引擎的默认模型。面板里的模型选择器会按对话覆盖它。
+  profile:
+    name: "引擎配置档"
+    description: >-
+      可选，通常不用改。sdk 是完整 agent（工具、记忆、Home Assistant MCP）；
+      sdk-minimal 是精简档，内置能力更少。
+  reasoning_effort:
+    name: "思考强度"
+    description: >-
+      可选，通常不用改。每轮给模型的思考预算。off 关闭深度思考；max 最深但最慢。
+  max_tokens:
+    name: "最大输出 token"
+    description: "可选，通常不用改。单条回复的上限，调大能写更长的答案，也更费。"
+  permission_mode:
+    name: "权限模式"
+    description: >-
+      可选，通常不用改。danger-full-access 允许 agent 直接执行工具、不逐次确认；
+      想每次都要批准就选更严格的模式。
+  enable_ha_tools:
+    name: "Home Assistant 工具"
+    description: >-
+      可选，通常不用改。通过 MCP 把 ha_list_entities / ha_get_state / ha_call_service /
+      ha_render_template 交给 agent，它才能读取和控制你的设备。
+  cors_allow_origins:
+    name: "CORS 允许来源"
+    description: >-
+      可选，通常不用改。允许调用 agent API 的来源。除非要把面板嵌到别处，保持 * 即可。
+  log_level:
+    name: "日志级别"
+    description: "可选，通常不用改。写入 Supervisor 日志的详细程度。"
+  default_model:
+    name: "强制默认模型"
+    description: >-
+      可选，通常不用改。推荐留空（用当前清单里的第一个）。要钉死才填，
+      格式 <运营商>/<模型>@<运营商>。
+  hide_user_api_key:
+    name: "隐藏用户密钥"
+    description: >-
+      可选，通常不用改。保持关闭。打开后，凡是保存过自己 key 的浏览器都会每条消息 401
+      （NextChat 的已知行为）。
+  ui_language:
+    name: "界面语言"
+    description: >-
+      可选，通常不用改。本应用额外界面（过程块、配置向导、运营商页）的语言。
+      auto 跟随 NextChat 自己的语言设置。

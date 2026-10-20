@@ -1,0 +1,67 @@
+configuration:
+  deepseek_api_key:
+    name: "DeepSeek API key"
+    description: >-
+      Optional — leave it empty and the panel wizard will ask for it on first open.
+      Get a key at platform.deepseek.com.
+  deepseek_base_url:
+    name: "DeepSeek base URL"
+    description: >-
+      Optional — usually no need to change. Keep the default when talking to the official DeepSeek API. Only change it
+      when pointing at a compatible gateway, e.g. https://your-gw/anthropic
+  provider:
+    name: "Provider"
+    description: >-
+      Optional — usually no need to change. Official DeepSeek adapter. Other providers are configured in the app's own
+      provider page (Operators / Models) and picked from the model selector.
+  model:
+    name: "Model"
+    description: >-
+      Optional — usually no need to change. Default model for the agent engine. The model selector inside the panel
+      overrides it per conversation.
+  profile:
+    name: "Engine profile"
+    description: >-
+      Optional — usually no need to change. sdk is the full agent (tools, memory, Home Assistant MCP).
+      sdk-minimal is a lighter profile with fewer built-in capabilities.
+  reasoning_effort:
+    name: "Reasoning effort"
+    description: >-
+      Optional — usually no need to change. How much thinking budget the model gets per turn.
+      off disables extended thinking; max gives the deepest (and slowest) answers.
+  max_tokens:
+    name: "Max output tokens"
+    description: "Optional — usually no need to change. Upper bound for one reply; larger allows longer answers but costs more."
+  permission_mode:
+    name: "Permission mode"
+    description: >-
+      Optional — usually no need to change. danger-full-access lets the agent run tools without asking every time.
+      Use a stricter mode if you want approval prompts.
+  enable_ha_tools:
+    name: "Home Assistant tools"
+    description: >-
+      Optional — usually no need to change. Exposes ha_list_entities / ha_get_state / ha_call_service / ha_render_template
+      to the agent over MCP, so it can read and control your devices.
+  cors_allow_origins:
+    name: "CORS allowed origins"
+    description: >-
+      Optional — usually no need to change. Origins allowed to call the agent API. Keep * unless you embed the panel
+      somewhere else.
+  log_level:
+    name: "Log level"
+    description: "Optional — usually no need to change. How much detail is written to the Supervisor log."
+  default_model:
+    name: "Forced default model"
+    description: >-
+      Optional — usually no need to change. Leave empty to use the first model of the current list (recommended).
+      Otherwise use the form <provider>/<model>@<provider>.
+  hide_user_api_key:
+    name: "Hide user API key"
+    description: >-
+      Optional — usually no need to change. Keep this off. Turning it on makes NextChat reject browsers that already
+      saved their own key (HTTP 401 on every message).
+  ui_language:
+    name: "Interface language"
+    description: >-
+      Optional — usually no need to change. Language of the panels this app adds (progress blocks, setup wizard,
+      provider page). auto follows the NextChat locale.

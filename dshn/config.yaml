@@ -1,0 +1,84 @@
+---
+name: NextChat + DSH Agent (npm)
+# 版本号规则（两个 addon 统一）：
+#   <dsh 引擎版本三段>.<rc 号>.<构建号>   →  例如 0.2.0.2.1 = 引擎 0.2.0-rc.2 的第 1 次构建
+#   · 同一个引擎内只递增最后一位（改我们的胶水代码：界面/代理/日志）
+#   · 升上游引擎时前三段/rc 号一起变（例如引擎 0.2.1-rc.2 → 0.2.1.2.1）
+#   · 为什么不用 0.2.0-rc.2-1：SemVer 多段 prerelease 在 AwesomeVersion 里排序不可靠
+#     （实测 0.2.0-rc.2 < 0.2.0-rc.2-1 判为 False）；5 段 SIMPLEVER 才是单调的。
+#   ⚠️ 版本号必须与镜像 tag 严格一致（Supervisor 拉的就是 <image>:<version>）。
+version: "0.2.0.2.6"
+slug: nextchat_dshn
+description: NextChat 对话前端 + DeepSeek Harness（npm 版 dsh）真 agent 引擎（含 Home Assistant 设备控制工具）
+url: https://github.com/deepseek-ai/deepseek-harness
+arch:
+  - aarch64
+  - amd64
+# 预构建镜像：本仓库**不含 Dockerfile**，Supervisor 只按 `<image>:<version>` 拉取
+# （tag 恒等于上面的 version），例如 wghaos/addon-nextchat-dshn:0.2.0.2.3
+# —— 一个 amd64 + aarch64 同 tag 的多架构镜像。
+# 镜像名与构建仓库（davidg/nextchat-dshn）CI 推的名字**完全一致**，两边只靠 version/tag 对齐。
+# ⚠️ 运行时代码都在镜像里：改脚本要去构建仓库改并重新出镜像，改这个目录是没有任何效果的。
+image: wghaos/addon-nextchat-dshn
+init: false
+startup: application
+boot: auto
+# 拿到 SUPERVISOR_TOKEN，MCP 工具才能调用 HA Core API（不需要长期令牌）
+homeassistant_api: true
+hassio_api: true
+# 容器里装了 `ha` CLI（与 advancedssh 同做法）；`ha apps` 需要 manager 角色。
+hassio_role: manager
+# 与 nextchat-dsh 一样：刻意**不声明任何 ports**，整个 app 只从 HA Ingress 进出。
+#   - NextChat    : 127.0.0.1:3000（容器内）
+#   - agent API   : 127.0.0.1:8000（容器内）
+#   - Ingress 代理: 0.0.0.0:8099（只由 Supervisor 转发，不在 host 上发布）
+# 两个 app 各自在自己的容器网络里监听同样的端口，互不冲突。
+map:
+  - app_config:rw
+  - homeassistant_config:rw
+ingress: true
+ingress_port: 8099
+# ⚠️ 侧边栏标题必须与 nextchat-dsh 区分，否则两个面板在侧栏里分不清。
+panel: true
+panel_title: "deepseekchat(n)"
+panel_icon: mdi:chat-processing
+panel_admin: false
+options:
+  # ⚠️ npm 版与 python 版的差异都在这一层「引擎怎么来」上，
+  #    业务配置项与 python 版保持一致，便于两个 addon 对照/互切。
+  # ⚠️ 0.1.6 起 dsh 的官方 DeepSeek 适配器改用 **Messages 协议**，
+  #    0.1.7-rc.1 起更彻底移除了 Chat Completions / protocol 选项。
+  #    所以这里**默认留空**，用适配器内置的 Messages 地址；
+  #    只有要指到兼容网关时才填（形如 https://your-gw/anthropic）。
+  deepseek_base_url: ""
+  provider: "deepseek-official"
+  model: "deepseek-flash"
+  profile: "sdk"
+  reasoning_effort: "high"
+  max_tokens: 32768
+  permission_mode: "danger-full-access"
+  enable_ha_tools: true
+  cors_allow_origins: "*"
+  log_level: "info"
+  default_model: ""
+  hide_user_api_key: false
+  # 界面语言：auto = 跟随 NextChat 自己的 locale（推荐）；也可强制 zh / en。
+  #   只影响【我们额外加的界面】——过程块的标题、首次配置向导、管理页；
+  #   NextChat 自身的多语言由它自己的设置控制，与本项无关。
+  ui_language: "auto"
+schema:
+  # 可选：留空就跳过注入，由应用内向导或管理页填 key。
+  deepseek_api_key: password?
+  deepseek_base_url: str
+  provider: str
+  model: str
+  profile: list(sdk|sdk-minimal)
+  reasoning_effort: list(off|low|high|max)
+  max_tokens: int(1024,393216)
+  permission_mode: str
+  enable_ha_tools: bool
+  cors_allow_origins: str
+  log_level: list(debug|info|warning|error)
+  default_model: str
+  hide_user_api_key: bool
+  ui_language: list(auto|zh|en)
