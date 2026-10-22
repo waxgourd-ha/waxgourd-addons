@@ -78,7 +78,7 @@ ingress_port: 0
 ingress_stream: true
 init: false
 map:
-  - addon_config:rw
+  - app_config:rw
   - homeassistant_config:rw
   - share:rw
   - media:rw
@@ -121,6 +121,6 @@ schema:
 slug: emby_nas
 udev: true
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: "4.11.0.1"
+version: "4.11.0.8"
 video: true
 boot: manual

@@ -13,10 +13,12 @@ ingress_port: 1337
 ingress_stream: true
 init: false
 map:
+  - app_config:rw
   - share:rw
   - ssl
 name: Portainer冬瓜汉化版
 options:
+  env_vars: []
   certfile: fullchain.pem
   keyfile: privkey.pem
   password: homeassistant
@@ -30,6 +32,9 @@ ports_description:
   8000/tcp: Edge Agent Api (Enable when managing remote edge agents)
   9099/tcp: Web UI port
 schema:
+  env_vars:
+    - name: match(^[A-Za-z0-9_]+$)
+      value: str?
   certfile: str
   keyfile: str
   password: str?
@@ -37,5 +42,5 @@ schema:
 slug: portainer-zh-wg
 udev: true
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: "2.39.0"
+version: "2.45.2"
 boot: manual

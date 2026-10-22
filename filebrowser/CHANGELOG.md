@@ -1,4 +1,18 @@
+- Local disks: `localdisks` can now mount a single folder of a disk with `disk/folder` (e.g. `sda1/public` or `NAS/public`, mounted at `/mnt/<disk>/<folder>`). Existing values are unchanged.
+- Breaking change : only appears in ingress for admins
+- Migrate legacy add-on configuration map names to current app configuration terminology.
+ 
 ## 2.63.23 (2026-08-01)
+- Update to latest version from filebrowser/filebrowser (changelog : https://github.com/filebrowser/filebrowser/releases)
+## 2.63.18.5 (26-07-2026)
+- Fixed healthcheck log spam when ssl is enabled (#2881)
+## 2.63.18.4 (22-07-2026)
+- Minor bugs fixed
+## 2.63.18.3 (22-07-2026)
+- New flag added : follow_external_symlinks
+ 
+## 2.63.18 (2026-07-04)
+- Update to latest version from filebrowser/filebrowser (changelog : https://github.com/filebrowser/filebrowser/releases)
 
 Update to latest version from filebrowser/filebrowser (changelog : https://github.com/filebrowser/filebrowser/releases)
 

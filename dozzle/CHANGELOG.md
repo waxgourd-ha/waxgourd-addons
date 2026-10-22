@@ -1,3 +1,5 @@
+### 11.3.3 (2026-10-20)
+- 版本升级
 ### 10.10.0 (2026-09-09)
 - Sync addon version with waxgourd_addons/dozzle (image: r.hassbus.com/wghaos/dozzle, upstream version: 10.10.0, source: https://github.com/amir20/dozzle)
 

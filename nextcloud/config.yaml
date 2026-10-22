@@ -86,7 +86,7 @@ image: ghcr.io/alexbelgium/nextcloud_ocr-{arch}
 ingress_port: 0
 init: false
 map:
-  - addon_config:rw
+  - app_config:rw
   - homeassistant_config:rw
   - share:rw
   - media:rw
@@ -151,6 +151,6 @@ slug: nextcloud_ocr
 uart: true
 udev: true
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: 35.0.1
+version: 35.0.2
 webui: https://[HOST]:[PORT:443]
 boot: manual

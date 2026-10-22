@@ -76,12 +76,13 @@ environment:
 homeassistant: 2025.5.0
 image: ghcr.io/alexbelgium/filebrowser-{arch}
 ingress: true
+ingress_entry: files
 ingress_port: 8071
 ingress_stream: true
 map:
-  - addon_config:rw
+  - app_config:rw
   - media:rw
-  - all_addon_configs:rw
+  - all_app_configs:rw
   - homeassistant_config:rw
   - addons:rw
   - backup:rw
@@ -93,6 +94,7 @@ options:
   NoAuth: true
   certfile: fullchain.pem
   disable_thumbnails: true
+  follow_external_symlinks: true
   keyfile: privkey.pem
   ssl: false
 panel_admin: false
@@ -115,6 +117,7 @@ schema:
   cifspassword: str?
   cifsusername: str?
   disable_thumbnails: bool?
+  follow_external_symlinks: bool?
   keyfile: str
   localdisks: str?
   networkdisks: str?

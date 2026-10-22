@@ -78,7 +78,7 @@ ingress_port: 0
 ingress_stream: true
 init: false
 map:
-  - addon_config:rw
+  - app_config:rw
   - share:rw
   - media:rw
   - ssl:rw
@@ -120,6 +120,6 @@ schema:
 slug: emby
 udev: true
 url: https://github.com/waxgourd-ha/waxgourd-addons
-version: "4.10.0.40"
+version: "4.10.1.0"
 video: true
 boot: manual
