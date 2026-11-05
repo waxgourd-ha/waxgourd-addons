@@ -1,5 +1,5 @@
 name: 'DrawIO'
-version: 32.5.5
+version: 32.6.9
 slug: 'drawio'
 description: "DrawIO是运行在浏览器中的在线绘图工具"
 image: jgraph/drawio

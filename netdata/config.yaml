@@ -11,11 +11,10 @@ arch:
 privileged:
   - SYS_ADMIN
   - SYS_PTRACE
-panel_icon: mdi:chart-bell-curve
-panel_title: Netdata
-ingress: true
-ingress_port: 19999
-ingress_stream: true
+# Netdata 的 dashboard 使用绝对路径（/api/v1/...、/api/v2/...），不支持子路径部署，
+# 因此无法在 Home Assistant ingress（/api/hassio_ingress/<token>/）下工作。
+# 这里关闭 ingress，改由 webui + 映射端口提供入口（"打开网页界面"按钮）。
+webui: http://[HOST]:[PORT:19999]
 ports:
   19999/tcp: 19999
 ports_description:
