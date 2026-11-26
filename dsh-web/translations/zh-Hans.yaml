@@ -1,0 +1,18 @@
+configuration:
+  deepseek_api_key:
+    name: "DeepSeek API 密钥"
+    description: >-
+      可选 —— 可以留空，改在官方界面的设置里填。到 platform.deepseek.com 申请。
+  deepseek_base_url:
+    name: "DeepSeek 接口地址"
+    description: >-
+      可选，通常不用改。直连官方 API 就保持留空：地址由适配器自己补。
+      只有指向兼容网关时才填，形如 https://your-gw/anthropic
+  workspace:
+    name: "工作区目录"
+    description: >-
+      可选，通常不用改。agent 干活的目录。它在应用自己的配置目录里，随 HA 备份一起走。
+      改这里不会搬走已有文件：改完重启，再在界面里重新选一次目录。
+  log_level:
+    name: "日志级别"
+    description: "可选，通常不用改。写入 Supervisor 日志的详细程度。"

@@ -1,0 +1,21 @@
+configuration:
+  deepseek_api_key:
+    name: "DeepSeek API key"
+    description: >-
+      Optional — leave it empty and set the key in the UI's own settings instead.
+      Get a key at platform.deepseek.com.
+  deepseek_base_url:
+    name: "DeepSeek base URL"
+    description: >-
+      Optional — usually no need to change. Leave it empty for the official DeepSeek API: the
+      adapter fills in the endpoint itself. Only set it for a compatible gateway,
+      e.g. https://your-gw/anthropic
+  workspace:
+    name: "Workspace folder"
+    description: >-
+      Optional — usually no need to change. The folder the agent works in. It lives in the
+      app's own config folder, so it travels with your Home Assistant backups. Changing it
+      does not move existing files: restart, then pick the folder again in the UI.
+  log_level:
+    name: "Log level"
+    description: "Optional — usually no need to change. How much detail is written to the Supervisor log."

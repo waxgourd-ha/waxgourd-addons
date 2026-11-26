@@ -20,9 +20,9 @@ page.
 *配置分两处：**配置** 标签页放启动前必须有的少量设置；其余都在面板里 —— 首次打开的
 向导，以及「运营商 / 模型配置」页。*
 
-Engine: DeepSeek Harness SDK `0.1.5rc1`.
+Engine: DeepSeek Harness SDK `0.2.2rc2`.
 
-*引擎：DeepSeek Harness SDK `0.1.5rc1`（Python）。*
+*引擎：DeepSeek Harness SDK `0.2.2rc2`（Python）。*
 
 ## Install
 

@@ -20,9 +20,9 @@ page.
 *配置分两处：**配置** 标签页放启动前必须有的少量设置；其余都在面板里 —— 首次打开的
 向导，以及「运营商 / 模型配置」页。*
 
-Engine: DeepSeek Harness (npm) `0.2.0-rc.2`.
+Engine: DeepSeek Harness (npm) `0.2.2-rc.5`, Node 24.
 
-*引擎：DeepSeek Harness（npm）`0.2.0-rc.2`（Node）。*
+*引擎：DeepSeek Harness（npm）`0.2.2-rc.5`，Node 24。*
 
 ## Install
 
